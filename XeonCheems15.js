@@ -1,13 +1,3 @@
-//base by DGXeon
-//re-upload? recode? copy code? give credit ya :)
-//YouTube: @DGXeon
-//Instagram: unicorn_xeon13
-//Telegram: t.me/xeonbotinc
-//GitHub: @DGXeon
-//WhatsApp: +916909137213
-//want more free bot scripts? 
-//subscribe to my youtube channel: https://youtube.com/@DGXeon
-
 process.on('unhandledRejection', console.error)
 process.on('uncaughtException', console.error)
 require('./settings');
@@ -66,13 +56,13 @@ const xsteek = fs.readFileSync(`./69/x.webp`)
 const o = fs.readFileSync(`./69/o.jpg`)
 
 //media
-const VoiceNoteXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonvn.json'));
-const StickerXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonsticker.json'));
-const ImageXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonimage.json'));
-const VideoXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonvideo.json'));
-const DocXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/doc.json'));
-const ZipXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/zip.json'));
-const ApkXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/apk.json'));
+const VoiceNoteXeon = JSON.parse(fs.readFileSync('./Advanced/xeonvn.json'));
+const StickerXeon = JSON.parse(fs.readFileSync('./Advanced/xeonsticker.json'));
+const ImageXeon = JSON.parse(fs.readFileSync('./Advanced/xeonimage.json'));
+const VideoXeon = JSON.parse(fs.readFileSync('./Advanced/xeonvideo.json'));
+const DocXeon = JSON.parse(fs.readFileSync('./Advanced/doc.json'));
+const ZipXeon = JSON.parse(fs.readFileSync('./Advanced/zip.json'));
+const ApkXeon = JSON.parse(fs.readFileSync('./Advanced/apk.json'));
 
 const prem = require('./src/premium');
 const owner = JSON.parse(fs.readFileSync('./src/owner.json'));
