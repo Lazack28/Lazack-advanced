@@ -1,12 +1,3 @@
-//base by DGXeon
-//re-upload? recode? copy code? give credit ya :)
-//YouTube: @DGXeon
-//Instagram: unicorn_xeon13
-//Telegram: t.me/xeonbotinc
-//GitHub: @DGXeon
-//WhatsApp: +916909137213
-//want more free bot scripts? 
-//subscribe to my youtube channel: https://youtube.com/@DGXeon
 
 const fs = require('fs');
 const chalk = require('chalk');
@@ -14,7 +5,7 @@ const chalk = require('chalk');
 //owmner v card
 global.ytname = "YT: Lazaromtaju" //ur yt chanel name
 global.socialm = "GitHub: Lazack28" //ur github or insta name
-global.location = "India, Mizoram, Aizawl" //ur location
+global.location = "Tanzania, Dodoma, Kikuyu" //ur location
 
 //new
 global.botname = 'LAZACK ADVANCED 003' //ur bot name
