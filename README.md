@@ -19,3 +19,12 @@
 | Menu ⁠➜ | Anime | Photo| Video | Database | Sticker | Stalker | Other |Religion | NSFW | 
 | --------| ----- | ---- | ----- | -------- | ------- | ------- | ------|---------| -----|
 | Work ➜ |   ✅  |   ✅ |   ✅  |    ✅    |    ✅   |    ✅   |   ✅  |    ✅   |  ✅  |
+
+---------------------
+
+## Deploy Heroku 👇
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Lazack28/Lazack-advanced)
+
+----------------------
+
