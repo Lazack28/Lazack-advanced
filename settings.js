@@ -17,19 +17,19 @@ global.socialm = "GitHub: DGXeon" //ur github or insta name
 global.location = "India, Mizoram, Aizawl" //ur location
 
 //new
-global.botname = 'Cheems Bot MD V15' //ur bot name
-global.ownernumber = ['916909137213'] //ur owner number, dont add more than one
-global.ownername = '🦄드림 가이 Xeon' //ur owner name
-global.websitex = "https://youtu.be/tLq8_qOOGFI"
+global.botname = 'LAZACK ADVANCED 003' //ur bot name
+global.ownernumber = ['255734980103'] //ur owner number, dont add more than one
+global.ownername = 'LAZACK' //ur owner name
+global.websitex = "https://youtu.be/@Lazaromtaju"
 global.wagc = "https://whatsapp.com/channel/0029VaG9VfPKWEKk1rxTQD20"
 global.themeemoji = '🪀'
-global.wm = "Xeon Bot Inc."
-global.botscript = 'https://github.com/DGXeon/CheemsBot-MD15' //script link
+global.wm = "Lazack."
+global.botscript = 'https://github.com/Lazack28/Lazack-Advanced' //script link
 global.packname = "Sticker By"
-global.author = "🦄드림 가이 Xeon\n\n+916909137213"
-global.creator = "916909137213@s.whatsapp.net"
+global.author = "Lazack\n\n+255734980103"
+global.creator = "255734980103@s.whatsapp.net"
 global.xprefix = '.'
-global.premium = ["916909137213"] // Premium User
+global.premium = ["255734980103"] // Premium User
 
 //channel id
 global.xchannel = {
