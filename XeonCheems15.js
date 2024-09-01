@@ -16789,10 +16789,10 @@ break
             const a = db.users[sender]
             const me = m.sender
 			const xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
+╭──⎆「 *INTRO* 」⎆
+├  _CODING IS OF WHATSAPP BOTS_
+├ *JOIN MY CHANNEL FOR MORE*
+├  ~Recoded by Lazack28~
 ╰─┬────⎆ ${readmore}
 ╭─┴⎆「 *MENU* 」⎆
 │${setv} ${prefix}allmenu
