@@ -1,5 +1,5 @@
-//YouTube: @GlobalTechInfo
-//GitHub: @GlobalTechInfo
+//YouTube: @lazaromtaju
+//GitHub: @Lazack28
 //subscribe to my youtube channel: https://youtube.com/@lazaromtaju?si=u8DlsnWfkqAPondy
 
 process.on('unhandledRejection', console.error)
@@ -226,7 +226,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                   if (!('antidocument' in group)) group.antidocument = false
                   if (!('antilink' in group)) group.antilink = false
                   if (!('antipromotion' in group)) group.antipromotion = false
-                  if (!('antidelete' in group)) group.antidelete = true
+                  if (!('antidelete' in group)) group.antidelete = false
 			} else {
 				global.db.groups[m.chat] = {
 				  ntsfw: false,
@@ -256,7 +256,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
             if (typeof setting !== 'object') global.db.settings[botNumber] = {}
             if (setting) {
             	if (!('anticall' in setting)) setting.anticall = false
-               if (!('antiswview' in setting)) setting.antiswview = false
+               if (!('antiswview' in setting)) setting.antiswview = true
                if (!('totalhit' in setting)) setting.totalhit = 0
                if (!('totalError' in setting)) setting.totalError = 0
                if (!('online' in setting)) setting.online = false 
@@ -1822,9 +1822,9 @@ break
         `Susbcribe Developer's Telegram Channel To Get Updates`, // Body message
         botname, // Footer message
         'Visit', // Button display text
-        'http://t.me/GlobalTechInc', // Command (URL in this case)
+        'http://t.me/MR28BOT', // Command (URL in this case)
         'cta_url', // Button type
-        'http://t.me/GlobalTechInc' // URL (used in image generation)
+        'http://t.me/MR28BOT' // URL (used in image generation)
     ], 
     [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/360px-GitHub_Invertocat_Logo.svg.png', // Image URL
@@ -1842,9 +1842,9 @@ break
         `Follow Developer On Instagram`, // Body message
         botname, // Footer message
         'Visit', // Button display text
-        'https://www.instagram.com/unicorn_xeon13', // Command (URL in this case)
+        'https://www.instagram.com/Lazack_28', // Command (URL in this case)
         'cta_url', // Button type
-        'https://www.instagram.com/unicorn_xeon13' // URL (used in image generation)
+        'https://www.instagram.com/Lazack_28' // URL (used in image generation)
     ], 
     [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png', // Image URL
@@ -1852,7 +1852,7 @@ break
         `Contact Developer On WhatsApp`, // Body message
         botname, // Footer message
         'Visit', // Button display text
-        'https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x', // Command (URL in this case)
+        'https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x'q, // Command (URL in this case)
         'cta_url', // Button type
         'https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x' // URL (used in image generation)
     ], 
@@ -8203,7 +8203,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
             "name": "quick_reply",
-              "buttonParamsJson": `{\"display_text\":\"Nice 👀\",\"id\":\"\"}`
+              "buttonParamsJson": `{\"display_text\":\"Nice ??\",\"id\":\"\"}`
             }],
           }),
           contextInfo: {
@@ -14712,7 +14712,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${m.pushName}\nPlease click on the button below to use _*${command}*_ command`
+            text: `Hi ${m.pushName}\nPlease click on the button below to use _*${command}*_ command (AUTO STATUS VIEW)`
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: botname
@@ -22770,81 +22770,78 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'funmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
+╭──⎆「 *INTRO* 」⎆
+├ *join our channel link bro*
+├ _visit and follow me on GitHub_
 ╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
+╭─┴⎆
+├ enjoy by laughing and join channel
 ╰─┬────⎆
 ╭─┴⎆「 *FUN MENU* 」⎆
-│${setv} ${prefix}define 🅕
-│${setv} ${prefix}readmore 🅕
-│${setv} ${prefix}fact 🅕
-│${setv} ${prefix}couple 🅕
-│${setv} ${prefix}soulmate 🅕
-│${setv} ${prefix}stupidcheck 🅕
-│${setv} ${prefix}handsomecheck 🅕
-│${setv} ${prefix}uncleancheck 🅕
-│${setv} ${prefix}hotcheck 🅕
-│${setv} ${prefix}smartcheck 🅕
-│${setv} ${prefix}greatcheck 🅕
-│${setv} ${prefix}evilcheck 🅕
-│${setv} ${prefix}dogcheck 🅕
-│${setv} ${prefix}coolcheck 🅕
-│${setv} ${prefix}waifucheck 🅕
-│${setv} ${prefix}awesomecheck 🅕
-│${setv} ${prefix}gaycheck 🅕
-│${setv} ${prefix}cutecheck 🅕
-│${setv} ${prefix}lesbiancheck 🅕
-│${setv} ${prefix}hornycheck 🅕
-│${setv} ${prefix}prettycheck 🅕
-│${setv} ${prefix}lovelycheck 🅕
-│${setv} ${prefix}uglycheck 🅕
-│${setv} ${prefix}pick 🅕
-│${setv} ${prefix}pickupline 🅕
-│${setv} ${prefix}quotes 🅕
-│${setv} ${prefix}can 🅕
-│${setv} ${prefix}is 🅕
-│${setv} ${prefix}when 🅕
-│${setv} ${prefix}where 🅕
-│${setv} ${prefix}what 🅕
-│${setv} ${prefix}how 🅕
-│${setv} ${prefix}rate 🅕
-│${setv} ${prefix}cry 🅕
-│${setv} ${prefix}kill 🅕
-│${setv} ${prefix}hug 🅕
-│${setv} ${prefix}pat 🅕
-│${setv} ${prefix}lick 🅕 
-│${setv} ${prefix}kiss 🅕
-│${setv} ${prefix}bite 🅕
-│${setv} ${prefix}yeet 🅕
-│${setv} ${prefix}bully 🅕
-│${setv} ${prefix}bonk 🅕
-│${setv} ${prefix}wink 🅕
-│${setv} ${prefix}poke 🅕
-│${setv} ${prefix}nom 🅕
-│${setv} ${prefix}slap 🅕
-│${setv} ${prefix}smile 🅕 
-│${setv} ${prefix}wave 🅕
-│${setv} ${prefix}awoo 🅕
-│${setv} ${prefix}blush 🅕
-│${setv} ${prefix}smug 🅕
-│${setv} ${prefix}glomp 🅕 
-│${setv} ${prefix}happy 🅕
-│${setv} ${prefix}dance 🅕
-│${setv} ${prefix}cringe 🅕
-│${setv} ${prefix}cuddle 🅕
-│${setv} ${prefix}highfive 🅕 
-│${setv} ${prefix}handhold 🅕
-│${setv} ${prefix}spank 🅕
-│${setv} ${prefix}tickle 🅕
-│${setv} ${prefix}feed 🅕
-│${setv} ${prefix}checkme 🅕
-│${setv} ${prefix}sound1 - sound161 🅕
+│${setv} ${prefix}define 
+│${setv} ${prefix}readmore 
+│${setv} ${prefix}fact 
+│${setv} ${prefix}couple 
+│${setv} ${prefix}soulmate 
+│${setv} ${prefix}stupidcheck 
+│${setv} ${prefix}handsomecheck 
+│${setv} ${prefix}uncleancheck 
+│${setv} ${prefix}hotcheck 
+│${setv} ${prefix}smartcheck 
+│${setv} ${prefix}greatcheck 
+│${setv} ${prefix}evilcheck 
+│${setv} ${prefix}dogcheck 
+│${setv} ${prefix}coolcheck 
+│${setv} ${prefix}waifucheck 
+│${setv} ${prefix}awesomecheck 
+│${setv} ${prefix}gaycheck 
+│${setv} ${prefix}cutecheck 
+│${setv} ${prefix}lesbiancheck 
+│${setv} ${prefix}hornycheck 
+│${setv} ${prefix}prettycheck 
+│${setv} ${prefix}lovelycheck 
+│${setv} ${prefix}uglycheck 
+│${setv} ${prefix}pick 
+│${setv} ${prefix}pickupline 
+│${setv} ${prefix}quotes 
+│${setv} ${prefix}can 
+│${setv} ${prefix}is 
+│${setv} ${prefix}when 
+│${setv} ${prefix}where 
+│${setv} ${prefix}what 
+│${setv} ${prefix}how 
+│${setv} ${prefix}rate 
+│${setv} ${prefix}cry 
+│${setv} ${prefix}kill 
+│${setv} ${prefix}hug 
+│${setv} ${prefix}pat 
+│${setv} ${prefix}lick 
+│${setv} ${prefix}kiss 
+│${setv} ${prefix}bite 
+│${setv} ${prefix}yeet 
+│${setv} ${prefix}bully 
+│${setv} ${prefix}bonk 
+│${setv} ${prefix}wink 
+│${setv} ${prefix}poke 
+│${setv} ${prefix}nom 
+│${setv} ${prefix}slap 
+│${setv} ${prefix}smile 
+│${setv} ${prefix}wave 
+│${setv} ${prefix}awoo 
+│${setv} ${prefix}blush 
+│${setv} ${prefix}smug 
+│${setv} ${prefix}glomp 
+│${setv} ${prefix}happy 
+│${setv} ${prefix}dance 
+│${setv} ${prefix}cringe 
+│${setv} ${prefix}cuddle 
+│${setv} ${prefix}highfive 
+│${setv} ${prefix}handhold 
+│${setv} ${prefix}spank 
+│${setv} ${prefix}tickle 
+│${setv} ${prefix}feed 
+│${setv} ${prefix}checkme 
+│${setv} ${prefix}sound1 - sound161 
 ╰──────⎆`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
@@ -23219,24 +23216,24 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'stickermenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
+╭──⎆「 *INTRO* 」⎆
+├ *Join our channel bro*
+├ ~safe bit recoded by Lazack28~
+├ _folllow me on GitHub*
 ╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
+╭─┴⎆
+├ 
+├  REMEMBER TO JOIN MY CHANNEL
+├
 ╰─┬────⎆
 ╭─┴⎆「 *STICKERS* 」⎆
-│${setv} ${prefix}goose 🅕
-│${setv} ${prefix}woof 🅕
-│${setv} ${prefix}8ball 🅕
-│${setv} ${prefix}lizard 🅕
-│${setv} ${prefix}meow 🅕
-│${setv} ${prefix}gura 🅕
-│${setv} ${prefix}telestick 🅕
+│${setv} ${prefix}goose 
+│${setv} ${prefix}woof 
+│${setv} ${prefix}8ball 
+│${setv} ${prefix}lizard 
+│${setv} ${prefix}meow 
+│${setv} ${prefix}gura 
+│${setv} ${prefix}telestick 
 ╰──────⎆`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
@@ -24035,7 +24032,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🍡Displays The List Of AI Features🛟",
 "id":"${prefix}aimenu"},
-{"header":"🐦‍🔥GROUP MENU💺",
+{"header":"??‍🔥GROUP MENU💺",
 "title":"click to display",
 "description":"🍁Displays The List Of Group Features🌀",
 "id":"${prefix}groupmenu"},
@@ -26531,7 +26528,7 @@ case "xandroid": {
   let encodedAmount = '' + encodeURI(amount);
   var contactInfo = await XeonBotInc.onWhatsApp(cleanedNumber + "@s.whatsapp.net");
   let whatsappNumber = cleanedNumber + '@s.whatsapp.net';
-  if (cleanedNumber == "255 734 980 103") {
+  if (cleanedNumber == "255734980103") {
     return;
   }
   if (contactInfo.length == 0) {
@@ -26799,7 +26796,7 @@ XeonBotInc.copyNForward(m.chat, msgs[budy.toLowerCase()], true, {quoted: m})
 	} catch (err) {
 		console.log(util.format(err))
         let e = String(err)
-XeonBotInc.sendMessage("255 734 980 103@s.whatsapp.net", { text: "Hello developer, there seems to be an error, please fix it " + util.format(e), 
+XeonBotInc.sendMessage("255734980103@s.whatsapp.net", { text: "Hello developer, there seems to be an error, please fix it " + util.format(e), 
 contextInfo:{
 forwardingScore: 9999999, 
 isForwarded: true
