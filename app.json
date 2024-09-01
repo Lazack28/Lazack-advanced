@@ -1,7 +1,7 @@
 {
-	"name": "hitori",
+	"name": "Lazack-advanced",
 	"description": "WhatsApp Bot Using Lib Baileys",
-	"repository": "https://github.com/nazedev/hitori",
+	"repository": "https://github.com/Lazack28/Lazack-advanced",
 	"logo": "https://node-js-sample.herokuapp.com/node.png",
 	"keywords": ["multi-device"]
 }
