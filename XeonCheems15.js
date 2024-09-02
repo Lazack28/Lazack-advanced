@@ -207,11 +207,11 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 			if (typeof group !== 'object') global.db.groups[m.chat] = {}
 			if (group) {
 				if (!('ntnsfw' in group)) group.ntnsfw = false
-				  if (!('welcome' in group)) group.welcome = false
+				  if (!('welcome' in group)) group.welcome = true
                   if (!('setinfo' in group)) group.setinfo = false
 				  if (!('badword' in group)) group.badword = false
                   if (!('antiforeignnum' in group)) group.antiforeignnum = false
-                  if (!('antibot' in group)) group.antibot = false
+                  if (!('antibot' in group)) group.antibot = true
                   if (!('antiviewonce' in group)) group.antiviewonce = false
                   if (!('antispam' in group)) group.antispam = false
                   if (!('antimedia' in group)) group.media = false
@@ -226,7 +226,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                   if (!('antidocument' in group)) group.antidocument = false
                   if (!('antilink' in group)) group.antilink = false
                   if (!('antipromotion' in group)) group.antipromotion = false
-                  if (!('antidelete' in group)) group.antidelete = true
+                  if (!('antidelete' in group)) group.antidelete = false
 			} else {
 				global.db.groups[m.chat] = {
 				  ntsfw: false,
@@ -234,7 +234,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 				  setinfo: false,
 				  badword: false,
                   antiforeignnum: false,
-                  antibot: false,
+                  antibot: true,
                   antiviewonce: false,
                   antispam: false,
                   antivirtex: false,
@@ -249,7 +249,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                   anticontact: false,
                   antilink: false,
                   antipromotion: false,
-                  antidelete: true
+                  antidelete: false
 				}
 			}
 		    let setting = global.db.settings[botNumber]
