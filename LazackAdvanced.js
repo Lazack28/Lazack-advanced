@@ -226,7 +226,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                   if (!('antidocument' in group)) group.antidocument = false
                   if (!('antilink' in group)) group.antilink = false
                   if (!('antipromotion' in group)) group.antipromotion = false
-                  if (!('antidelete' in group)) group.antidelete = true
+                  if (!('antidelete' in group)) group.antidelete = false
 			} else {
 				global.db.groups[m.chat] = {
 				  ntsfw: false,
@@ -249,7 +249,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                   anticontact: false,
                   antilink: false,
                   antipromotion: false,
-                  antidelete: true
+                  antidelete: false
 				}
 			}
 		    let setting = global.db.settings[botNumber]
