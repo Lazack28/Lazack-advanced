@@ -16789,11 +16789,6 @@ break
             const a = db.users[sender]
             const me = m.sender
 			const xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
 ╭─┴⎆「 *MENU* 」⎆
 │${setv} ${prefix}allmenu
 │${setv} ${prefix}searchmenu
@@ -17189,16 +17184,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'allmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *OWNER MENU* 」⎆
 │${setv} ${prefix}addbadword 🅞
 │${setv} ${prefix}delbadword 🅞
@@ -18204,16 +18189,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'ownermenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *OWNER MENU* 」⎆
 │${setv} ${prefix}addbadword 🅞
 │${setv} ${prefix}delbadword 🅞
@@ -18667,17 +18642,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'groupmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium 
-User*
-╰─┬────⎆
 ╭─┴⎆「 *GROUP MENU* 」⎆
 │${setv} ${prefix}antibot 🅖
 │${setv} ${prefix}antiviewonce 🅖
@@ -19507,16 +19471,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'downloadmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *DOWNLOADS* 」⎆
 │${setv} ${prefix}xnxxdl 🅕
 │${setv} ${prefix}xvideodl 🅕
@@ -19918,16 +19872,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'toolmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *TOOL MENU* 」⎆
 │${setv} ${prefix}obfuscate 🅕
 │${setv} ${prefix}styletext 🅕
@@ -20346,29 +20290,19 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'listmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *LIST MENU* 」⎆
-│${setv} ${prefix}listprem 🅕
-│${setv} ${prefix}listowner 🅕
-│${setv} ${prefix}liststicker 🅕
-│${setv} ${prefix}listimage 🅕
-│${setv} ${prefix}listvideo 🅕
-│${setv} ${prefix}listvn 🅕
-│${setv} ${prefix}listapk 🅕
-│${setv} ${prefix}listzip 🅕
-│${setv} ${prefix}listpdf 🅕
-│${setv} ${prefix}listbadword 🅕
-│${setv} ${prefix}listpc 🅕
-│${setv} ${prefix}listgc 🅕
+│${setv} ${prefix}listprem 
+│${setv} ${prefix}listowner 
+│${setv} ${prefix}liststicker 
+│${setv} ${prefix}listimage 
+│${setv} ${prefix}listvideo 
+│${setv} ${prefix}listvn 
+│${setv} ${prefix}listapk 
+│${setv} ${prefix}listzip 
+│${setv} ${prefix}listpdf 
+│${setv} ${prefix}listbadword 
+│${setv} ${prefix}listpc 
+│${setv} ${prefix}listgc 
 ╰──────⎆`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
