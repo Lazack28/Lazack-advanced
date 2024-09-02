@@ -16,6 +16,9 @@
 
 ****[FORK THIS REPO](https://github.com/Lazack28/Lazack-advanced/fork)****
 
+***[GROUP](https://chat.whatsapp.com/IIpL6gf6dcq4ial8gaJLE9)***
+
+
 ------------------------------------------
 
 **Generate Pair Code For Session**
