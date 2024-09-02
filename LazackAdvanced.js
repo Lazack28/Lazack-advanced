@@ -1,5 +1,5 @@
-//YouTube: @GlobalTechInfo
-//GitHub: @GlobalTechInfo
+//YouTube: @Lazaromtaju
+//GitHub: @Lazack_28
 //subscribe to my youtube channel: https://youtube.com/@lazaromtaju?si=u8DlsnWfkqAPondy
 
 process.on('unhandledRejection', console.error)
@@ -8982,7 +8982,7 @@ case 'runtime': {
 			}
 			break
 case 'ghstalk': case 'githubstalk':{
-if (!q) return replygcxeon(`Example ${prefix+command} Qasim`)
+if (!q) return replygcxeon(`Example ${prefix+command} Lazack28`)
 await XeonStickWait()
 let githubstalk = require('./lib/scraper')
 aj = await githubstalk.githubstalk(`${q}`)
@@ -10095,7 +10095,7 @@ https://cloud.google.com/translate/docs/languages
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
             "name": "quick_reply",
-              "buttonParamsJson": `{\"display_text\":\"🌿\",\"id\":\""}`
+              "buttonParamsJson": `{\"display_text\":\"⚔️\",\"id\":\""}`
             }],
           }), 
           contextInfo: {
@@ -10886,7 +10886,7 @@ XeonBotInc.sendMessage(m.chat, {text: `Here @${teman.split("@")[0]}`, mentions: 
 }
 break
             case 'wanumber': case 'nowa': case 'searchno': case 'searchnumber':{
-           	if (!text) return replygcxeon(`Provide Number with last number x\n\nExample: ${prefix + command} 92344484406x`)
+           	if (!text) return replygcxeon(`Provide Number with last number x\n\nExample: ${prefix + command} 2557349801x`)
 var inputnumber = text.split(" ")[0]
         
         replygcxeon(`Searching for WhatsApp account in given range...`)
@@ -26733,7 +26733,7 @@ XeonBotInc.copyNForward(m.chat, msgs[budy.toLowerCase()], true, {quoted: m})
 	} catch (err) {
 		console.log(util.format(err))
         let e = String(err)
-XeonBotInc.sendMessage("255 734 980 103@s.whatsapp.net", { text: "Hello developer, there seems to be an error, please fix it " + util.format(e), 
+XeonBotInc.sendMessage("255758868502@s.whatsapp.net", { text: "Hello developer, there seems to be an error, please fix it " + util.format(e), 
 contextInfo:{
 forwardingScore: 9999999, 
 isForwarded: true
