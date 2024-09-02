@@ -16789,12 +16789,7 @@ break
             const a = db.users[sender]
             const me = m.sender
 			const xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *MENU* 」⎆
+╭──────「 *MENU* 」⎆
 │${setv} ${prefix}allmenu
 │${setv} ${prefix}searchmenu
 │${setv} ${prefix}downloadmenu
