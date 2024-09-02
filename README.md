@@ -46,3 +46,13 @@
 ****MAIN DEV EDITOR****
 
  [![Lazack28](https://github.com/Lazack28.png?size=100)](https://github.com/Lazack28)
+
+----------------------
+
+<h2 align="center">  NOTICE
+</h2>
+   
+ 
+- *Lazack Bots are made by a student if you see any errors please submit a pull request`*
+- *I may help you in bot deployment and bot code editing if i have time to do so*
+- *Use Lazack bots are always safe to youre heroku and give us credits.*
