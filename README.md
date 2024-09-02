@@ -1,7 +1,24 @@
-# Lazack advanced 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=WELCOME+TO+LAZACK+MD+v3+MADE+BY;LAZACK28;THANKS+FOR+VISITING+MY+REPO)](https://git.io/typing-svg)
 
+<p align="left">
+  <a href="" target="_blank">
+    <img alt="Forks" src="https://img.shields.io/github/forks/Lazack28/Lazack-advanced" />
+  </a>
 
-## `Generate Pair Code For Session`
+</p>
+<p align="center"><img src="https://profile-counter.glitch.me/{Lazack28}/count.svg" alt="Lazack28 :: Visitor's Count" /></p>
+<p align="center">  
+
+<p align="center">
+  <a href="https://chat.whatsapp.com/ICNOZzsDH9E81j3RlqLx4w">
+    <img alt=Support height="250" src="https://telegra.ph/file/1dc10a39146c80069a439.jpg"> 
+    </p>
+
+****[FORK THIS REPO](https://github.com/Lazack28/Lazack-advanced/fork)****
+
+------------------------------------------
+
+**Generate Pair Code For Session**
 
 <a href='https://replit.com/@lazck22/LAZACK-ADVANCE-AND-DEVICE' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-001-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
@@ -10,22 +27,22 @@
 
 -------------------------
 
-## BOT FEATURES 💌
+***BOT FEATURES 💌***
 
 | Menu ⁠➜ | Bot | Group | Search | Download | Tools | Ai | Game | Fun | Owner | Bug | Convert | List |
 | --------| --- | ----- | ------ | -------- | ----- | -- | ---- | --- | ----- | ----| --------| -----|
 | Work ➜ |  ✅ |   ✅  |    ✅  |     ✅   |   ✅  | ✅ |   ✅ |  ✅ |  ✅   | ✅  |    ✅   |  ✅  |
 
-| Menu ⁠➜ | Anime | Photo| Video | Database | Sticker | Stalker | Other |Religion | NSFW | 
-| --------| ----- | ---- | ----- | -------- | ------- | ------- | ------|---------| -----|
-| Work ➜ |   ✅  |   ✅ |   ✅  |    ✅    |    ✅   |    ✅   |   ✅  |    ✅   |  ✅  |
-
 ---------------------
 
-## Deploy Heroku 👇
+*****DEPLOYMENT SITE👇*****
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Lazack28/Lazack-advanced)
+  
+<a href='https://replit.com/~' target="_blank"><img alt='Deploy Replit' src='https://img.shields.io/badge/DEPLOY REPLIT-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ----------------------
 
-    MODIFIED BOT OF CHEEMSBOT, WORKING PERFECTLY
+****MAIN DEV EDITOR****
+
+ [![Lazack28](https://github.com/Lazack28.png?size=100)](https://github.com/Lazack28)
