@@ -256,7 +256,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
             if (typeof setting !== 'object') global.db.settings[botNumber] = {}
             if (setting) {
             	if (!('anticall' in setting)) setting.anticall = false
-               if (!('antiswview' in setting)) setting.antiswview = false
+               if (!('antiswview' in setting)) setting.antiswview = true
                if (!('totalhit' in setting)) setting.totalhit = 0
                if (!('totalError' in setting)) setting.totalError = 0
                if (!('online' in setting)) setting.online = false 
@@ -274,7 +274,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                if (!('onlypc' in setting)) setting.onlypc = false
             } else global.db.settings[botNumber] = {
                anticall: false,
-           	antiswview: false,
+           	antiswview: true,
                totalhit: 0,
                totalError: 0,
                online: false,
