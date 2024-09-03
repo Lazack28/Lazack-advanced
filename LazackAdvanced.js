@@ -915,7 +915,7 @@ externalAdReply: {
 showAdAttribution: true,
 title: botname,
 body: ownername,
-thumbnailUrl: 'https://telegra.ph/file/f6119ab1993a2d875843a.jpg',
+thumbnailUrl: 'https://telegra.ph/file/3fa5e5c3dfb83f6ed07ed.jpg',
 sourceUrl: websitex
 },
 },
@@ -1733,18 +1733,18 @@ break
     if (response.status === 200) {
       const repoData = response.data
       const formattedInfo = `
-${themeemoji} Repository Name: ${repoData.name}
-${themeemoji} Description: ${repoData.description}
-${themeemoji} Owner: ${repoData.owner.login}
-${themeemoji} Stars: ${repoData.stargazers_count}
-${themeemoji} Forks: ${repoData.forks_count}
-${themeemoji} URL: ${repoData.html_url}
+|| *Repository Name*: ${repoData.name}
+|| *Description*: ${repoData.description}
+|| *Owner*: ${repoData.owner.login}
+|| *Stars*: ${repoData.stargazers_count}
+|| *Forks*: ${repoData.forks_count}
+|| *Repo*: ${repoData.html_url}
      
  `.trim()
       await XeonBotInc.relayMessage(m.chat,  {
         requestPaymentMessage: {
-          currencyCodeIso4217: 'INR',
-          amount1000: 69000,
+          currencyCodeIso4217: 'TZS',
+          amount1000: 20000,
           requestFrom: m.sender,
           noteMessage: {
           extendedTextMessage: {
@@ -1822,9 +1822,9 @@ break
         `Susbcribe Developer's Telegram Channel To Get Updates`, // Body message
         botname, // Footer message
         'Visit', // Button display text
-        'http://t.me/GlobalTechInc', // Command (URL in this case)
+        'http://t.me/hackersreality', // Command (URL in this case)
         'cta_url', // Button type
-        'http://t.me/GlobalTechInc' // URL (used in image generation)
+        'http://t.me/hackersreality' // URL (used in image generation)
     ], 
     [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/360px-GitHub_Invertocat_Logo.svg.png', // Image URL
@@ -1842,9 +1842,9 @@ break
         `Follow Developer On Instagram`, // Body message
         botname, // Footer message
         'Visit', // Button display text
-        'https://www.instagram.com/unicorn_xeon13', // Command (URL in this case)
+        'https://www.instagram.com/Lazack_28', // Command (URL in this case)
         'cta_url', // Button type
-        'https://www.instagram.com/unicorn_xeon13' // URL (used in image generation)
+        'https://www.instagram.com/Lazack_28' // URL (used in image generation)
     ], 
     [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png', // Image URL
