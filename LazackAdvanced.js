@@ -873,7 +873,7 @@ fs.writeFileSync('./src/user.json', JSON.stringify(xeonverifieduser, null, 2))
                             title: botname,
                             body: ownername,
                             previewType: "PHOTO",
-                            thumbnail: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
+                            thumbnail: fs.readFileSync('./Plugins/cheemspic.jpg'),
                             sourceUrl: wagc
                         }
                     },
@@ -889,7 +889,7 @@ fs.writeFileSync('./src/user.json', JSON.stringify(xeonverifieduser, null, 2))
                         showAdAttribution: true,
                         title: botname,
                         body: ownername,
-                        thumbnail: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
+                        thumbnail: fs.readFileSync('./Plugins/cheemspic.jpg'),
                         sourceUrl: websitex,
                         mediaType: 1,
                         renderLargerThumbnail: true
@@ -942,27 +942,27 @@ quoted: m,
 
 //theme sticker reply
         const XeonStickWait = () => {
-        let XeonStikRep = fs.readFileSync('./XeonMedia/theme/sticker_reply/wait.webp')
+        let XeonStikRep = fs.readFileSync('./Plugins/wait.webp')
         XeonBotInc.sendMessage(m.chat, { sticker: XeonStikRep }, { quoted: m })
         }
         const XeonStickAdmin = () => {
-        let XeonStikRep = fs.readFileSync('./XeonMedia/theme/sticker_reply/admin.webp')
+        let XeonStikRep = fs.readFileSync('./Plugins/admin.webp')
         XeonBotInc.sendMessage(m.chat, { sticker: XeonStikRep }, { quoted: m })
         }
         const XeonStickBotAdmin = () => {
-        let XeonStikRep = fs.readFileSync('./XeonMedia/theme/sticker_reply/botadmin.webp')
+        let XeonStikRep = fs.readFileSync('./plugins/botadmin.webp')
         XeonBotInc.sendMessage(m.chat, { sticker: XeonStikRep }, { quoted: m })
         }
         const XeonStickOwner = () => {
-        let XeonStikRep = fs.readFileSync('./XeonMedia/theme/sticker_reply/owner.webp')
+        let XeonStikRep = fs.readFileSync('./plugins/owner.webp')
         XeonBotInc.sendMessage(m.chat, { sticker: XeonStikRep }, { quoted: m })
         }
         const XeonStickGroup = () => {
-        let XeonStikRep = fs.readFileSync('./XeonMedia/theme/sticker_reply/group.webp')
+        let XeonStikRep = fs.readFileSync('./plugins/group.webp')
         XeonBotInc.sendMessage(m.chat, { sticker: XeonStikRep }, { quoted: m })
         }
         const XeonStickPrivate = () => {
-        let XeonStikRep = fs.readFileSync('./XeonMedia/theme/sticker_reply/private.webp')
+        let XeonStikRep = fs.readFileSync('./plugins/private.webp')
         XeonBotInc.sendMessage(m.chat, { sticker: XeonStikRep }, { quoted: m })
         }
         
@@ -996,25 +996,25 @@ let setv = pickRandom(global.listv)
 //autoreply
 for (let BhosdikaXeon of VoiceNoteXeon) {
 if (budy === BhosdikaXeon) {
-let audiobuffy = fs.readFileSync(`./XeonMedia/audio/${BhosdikaXeon}.mp3`)
+let audiobuffy = fs.readFileSync(`./Plugins/${BhosdikaXeon}.mp3`)
 XeonBotInc.sendMessage(m.chat, { audio: audiobuffy, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 }
 }
 for (let BhosdikaXeon of StickerXeon){
 if (budy === BhosdikaXeon){
-let stickerbuffy = fs.readFileSync(`./XeonMedia/sticker/${BhosdikaXeon}.webp`)
+let stickerbuffy = fs.readFileSync(`./Plugins/${BhosdikaXeon}.webp`)
 XeonBotInc.sendMessage(m.chat, { sticker: stickerbuffy }, { quoted: m })
 }
 }
 for (let BhosdikaXeon of ImageXeon){
 if (budy === BhosdikaXeon){
-let imagebuffy = fs.readFileSync(`./XeonMedia/image/${BhosdikaXeon}.jpg`)
+let imagebuffy = fs.readFileSync(`./Plugins/${BhosdikaXeon}.jpg`)
 XeonBotInc.sendMessage(m.chat, { image: imagebuffy }, { quoted: m })
 }
 }
 for (let BhosdikaXeon of VideoXeon){
 if (budy === BhosdikaXeon){
-let videobuffy = fs.readFileSync(`./XeonMedia/video/${BhosdikaXeon}.mp4`)
+let videobuffy = fs.readFileSync(`./Plugins/${BhosdikaXeon}.mp4`)
 XeonBotInc.sendMessage(m.chat, { video: videobuffy }, { quoted: m })
 }
 }
@@ -1024,7 +1024,7 @@ XeonBotInc.sendMessage(m.chat, { document: teks, mimetype: 'application/vnd.andr
 }
 for (let BhosdikaXeon of ApkXeon) {
 if (budy === BhosdikaXeon) {
-let buffer = fs.readFileSync(`./XeonMedia/apk/${BhosdikaXeon}.apk`)
+let buffer = fs.readFileSync(`./Plugins/${BhosdikaXeon}.apk`)
 sendapk(buffer)
 }
 }
@@ -1034,7 +1034,7 @@ XeonBotInc.sendMessage(m.chat, { document: teks, mimetype: 'application/zip'}, {
 }
 for (let BhosdikaXeon of ZipXeon) {
 if (budy === BhosdikaXeon) {
-let buffer = fs.readFileSync(`./XeonMedia/zip/${BhosdikaXeon}.zip`)
+let buffer = fs.readFileSync(`./Plugins/${BhosdikaXeon}.zip`)
 sendzip(buffer)
 }
 }
@@ -1044,7 +1044,7 @@ XeonBotInc.sendMessage(m.chat, { document: teks, mimetype: 'application/pdf'}, {
 }
 for (let BhosdikaXeon of DocXeon) {
 if (budy === BhosdikaXeon) {
-let buffer = fs.readFileSync(`./XeonMedia/doc/${BhosdikaXeon}.pdf`)
+let buffer = fs.readFileSync(`./Plugins/${BhosdikaXeon}.pdf`)
 senddocu(buffer)
 }
 }
@@ -1122,7 +1122,7 @@ remoteJid: "status@broadcast"
 "interactiveMessage": { 
 "header": {
 "hasMediaAttachment": true,
-"jpegThumbnail": fs.readFileSync(`./69/xx1.png`)
+"jpegThumbnail": fs.readFileSync(`./Plugins/xx1.png`)
 },
 "nativeFlowMessage": {
 "buttons": [
@@ -1147,7 +1147,7 @@ remoteJid: "status@broadcast"
 "interactiveMessage": { 
 "header": {
 "hasMediaAttachment": true,
-"jpegThumbnail": fs.readFileSync(`./69/xx1.png`)
+"jpegThumbnail": fs.readFileSync(`./Plugins/xx1.png`)
 },
 "nativeFlowMessage": {
 "buttons": [
@@ -1586,7 +1586,7 @@ case 'handsomecheck':{
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -1631,7 +1631,7 @@ case 'beautifulcheck':{
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -1657,7 +1657,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
 }
 					break
 					case 'charactercheck':{
-					if (!text) return replygcxeon(`Tag Someone, Example : ${prefix + command} @Qasim`)
+					if (!text) return replygcxeon(`Tag Someone, Example : ${prefix + command} @Lazack`)
 					const xeony =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const taky = xeony[Math.floor(Math.random() * xeony.length)]
 					let msgs = generateWAMessageFromContent(m.chat, {
@@ -1676,7 +1676,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -2089,7 +2089,7 @@ ${translatedTafsirEnglish.text}`
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -2161,7 +2161,7 @@ ${translatedChapterHindi.text}`
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7485,7 +7485,7 @@ try {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7539,7 +7539,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7583,7 +7583,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7633,7 +7633,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7680,7 +7680,7 @@ break
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/soulmate.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/soulmate.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7726,7 +7726,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/couple.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/couple.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7772,7 +7772,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7818,7 +7818,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7864,7 +7864,7 @@ return await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7910,7 +7910,7 @@ case 'what': {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -7956,7 +7956,7 @@ if (!text) return replygcxeon(`Ask question\n\nExample : ${prefix + command} is 
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8002,7 +8002,7 @@ case 'how': {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8048,7 +8048,7 @@ case 'rate': {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8102,7 +8102,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8150,7 +8150,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })  
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })  
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8198,7 +8198,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })  
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg') }, { upload: XeonBotInc.waUploadToServer })  
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8294,7 +8294,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })  
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })  
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8390,7 +8390,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })  
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })  
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8879,7 +8879,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image:  fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image:  fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -8923,7 +8923,7 @@ mentionedJid:[sender],
 "title": botname, 
 "containsAutoReply": true,
 "mediaType": 1, 
-"thumbnail": fs.readFileSync("./XeonMedia/theme/cheemspic.jpg"),
+"thumbnail": fs.readFileSync("./Plugins/cheemspic.jpg"),
 "mediaUrl": `${wagc}`,
 "sourceUrl": `${wagc}`
 }
@@ -10090,7 +10090,7 @@ https://cloud.google.com/translate/docs/languages
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -10446,7 +10446,7 @@ break
 	    }
 	    break
 			case 'obfus': case 'obfuscate':{
-if (!text) return replygcxeon(`Example ${prefix+command} const xeonbot = require('baileys')`)
+if (!text) return replygcxeon(`Example ${prefix+command} const Lazackbots = require('baileys')`)
 try {
 let meg = await obfus(text)
 replygcxeon(`Success
@@ -10481,7 +10481,7 @@ if (!XeonTheCreator) return XeonStickOwner()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -10843,7 +10843,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -10969,7 +10969,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image:  fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image:  fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -11133,7 +11133,7 @@ await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -11247,7 +11247,7 @@ await XeonBotInc.relayMessage(m.chat, msgs.message, {})
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -11398,7 +11398,7 @@ ${resulw}`
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image:  fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image:  fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -11514,7 +11514,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -11590,7 +11590,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -11865,7 +11865,7 @@ break
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12053,7 +12053,7 @@ break
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12139,7 +12139,7 @@ let msgs = generateWAMessageFromContent(m.chat, {
           }),
           header: proto.Message.InteractiveMessage.Header.create({
           hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
+          ...await prepareWAMessageMedia({ image: fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer })
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [{
@@ -12207,7 +12207,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12282,7 +12282,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12357,7 +12357,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12432,7 +12432,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12507,7 +12507,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12579,7 +12579,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12652,7 +12652,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12725,7 +12725,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12800,7 +12800,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12875,7 +12875,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -12950,7 +12950,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -13025,7 +13025,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -13099,7 +13099,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -13173,7 +13173,7 @@ if (!m.isAdmin && !XeonTheCreator) return XeonStickAdmin()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -13434,7 +13434,7 @@ if (!XeonTheCreator) return XeonStickOwner()
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -13487,8 +13487,8 @@ if (args.length < 1) return replygcxeon('Whats the video name?')
 if (VideoXeon.includes(q)) return replygcxeon("The name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 VideoXeon.push(q)
-await fsx.copy(delb, `./XeonMedia/video/${q}.mp4`)
-fs.writeFileSync('./XeonMedia/database/xeonvideo.json', JSON.stringify(VideoXeon))
+await fsx.copy(delb, `./plugins/${q}.mp4`)
+fs.writeFileSync('./Plugins/xeonvideo.json', JSON.stringify(VideoXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Success Adding Video\nCheck by typing ${prefix}listvideo`)
 }
@@ -13499,8 +13499,8 @@ if (args.length < 1) return replygcxeon('Enter the video name')
 if (!VideoXeon.includes(q)) return replygcxeon("The name does not exist in the database")
 let wanu = VideoXeon.indexOf(q)
 VideoXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/xeonvideo.json', JSON.stringify(VideoXeon))
-fs.unlinkSync(`./XeonMedia/video/${q}.mp4`)
+fs.writeFileSync('./Plugins/xeonvideo.json', JSON.stringify(VideoXeon))
+fs.unlinkSync(`./Plugins/${q}.mp4`)
 replygcxeon(`Success deleting video ${q}`)
 }
 break
@@ -13519,8 +13519,8 @@ if (args.length < 1) return replygcxeon('Whats the image name?')
 if (ImageXeon.includes(q)) return replygcxeon("The name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 ImageXeon.push(q)
-await fsx.copy(delb, `./XeonMedia/image/${q}.jpg`)
-fs.writeFileSync('./XeonMedia/database/xeonimage.json', JSON.stringify(ImageXeon))
+await fsx.copy(delb, `./plugins/mtaju/${q}.jpg`)
+fs.writeFileSync('./plugins/xeonimage.json', JSON.stringify(ImageXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Success Adding Image\nCheck by typing ${prefix}listimage`)
 }
@@ -13531,8 +13531,8 @@ if (args.length < 1) return replygcxeon('Enter the image name')
 if (!ImageXeon.includes(q)) return replygcxeon("The name does not exist in the database")
 let wanu = ImageXeon.indexOf(q)
 ImageXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/xeonimage.json', JSON.stringify(ImageXeon))
-fs.unlinkSync(`./XeonMedia/image/${q}.jpg`)
+fs.writeFileSync('./Plugins/xeonimage.json', JSON.stringify(ImageXeon))
+fs.unlinkSync(`./Plugins/mtaju/${q}.jpg`)
 replygcxeon(`Success deleting image ${q}`)
 }
 break
@@ -13551,8 +13551,8 @@ if (args.length < 1) return replygcxeon('Whats the sticker name?')
 if (StickerXeon.includes(q)) return replygcxeon("The name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 StickerXeon.push(q)
-await fsx.copy(delb, `./XeonMedia/sticker/${q}.webp`)
-fs.writeFileSync('./XeonMedia/database/xeonsticker.json', JSON.stringify(StickerXeon))
+await fsx.copy(delb, `./Plugins/${q}.webp`)
+fs.writeFileSync('./Plugins/xeonsticker.json', JSON.stringify(StickerXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Success Adding Sticker\nCheck by typing ${prefix}liststicker`)
 }
@@ -13563,8 +13563,8 @@ if (args.length < 1) return replygcxeon('Enter the sticker name')
 if (!StickerXeon.includes(q)) return replygcxeon("The name does not exist in the database")
 let wanu = StickerXeon.indexOf(q)
 StickerXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/xeonsticker.json', JSON.stringify(StickerXeon))
-fs.unlinkSync(`./XeonMedia/sticker/${q}.webp`)
+fs.writeFileSync('./Plugins/xeonsticker.json', JSON.stringify(StickerXeon))
+fs.unlinkSync(`./Plugins/${q}.webp`)
 replygcxeon(`Success deleting sticker ${q}`)
 }
 break
@@ -13583,8 +13583,8 @@ if (args.length < 1) return replygcxeon('Whats the audio name?')
 if (VoiceNoteXeon.includes(q)) return replygcxeon("The name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 VoiceNoteXeon.push(q)
-await fsx.copy(delb, `./XeonMedia/audio/${q}.mp3`)
-fs.writeFileSync('./XeonMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
+await fsx.copy(delb, `./Plugins/${q}.mp3`)
+fs.writeFileSync('./Plugins/xeonvn.json', JSON.stringify(VoiceNoteXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Success Adding Audio\nCheck by typing ${prefix}listvn`)
 }
@@ -13595,8 +13595,8 @@ if (args.length < 1) return replygcxeon('Enter the vn name')
 if (!VoiceNoteXeon.includes(q)) return replygcxeon("The name does not exist in the database")
 let wanu = VoiceNoteXeon.indexOf(q)
 VoiceNoteXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/xeonvn.json', JSON.stringify(VoiceNoteXeon))
-fs.unlinkSync(`./XeonMedia/audio/${q}.mp3`)
+fs.writeFileSync('./Plugins/xeonvn.json', JSON.stringify(VoiceNoteXeon))
+fs.unlinkSync(`./Plugins/${q}.mp3`)
 replygcxeon(`Success deleting vn ${q}`)
 }
 break
@@ -13618,8 +13618,8 @@ let teks = `${text}`
 if (ZipXeon.includes(teks)) return replygcxeon("This name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 ZipXeon.push(teks)
-await fsx.copy(delb, `./XeonMedia/zip/${teks}.zip`)
-fs.writeFileSync('./XeonMedia/database/zip.json', JSON.stringify(ZipXeon))
+await fsx.copy(delb, `./Plugins/${teks}.zip`)
+fs.writeFileSync('./Plugins/zip.json', JSON.stringify(ZipXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Success Adding zip\nTo check type ${prefix}listzip`)
 }
@@ -13634,8 +13634,8 @@ let teks = `${text}`
 if (!ZipXeon.includes(teks)) return replygcxeon("This name does not exist in the database")
 let wanu = ZipXeon.indexOf(teks)
 ZipXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/zip.json', JSON.stringify(ZipXeon))
-fs.unlinkSync(`./XeonMedia/zip/${teks}.zip`)
+fs.writeFileSync('./Plugins/zip.json', JSON.stringify(ZipXeon))
+fs.unlinkSync(`./Plugins/${teks}.zip`)
 replygcxeon(`Successfully deleted zip ${teks}`)
 }
 }
@@ -13659,8 +13659,8 @@ let teks = `${text}`
 if (ApkXeon.includes(teks)) return replygcxeon("This name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 apknye.push(teks)
-await fsx.copy(delb, `./XeonMedia/apk/${teks}.apk`)
-fs.writeFileSync('./XeonMedia/database/apk.json', JSON.stringify(ApkXeon))
+await fsx.copy(delb, `./Plugins/${teks}.apk`)
+fs.writeFileSync('./Plugins/apk.json', JSON.stringify(ApkXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Successful Adding apk\nTo Check type ${prefix}listapk`)
 }
@@ -13675,8 +13675,8 @@ let teks = `${text}`
 if (!ApkXeon.includes(teks)) return replygcxeon("This name does not exist in the database")
 let wanu = ApkXeon.indexOf(teks)
 ApkXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/apk.json', JSON.stringify(ApkXeon))
-fs.unlinkSync(`./XeonMedia/apk/${teks}.apk`)
+fs.writeFileSync('./Plugins/apk.json', JSON.stringify(ApkXeon))
+fs.unlinkSync(`./Plugins/${teks}.apk`)
 replygcxeon(`Successfully deleted Apk ${teks}`)
 }
 }
@@ -13700,8 +13700,8 @@ let teks = `${text}`
 if (DocXeon.includes(teks)) return replygcxeon("This name is already in use")
 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 DocXeon.push(teks)
-await fsx.copy(delb, `./XeonMedia/doc/${teks}.pdf`)
-fs.writeFileSync('./XeonMedia/database/doc.json', JSON.stringify(DocXeon))
+await fsx.copy(delb, `./Plugins/${teks}.pdf`)
+fs.writeFileSync('./Plugins/doc.json', JSON.stringify(DocXeon))
 fs.unlinkSync(delb)
 replygcxeon(`Successful Adding Pdf\nTo check type ${prefix}listpdf`)
 }
@@ -13716,8 +13716,8 @@ let teks = `${text}`
 if (!DocXeon.includes(teks)) return replygcxeon("This name does not exist in the database")
 let wanu = DocXeon.indexOf(teks)
 DocXeon.splice(wanu, 1)
-fs.writeFileSync('./XeonMedia/database/doc.json', JSON.stringify(DocXeon))
-fs.unlinkSync(`./XeonMedia/doc/${teks}.pdf`)
+fs.writeFileSync('./Plugins/doc.json', JSON.stringify(DocXeon))
+fs.unlinkSync(`./Plugins/${teks}.pdf`)
 replygcxeon(`Successfully deleted pdf ${teks}`)
 }
 }
@@ -13894,7 +13894,7 @@ break
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -14023,7 +14023,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
                 if (!XeonTheCreator) return XeonStickOwner()
                 try {
                 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-                await fsx.copy(delb, './XeonMedia/theme/Cheems-bot.mp4')
+                await fsx.copy(delb, './Plugins/Cheems-bot.mp4')
                 fs.unlinkSync(delb)
                 replygcxeon(mess.done)
                 } catch {
@@ -14036,7 +14036,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
                 if (!XeonTheCreator) return XeonStickOwner()
                 try {
                 let delb = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-                await fsx.copy(delb, './XeonMedia/theme/cheemspic.jpg')
+                await fsx.copy(delb, './Plugins/cheemspic.jpg')
                 fs.unlinkSync(delb)
                 replygcxeon(mess.done)
                 } catch {
@@ -14065,7 +14065,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -14345,7 +14345,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -14417,7 +14417,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
@@ -14489,7 +14489,7 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
             text: botname
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./Plugins/cheemspic.jpg')}, { upload: XeonBotInc.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: ownername,
