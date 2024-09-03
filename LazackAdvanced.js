@@ -60,13 +60,13 @@ const xsteek = fs.readFileSync(`./Plugins/x.webp`)
 const o = fs.readFileSync(`./Plugins/o.jpg`)
 
 //media
-const VoiceNoteXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonvn.json'));
-const StickerXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonsticker.json'));
-const ImageXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonimage.json'));
-const VideoXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/xeonvideo.json'));
-const DocXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/doc.json'));
-const ZipXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/zip.json'));
-const ApkXeon = JSON.parse(fs.readFileSync('./XeonMedia/database/apk.json'));
+const VoiceNoteXeon = JSON.parse(fs.readFileSync('./Plugins/xeonvn.json'));
+const StickerXeon = JSON.parse(fs.readFileSync('./Plugins/xeonsticker.json'));
+const ImageXeon = JSON.parse(fs.readFileSync('./Plugins/xeonimage.json'));
+const VideoXeon = JSON.parse(fs.readFileSync('./Plugins/xeonvideo.json'));
+const DocXeon = JSON.parse(fs.readFileSync('./Plugins/doc.json'));
+const ZipXeon = JSON.parse(fs.readFileSync('./Plugins/zip.json'));
+const ApkXeon = JSON.parse(fs.readFileSync('./Plugins/apk.json'));
 
 const prem = require('./src/premium');
 const owner = JSON.parse(fs.readFileSync('./src/owner.json'));
