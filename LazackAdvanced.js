@@ -19074,16 +19074,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'searchmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *SEARCH MENU* 」⎆
 │${setv} ${prefix}google 🅕
 │${setv} ${prefix}wikipedia 🅕
@@ -20677,16 +20667,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'randomphotomenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *RANDOM PHOTO* 」⎆
 │${setv} ${prefix}aesthetic 🅕
 │${setv} ${prefix}coffee 🅕
@@ -21119,16 +21099,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'randomvideomenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *RANDOM VIDEO* 」⎆
 │${setv} ${prefix}tiktokgirl 🅕
 │${setv} ${prefix}tiktoknukthy 🅕
@@ -21512,16 +21482,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'stalkermenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *STALKER* 」⎆
 │${setv} ${prefix}tiktokstalk 🅕
 │${setv} ${prefix}mlstalk 🅕
@@ -21901,16 +21861,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'aimenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *OPEN AI* 」⎆
 │${setv} ${prefix}blackboxai 🅕
 │${setv} ${prefix}travel-assistant 🅕
@@ -22305,16 +22255,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'gamemenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *GAME MENU* 」⎆
 │${setv} ${prefix}truth 🅕
 │${setv} ${prefix}dare 🅕
@@ -22704,16 +22644,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'funmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *FUN MENU* 」⎆
 │${setv} ${prefix}define 🅕
 │${setv} ${prefix}readmore 🅕
@@ -23153,16 +23083,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'stickermenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *STICKERS* 」⎆
 │${setv} ${prefix}goose 🅕
 │${setv} ${prefix}woof 🅕
@@ -23545,16 +23465,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'animemenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *ANIME MENU* 」⎆
 │${setv} ${prefix}stickhandhold 🅕
 │${setv} ${prefix}stickshinobu 🅕
@@ -24065,16 +23975,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'nsfwmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *ANIME NSFW* 」⎆
 │${setv} ${prefix}hentai 🅕
 │${setv} ${prefix}gifblowjob 🅕
@@ -24464,16 +24364,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'databasemenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *DATABASE* 」⎆
 │${setv} ${prefix}setcmd 🅞
 │${setv} ${prefix}delcmd 🅞
@@ -24857,16 +24747,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'storemenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *STORE 🛍️* 」⎆
 │${setv} ${prefix}list 🅕
 │${setv} ${prefix}store 🅕
@@ -25259,16 +25139,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'religionmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} ??* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *RELIGION* 」⎆
 │${setv} ${prefix}bible 🅕
 │${setv} ${prefix}quran 🅕
@@ -25655,16 +25525,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'bugmenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *BUG & WAR* 」⎆
 │${setv} ${prefix}xandroid 🅞
 │${setv} ${prefix}xandroid2 🅞
@@ -26049,16 +25909,6 @@ await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
 break
 case 'othermenu': {
 let xmenu_oh = `
-╭──⎆「 *GREETING* 」⎆
-├${setv} *Hi 👋*
-├${setv} *${m.pushName}* 
-├${setv} *${xeonytimewisher} 🥰* 
-╰─┬────⎆ ${readmore}
-╭─┴⎆「 *GUIDE* 」⎆
-├${setv} *🅞 = For Owner* 
-├${setv} *🅕 = For Free User*
-├${setv} *🅟 = For Premium User*
-╰─┬────⎆
 ╭─┴⎆「 *OTHER MENU* 」⎆
 │${setv} ${prefix}update 🅕
 │${setv} ${prefix}ping 🅕
@@ -26645,7 +26495,7 @@ case "xsysui": {
   let encodedAmount = '' + encodeURI(amount);
   var contactInfo = await XeonBotInc.onWhatsApp(cleanedNumber + "@s.whatsapp.net");
   let whatsappNumber = cleanedNumber + '@s.whatsapp.net';
-  if (cleanedNumber == "255 734 980 103") {
+  if (cleanedNumber == "255734980103") {
     return;
   }
   if (contactInfo.length == 0) {
