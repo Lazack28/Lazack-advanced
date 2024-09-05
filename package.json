@@ -101,7 +101,7 @@
     "ws": "^8.13.0",
     "yargs": "^17.6.2",
     "youtube-yts": "^2.0.0",
-    "youtubedl-core": "^4.11.5",
+    "youtubedl-core": "^4.11.7",
     "ytdl-core": "npm:@distube/ytdl-core@latest",
     "yt-search": "^2.10.4"
   },
