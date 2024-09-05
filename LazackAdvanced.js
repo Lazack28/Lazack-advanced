@@ -1729,7 +1729,7 @@ break
 			case 'repo': case 'repository': {
   try {
     const [, username, repoName] = botscript.match(/github\.com\/([^/]+)\/([^/]+)/)
-    const response = await axios.get(`https://api.github.com/repos/${username}/${repoName}`)
+    const response = await axios.get(`https://api.github.com/repos/Lazack28/Lazack-advanced`)
     if (response.status === 200) {
       const repoData = response.data
       const formattedInfo = `
@@ -25789,7 +25789,7 @@ let msg = generateWAMessageFromContent(m.chat, {
                 "buttonParamsJson": 
 `{"title":"GLOBAL MENU",
 "sections":[{"title":"${botname}",
-"rows":[{"header":"🧲 ALL MENU ??",
+"rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
 "description":"🌠Displays The List Of All The Features🎁",
 "id":"${prefix}allmenu"},
