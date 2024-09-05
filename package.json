@@ -1,5 +1,5 @@
 {
-  "name": "CheemsBot-MD",
+  "name": "Lazack-advance",
   "version": "15.0.0",
   "description": "Bot WhatsApp Using Lib Baileys Multi Device",
   "main": "start.js",
@@ -8,9 +8,9 @@
     "start": "node start.js"
   },
   "keywords": [
-    "Whatsapp Bot By DGXeon"
+    "Whatsapp Bot By Lazack"
   ],
-  "author": "DGXeon",
+  "author": "Lazack",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys" : "^6.7.5",
