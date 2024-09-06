@@ -49,6 +49,10 @@
 
 ----------------------
 
+***[TUTORIAL HOW TO DEPLOY](https://vm.tiktok.com/ZMrEaehwD/)***
+
+----------------------
+
 ****MAIN DEV EDITOR****
 
  [![Lazack28](https://github.com/Lazack28.png?size=100)](https://github.com/Lazack28)
