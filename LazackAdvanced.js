@@ -17062,7 +17062,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"📶 ALL MENU 🎊",
 "title":"click to display",
@@ -18067,7 +18067,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"📶 ALL MENU 🎊",
 "title":"click to display",
@@ -18520,7 +18520,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"📶 ALL MENU 🎊",
 "title":"click to display",
@@ -18952,7 +18952,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"📶 ALL MENU 🎊",
 "title":"click to display",
@@ -19339,7 +19339,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"📶 ALL MENU 🎊",
 "title":"click to display",
@@ -19740,7 +19740,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"📶 ALL MENU 🎊",
 "title":"click to display",
@@ -20158,7 +20158,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -20545,7 +20545,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -20977,7 +20977,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -21360,7 +21360,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -21739,7 +21739,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -22133,7 +22133,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -22522,7 +22522,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -22707,7 +22707,7 @@ let xmenu_oh = `
 │${setv} ${prefix}spank 🅕
 │${setv} ${prefix}tickle 🅕
 │${setv} ${prefix}feed 🅕
-│${setv} ${prefix}checkme 🅕
+│${setv} ${prefix}checkme ??
 │${setv} ${prefix}sound1 - sound161 🅕
 ╰──────⎆`
 if (typemenu === 'v1') {
@@ -22961,7 +22961,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -23343,7 +23343,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -23853,7 +23853,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -24242,7 +24242,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -24625,7 +24625,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -25017,7 +25017,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -25403,7 +25403,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -25787,7 +25787,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
@@ -26178,7 +26178,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-`{"title":"GLOBAL MENU",
+`{"title":"ADVANCE MENU",
 "sections":[{"title":"${botname}",
 "rows":[{"header":"🧲 ALL MENU 🎊",
 "title":"click to display",
