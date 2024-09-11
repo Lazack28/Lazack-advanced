@@ -8909,7 +8909,7 @@ await XeonBotInc.relayMessage(m.chat, msgs.message, {})
     break
     case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 let me = m.sender
-let teks = `*「  ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nHi @${me.split('@')[0]} 👋\nDont forget to donate yeah🍜 👇 https://telegra.ph/file/f6119ab1993a2d875843a.jpg`
+let teks = `*「  ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nHi @${me.split('@')[0]} 👋\nDonate through Tanzania Mpesa accunt🍜 👇 MPESA ACCOUNT NUMBER: 0758868502-Lazaro Mtaju`
 sendXeonBotIncMessage(m.chat, { 
 text: teks,
 mentions:[sender],
@@ -17517,7 +17517,7 @@ let xmenu_oh = `
 │${setv} ${prefix}photoleap 🅕
 │${setv} ${prefix}openai 🅕
 │${setv} ${prefix}dalle 🅕
-│${setv} ${prefix}ai 🅕
+│${setv} ${prefix}ai ??
 │${setv} ${prefix}remini 🅕
 ╰─┬────⎆
 ╭─┴⎆「 *GAME MENU* 」⎆
@@ -22707,7 +22707,7 @@ let xmenu_oh = `
 │${setv} ${prefix}spank 🅕
 │${setv} ${prefix}tickle 🅕
 │${setv} ${prefix}feed 🅕
-│${setv} ${prefix}checkme ??
+│${setv} ${prefix}checkme 🅕
 │${setv} ${prefix}sound1 - sound161 🅕
 ╰──────⎆`
 if (typemenu === 'v1') {
