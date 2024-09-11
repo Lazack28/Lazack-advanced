@@ -18,7 +18,7 @@ global.wm = "Lazack."
 global.botscript = 'https://github.com/Lazack28/Lazack-Advanced' //script link
 global.packname = "Sticker By"
 global.author = "Lazack\n\n+255734980103"
-global.creator = "255734980103@s.whatsapp.net"
+global.creator = "255775303762@s.whatsapp.net"
 global.xprefix = '.'
 global.premium = ["255734980103"] // Premium User
 
