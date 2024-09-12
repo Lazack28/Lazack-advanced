@@ -264,9 +264,9 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                if (!('autodownload' in setting)) setting.autodownload = false 
                if (!('autobio' in setting)) setting.autobio = false 
                if (!('autoread' in setting)) setting.autoread = false
-               if (!('autorecordtype' in setting)) setting.autorecordtype = false
+               if (!('autorecordtype' in setting)) setting.autorecordtype = true
                if (!('autorecord' in setting)) setting.autorecord = false
-               if (!('autotype' in setting)) setting.autotype = false
+               if (!('autotype' in setting)) setting.autotype = true
                if (!('autoblocknum' in setting)) setting.autoblocknum = false
                if (!('onlyindia' in setting)) setting.onlyindia = false
                if (!('onlyindo' in setting)) setting.onlyindo = false
@@ -287,9 +287,9 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
                onlyindo: false,
                onlygrub: false,
                onlypc: false,
-               autorecordtype: false,
+               autorecordtype: true,
                autorecord: false,
-               autotype: false,               
+               autotype: true,               
             }
 	} catch (e) {
 		throw e;
