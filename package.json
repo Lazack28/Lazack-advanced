@@ -102,7 +102,7 @@
     "yargs": "^17.6.2",
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
-    "ytdl-core": "npm:@distube/ytdl-core@latest",
+    "ytdl-core": "github:soya-daizu/ytdl-core#sig-patch",
     "yt-search": "^2.10.4"
   },
   "directories": {
