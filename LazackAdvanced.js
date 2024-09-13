@@ -16530,7 +16530,7 @@ ${themeemoji} Title: ${result.title}`;
 	  if (!text) return replygcxeon(`You need to give the URL of Any Instagram video, post, reel, image`)
   let res
   try {
-    res = await fetch(`https://www.guruapi.tech/api/igdlv1?url=${text}`)
+    res = await fetch(`https://api.fgmods.xyz/api/downloader/igdl?url=${text}`)
   } catch (error) {
     return replygcxeon(`An error occurred: ${error.message}`)
   }
