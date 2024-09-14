@@ -45,25 +45,25 @@ let ntnsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 let bad = JSON.parse(fs.readFileSync('./src/badword.json'))
 
 //bug database
-const { xeontext1 } = require('./Plugins/xeontext1')
-const { xeontext2 } = require('./Plugins/xeontext2')
-const { xeontext3 } = require('./Plugins/xeontext3')
-const { xeontext4 } = require('./Plugins/xeontext4')
-const { xeontext5 } = require('./Plugins/xeontext5')
-const { xeontext6 } = require('./Plugins/xeontext6')
-const { xeontext7 } = require('./Plugins/xeontext7')
-const { xeontext8 } = require('./Plugins/xeontext8')
-const { xeontext9 } = require('./Plugins/xeontext9')
-const { xeontext10 } = require('./Plugins/xeontext10')
+const { xeontext1 } = require('./Plugins/mtaju1')
+const { xeontext2 } = require('./Plugins/mtaju2')
+const { xeontext3 } = require('./Plugins/mtaju3')
+const { xeontext4 } = require('./Plugins/mtaju4')
+const { xeontext5 } = require('./Plugins/mtaju5')
+const { xeontext6 } = require('./Plugins/mtaju6')
+const { xeontext7 } = require('./Plugins/mtaju7')
+const { xeontext8 } = require('./Plugins/mtaju8')
+const { xeontext9 } = require('./Plugins/mtaju9')
+const { xeontext10 } = require('./Plugins/mtaju10')
 const wkwk = fs.readFileSync(`./Plugins/x.mp3`)
 const xsteek = fs.readFileSync(`./Plugins/x.webp`)
 const o = fs.readFileSync(`./Plugins/o.jpg`)
 
 //media
-const VoiceNoteXeon = JSON.parse(fs.readFileSync('./Plugins/xeonvn.json'));
-const StickerXeon = JSON.parse(fs.readFileSync('./Plugins/xeonsticker.json'));
-const ImageXeon = JSON.parse(fs.readFileSync('./Plugins/xeonimage.json'));
-const VideoXeon = JSON.parse(fs.readFileSync('./Plugins/xeonvideo.json'));
+const VoiceNoteXeon = JSON.parse(fs.readFileSync('./Plugins/mtajuvn.json'));
+const StickerXeon = JSON.parse(fs.readFileSync('./Plugins/mtajusticker.json'));
+const ImageXeon = JSON.parse(fs.readFileSync('./Plugins/mtajuimage.json'));
+const VideoXeon = JSON.parse(fs.readFileSync('./Plugins/mtajuvideo.json'));
 const DocXeon = JSON.parse(fs.readFileSync('./Plugins/doc.json'));
 const ZipXeon = JSON.parse(fs.readFileSync('./Plugins/zip.json'));
 const ApkXeon = JSON.parse(fs.readFileSync('./Plugins/apk.json'));
@@ -16530,7 +16530,7 @@ ${themeemoji} Title: ${result.title}`;
 	  if (!text) return replygcxeon(`You need to give the URL of Any Instagram video, post, reel, image`)
   let res
   try {
-    res = await fetch(`https://www.guruapi.tech/api/igdlv1?url=${text}`)
+    res = await fetch(`https://api.fgmods.xyz/api/downloader/igdl?url=${text}&apikey=guYaDdtr`)
   } catch (error) {
     return replygcxeon(`An error occurred: ${error.message}`)
   }
