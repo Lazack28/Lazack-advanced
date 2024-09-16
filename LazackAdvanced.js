@@ -16188,7 +16188,7 @@ break
 if (!text) return replygcxeon(`Example : ${prefix + command} anime whatsapp status`)
 try {
 const xeonplaymp3 = require('./lib/ytdl')
-let yts = require("youtube-yts")
+let yts = require("yt-search")
         let search = await yts(text)
         let anup3k = search.videos[0]
 const pl= await xeonplaymp3.mp3(anup3k.url)
