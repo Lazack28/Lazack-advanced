@@ -10607,14 +10607,14 @@ break
 • 🔗 *Url*: ${api.data[0].url}`;
 
     // Send the song info to the user
-    await XliconBotInc.sendMessage(m.chat, { text: songInfo }, { quoted: m });
+    await XeonBotInc.sendMessage(m.chat, { text: songInfo }, { quoted: m });
 
     // Fetch the Spotify song download link
     let spodl = await fetchJson(`https://api.junn4.my.id/download/spotify?url=${api.data[0].url}`);
     const spoDl = spodl.data.download;
 
     // Send the Spotify song as an audio message with additional context (external ad reply)
-    await XliconBotInc.sendMessage(m.chat, {
+    await XeonBotInc.sendMessage(m.chat, {
       audio: { url: spoDl },
       mimetype: 'audio/mpeg',
       contextInfo: {
@@ -10632,7 +10632,7 @@ break
 
   } catch (error) {
     console.error('Error fetching Spotify data:', error);
-    await XliconBotInc.sendMessage(m.chat, { text: '❌ An error occurred while fetching the Spotify data. Please try again later.' }, { quoted: m });
+    await XeonBotInc.sendMessage(m.chat, { text: '❌ An error occurred while fetching the Spotify data. Please try again later.' }, { quoted: m });
   }
 }
     break
@@ -19401,7 +19401,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🐼Displays The List Of Database Features🦚",
 "id":"${prefix}databasemenu"},
-{"header":"🧬STORE MENU🍁",
+{"header":"??STORE MENU🍁",
 "title":"click to display",
 "description":"💃Displays The List Of Store Features😎",
 "id":"${prefix}storemenu"},
@@ -22967,7 +22967,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🦄Displays The List Of Download Features💕",
 "id":"${prefix}downloadmenu"},
-{"header":"??GAME MENU🚀",
+{"header":"🎩GAME MENU🚀",
 "title":"click to display",
 "description":"🍂Displays The List Of Game Features🌺",
 "id":"${prefix}gamemenu"},
