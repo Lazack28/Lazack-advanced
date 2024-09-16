@@ -17,7 +17,7 @@
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^4.2.4",
     "@develoka/angka-terbilang-js": "^1.4.2",
-    "@distube/ytdl-core": "^4.13.5",
+    "@distube/ytdl-core": "^4.14.4",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@hapi/boom": "^10.0.0",
     "@ibaraki-douji/pixivts": "^2.4.1",
@@ -103,7 +103,7 @@
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
     "ytdl-core": "^4.11.5",
-    "yt-search": "^2.10.4"
+    "yt-search": "^2.12.1"
   },
   "directories": {
     "lib": "lib",
