@@ -10592,57 +10592,49 @@ break
            case 'spotify':{
 	if (!text) return replygcxeon(`*Please enter a song name*`)
     try {
-        const apiUrl = (`https://api.junn4.my.id/search/spotify?query=${text}`);
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            console.log('Error searching for song:', response.statusText)
-            return replygcxeon('Error searching for song')
+        let api = await fetchJson(`https://api.junn4.my.id/search/spotify?query=${text}`);
+    
+    if (!api.data || api.data.length === 0) {
+      await XeonBotInc.sendMessage(m.chat, '❌ No results found on Spotify. Please try again with a different query.', { quoted: m });
+      return;
         }
-        const data = await response.json()
-        const coverimage = data.spty.results.thumbnail
-        const name = data.spty.results.title
-        const slink = data.spty.results.url
-        const dlapi = `https://www.guruapi.tech/api/spotifydl?text=${encodeURIComponent(text)}`
-        const audioResponse = await fetch(dlapi)
-        if (!audioResponse.ok) {
-            console.log('Error fetching audio:', audioResponse.statusText)
-            return replygcxeon('Error fetching audio')
+            // Prepare the response message with song information
+    const songInfo = `*🎶 S P O T I F Y - D L 🎶*
+
+• 🎵 *Title*: ${api.data[0].title}
+• ⏱️ *Duration*: ${api.data[0].duration}
+• ⭐ *Popularity*: ${api.data[0].popularity}
+• 🔗 *Url*: ${api.data[0].url}`;
+
+    // Send the song info to the user
+    await XliconBotInc.sendMessage(m.chat, { text: songInfo }, { quoted: m });
+
+    // Fetch the Spotify song download link
+    let spodl = await fetchJson(`https://api.junn4.my.id/download/spotify?url=${api.data[0].url}`);
+    const spoDl = spodl.data.download;
+
+    // Send the Spotify song as an audio message with additional context (external ad reply)
+    await XliconBotInc.sendMessage(m.chat, {
+      audio: { url: spoDl },
+      mimetype: 'audio/mpeg',
+      contextInfo: {
+        externalAdReply: {
+          title: `🎵 - sᴘᴏᴛɪғʏ -`,
+          body: api.data[0].title,
+          thumbnailUrl: spodl.data.image, // Use the song's album image as thumbnail
+          sourceUrl: global.sourceurl || spodl.data.url, // URL to the source (you can customize this)
+          mediaType: 2,
+          showAdAttribution: true,
+          renderLargerThumbnail: true
         }
-        const audioBuffer = await audioResponse.buffer()
-        const tempDir = os.tmpdir()
-        const audioFilePath = path.join(tempDir, 'audio.mp3')
-        try {
-            await fs.promises.writeFile(audioFilePath, audioBuffer)
-        } catch (writeError) {
-            console.error('Error writing audio file:', writeError)
-            return replygcxeon( 'Error writing audio file')
-        }
-        let doc = {
-            audio: {
-              url: audioFilePath
-            },
-            mimetype: 'audio/mpeg',
-            ptt: true,
-            waveform:  [100, 0, 100, 0, 100, 0, 100],
-            fileName: "dgxeon",
-            contextInfo: {
-              mentionedJid: [m.sender],
-              externalAdReply: {
-                title: `PLAYING TO ${name}`,
-                body: botname,
-                thumbnailUrl: coverimage,
-                sourceUrl: websitex,
-                mediaType: 1,
-                renderLargerThumbnail: true
-              }
-            }
-        }        
-        await XeonBotInc.sendMessage(m.chat, doc, { quoted: m })
-    } catch (error) {
-        console.error('Error fetching Spotify data:', error)
-        return replygcxeon('*Error*')
-    }
-    }
+      }
+    }, { quoted: m });
+
+  } catch (error) {
+    console.error('Error fetching Spotify data:', error);
+    await XliconBotInc.sendMessage(m.chat, { text: '❌ An error occurred while fetching the Spotify data. Please try again later.' }, { quoted: m });
+  }
+}
     break
 			case 'mediafire': {
   	if (!args[0]) return replygcxeon(`Enter the mediafire link next to the command`)
@@ -22975,7 +22967,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🦄Displays The List Of Download Features💕",
 "id":"${prefix}downloadmenu"},
-{"header":"🎩GAME MENU🚀",
+{"header":"??GAME MENU🚀",
 "title":"click to display",
 "description":"🍂Displays The List Of Game Features🌺",
 "id":"${prefix}gamemenu"},
@@ -23409,7 +23401,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🍹Displays The List Of Sticker Features🚇",
 "id":"${prefix}stickermenu"},
-{"header":"🦋DATABASE MENU??",
+{"header":"🦋DATABASE MENU🍭",
 "title":"click to display",
 "description":"🐼Displays The List Of Database Features🦚",
 "id":"${prefix}databasemenu"},
