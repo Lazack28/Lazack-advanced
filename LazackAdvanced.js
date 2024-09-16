@@ -207,7 +207,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 			if (typeof group !== 'object') global.db.groups[m.chat] = {}
 			if (group) {
 				if (!('ntnsfw' in group)) group.ntnsfw = false
-				  if (!('welcome' in group)) group.welcome = true
+				  if (!('welcome' in group)) group.welcome = false
                   if (!('setinfo' in group)) group.setinfo = false
 				  if (!('badword' in group)) group.badword = false
                   if (!('antiforeignnum' in group)) group.antiforeignnum = false
@@ -230,7 +230,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 			} else {
 				global.db.groups[m.chat] = {
 				  ntsfw: false,
-				  welcome: true,
+				  welcome: false,
 				  setinfo: false,
 				  badword: false,
                   antiforeignnum: false,
@@ -10592,7 +10592,7 @@ break
            case 'spotify':{
 	if (!text) return replygcxeon(`*Please enter a song name*`)
     try {
-        const apiUrl = `https://www.guruapi.tech/api/spotifyinfo?text=${encodeURIComponent(text)}`
+        const apiUrl = (`https://api.junn4.my.id/search/spotify?query=${text}`);
         const response = await fetch(apiUrl);
         if (!response.ok) {
             console.log('Error searching for song:', response.statusText)
@@ -23409,7 +23409,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🍹Displays The List Of Sticker Features🚇",
 "id":"${prefix}stickermenu"},
-{"header":"🦋DATABASE MENU🍭",
+{"header":"🦋DATABASE MENU??",
 "title":"click to display",
 "description":"🐼Displays The List Of Database Features🦚",
 "id":"${prefix}databasemenu"},
