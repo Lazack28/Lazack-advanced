@@ -1713,6 +1713,9 @@ break
 			case 'rentbot':
                 replygcxeon(`Type ${prefix}owner and chat him`)
                 break
+            case 'bot':
+                replygcxeon(`Type join my channel stupid\n 𝐋𝐀𝐙𝐀𝐂𝐊-𝐌𝐃 𝙎𝙐𝙋𝙋𝙊𝙍𝙏\n channel on WhatsApp https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x `)
+                break
 			case "idgroup": case "idgc": case "groupid": {
 if (!XeonTheCreator) return XeonStickOwner()
 let getGroups = await XeonBotInc.groupFetchAllParticipating()
