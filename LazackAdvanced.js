@@ -16177,7 +16177,7 @@ break
 			}
 			break
 			// Search Menu
-			case 'play':  case 'song': {
+			case 'play2':  case 'song2': {
 if (!text) return replygcxeon(`Example : ${prefix + command} anime whatsapp status`)
 try {
 const xeonplaymp3 = require('./lib/ytdl')
@@ -16208,8 +16208,8 @@ await fs.unlinkSync(pl.path)
 }
 break
 
-case 'play2':
-case 'song2': {
+case 'play':
+case 'song': {
   try {
     if (!text) return replygcxeon(`Example: ${prefix + command} anime whatsapp status`);
 
