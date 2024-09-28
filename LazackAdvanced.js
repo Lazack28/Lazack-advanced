@@ -1713,9 +1713,6 @@ break
 			case 'rentbot':
                 replygcxeon(`Type ${prefix}owner and chat him`)
                 break
-            case 'bot':
-                replygcxeon(`join my channel stupid\n\n 𝐋𝐀𝐙𝐀𝐂𝐊-𝐌𝐃 𝙎𝙐𝙋𝙋𝙊𝙍𝙏\n\n channel on WhatsApp https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x `)
-                break
 			case "idgroup": case "idgc": case "groupid": {
 if (!XeonTheCreator) return XeonStickOwner()
 let getGroups = await XeonBotInc.groupFetchAllParticipating()
@@ -10613,7 +10610,8 @@ break
     await XeonBotInc.sendMessage(m.chat, { text: songInfo }, { quoted: m });
 
     // Fetch the Spotify song download link
-    let spodl = await fetchJson(`https://api.junn4.my.id/download/spotify?url=${api.data[0].url}`);
+    let spodl = await fetchJson(`https://api.junn4.my.id/download/spotify?url=${api.data[0]
+.url}`);
     const spoDl = spodl.data.download;
 
     // Send the Spotify song as an audio message with additional context (external ad reply)
@@ -16209,6 +16207,59 @@ await fs.unlinkSync(pl.path)
 	}
 }
 break
+
+case 'play2':
+case 'song2': {
+  try {
+    if (!text) return replygcxeon(`Example: ${prefix + command} anime whatsapp status`);
+
+    // Indicate that the bot is processing the request
+    await XeonStickWait(); // Show loading indicator
+
+    // Perform a search using yts
+    const yts = require("yt-search");
+    let search = await yts(text);
+
+    if (!search || search.videos.length === 0) {
+      return replygcxeon('❌ No video found');
+    }
+
+    // Get the first video from the search results
+    let video = search.videos[0];
+
+    // Use the video URL to fetch audio
+    const xeonplaymp3 = require('./lib/ytdl');
+    const response = await axios.get(`https://ytdl.giftedtech.workers.dev/?url=${video.url}`);
+
+    if (!response.data || !response.data.result || !response.data.result.mp3) {
+      return replygcxeon('🚫 Error fetching audio from the URL.');
+    }
+
+    // Prepare message with audio details
+    const audioDetails = `🎶 *Title:* _${video.title}_\n` +
+                         `⏳ *Duration:* _${video.timestamp}_\n` +
+                         `👤 *Artist:* _${video.author.name}_\n` +
+                         `👀 *Views:* _${video.views.toLocaleString()} views_\n` +
+                         `🔗 *Link:* _${video.url}_`;
+
+    // Send audio details
+    await replygcxeon(audioDetails);
+
+    // Notify user that the audio is being downloaded
+    await replygcxeon('📥 Downloading audio...');
+
+    // Send audio message
+    await XeonBotInc.sendMessage(m.chat, {
+      audio: { url: response.data.result.mp3 },
+      mimetype: 'audio/mpeg'
+    }, { quoted: m });
+
+  } catch (error) {
+    console.error("Error in play2/song2 command: ", error);
+    replygcxeon("⚠️ An error occurred while processing your request.");
+  }
+}
+break;
 			
 			case 'pixiv': {
 				if (!text) return replygcxeon(`Example: ${prefix + command} hello`)
@@ -16785,27 +16836,27 @@ break
             const me = m.sender
 			const xmenu_oh = `
 ╭─┴⎆「 *MENU* 」⎆
-║${setv} ${prefix}allmenu
-║${setv} ${prefix}searchmenu
-║${setv} ${prefix}downloadmenu
-║${setv} ${prefix}gamemenu
-║${setv} ${prefix}funmenu
-║${setv} ${prefix}aimenu
-║${setv} ${prefix}groupmenu
-║${setv} ${prefix}ownermenu
-║${setv} ${prefix}convertmenu
-║${setv} ${prefix}listmenu
-║${setv} ${prefix}religionmenu
-║${setv} ${prefix}animemenu
-║${setv} ${prefix}nsfwmenu
-║${setv} ${prefix}randomphotomenu
-║${setv} ${prefix}randomvideomenu
-║${setv} ${prefix}stickermenu
-║${setv} ${prefix}databasemenu
-║${setv} ${prefix}storemenu
-║${setv} ${prefix}stalkermenu
-║${setv} ${prefix}bugmenu
-║${setv} ${prefix}othermenu
+│${setv} ${prefix}allmenu
+│${setv} ${prefix}searchmenu
+│${setv} ${prefix}downloadmenu
+│${setv} ${prefix}gamemenu
+│${setv} ${prefix}funmenu
+│${setv} ${prefix}aimenu
+│${setv} ${prefix}groupmenu
+│${setv} ${prefix}ownermenu
+│${setv} ${prefix}convertmenu
+│${setv} ${prefix}listmenu
+│${setv} ${prefix}religionmenu
+│${setv} ${prefix}animemenu
+│${setv} ${prefix}nsfwmenu
+│${setv} ${prefix}randomphotomenu
+│${setv} ${prefix}randomvideomenu
+│${setv} ${prefix}stickermenu
+│${setv} ${prefix}databasemenu
+│${setv} ${prefix}storemenu
+│${setv} ${prefix}stalkermenu
+│${setv} ${prefix}bugmenu
+│${setv} ${prefix}othermenu
 ╰──────⎆`
 if (typemenu === 'v1') {
                     XeonBotInc.sendMessage(m.chat, {
@@ -17180,84 +17231,84 @@ break
 case 'allmenu': {
 let xmenu_oh = `
 ╭─┴⎆「 *OWNER MENU* 」⎆
-║${setv} ${prefix}addbadword 
-║${setv} ${prefix}delbadword 
-║${setv} ${prefix}autoread 
-║${setv} ${prefix}autobio 
-║${setv} ${prefix}autotype 
-║${setv} ${prefix}unavailable 
-║${setv} ${prefix}autorecord 
-║${setv} ${prefix}autorecordtype 
-║${setv} ${prefix}autoswview 
-║${setv} ${prefix}setautoblock 
-║${setv} ${prefix}setantiforeign 
-║${setv} ${prefix}autoblock 
-║${setv} ${prefix}onlygc 
-║${setv} ${prefix}onlypc 
-║${setv} ${prefix}onlyindia 
-║${setv} ${prefix}onlyindo 
-║${setv} ${prefix}anticall 
-║${setv} ${prefix}self 
-║${setv} ${prefix}public 
-║${setv} ${prefix}join 
-║${setv} ${prefix}poll 
-║${setv} ${prefix}spam 
-║${setv} ${prefix}bc 
-║${setv} ${prefix}bcgroup 
-║${setv} ${prefix}setmenu 
-║${setv} ${prefix}setimgmenu 
-║${setv} ${prefix}setvidmenu 
-║${setv} ${prefix}setgifmenu 
-║${setv} ${prefix}setreply 
-║${setv} ${prefix}resethit 
-║${setv} ${prefix}resetuser 
-║${setv} ${prefix}creategc 
-║${setv} ${prefix}setexif 
-║${setv} ${prefix}getexif 
-║${setv} ${prefix}getautoblocknumber 
-║${setv} ${prefix}getantiforeignnumber 
-║${setv} ${prefix}userjid 
-║${setv} ${prefix}setbotbio 
-║${setv} ${prefix}delppbot 
-║${setv} ${prefix}shutdown 
-║${setv} ${prefix}setppbot 
-║${setv} ${prefix}addprem 
-║${setv} ${prefix}delprem 
-║${setv} ${prefix}addowner 
-║${setv} ${prefix}delowner 
-║${setv} ${prefix}addvn 
-║${setv} ${prefix}addapk 
-║${setv} ${prefix}addzip 
-║${setv} ${prefix}addpdf 
-║${setv} ${prefix}delapk 
-║${setv} ${prefix}delzip 
-║${setv} ${prefix}delpdf 
-║${setv} ${prefix}delvn 
-║${setv} ${prefix}addsticker 
-║${setv} ${prefix}delsticker 
-║${setv} ${prefix}addimage 
-║${setv} ${prefix}delimage 
-║${setv} ${prefix}addvideo 
-║${setv} ${prefix}delvideo 
-║${setv} ${prefix}upswtext 
-║${setv} ${prefix}upswvideo 
-║${setv} ${prefix}upswimage 
-║${setv} ${prefix}upswaudio 
-║${setv} ${prefix}autosticker 
-║${setv} ${prefix}block 
-║${setv} ${prefix}unblock 
-║${setv} ${prefix}leavegc 
-║${setv} ${prefix}pushcontact 
-║${setv} ${prefix}pushcontactv2 
-║${setv} ${prefix}pushcontactv3 
-║${setv} ${prefix}jpm 
-║${setv} ${prefix}checkmember 
-║${setv} ${prefix}post 
-║${setv} ${prefix}clearchat 
-║${setv} ${prefix}setprefix 
-║${setv} $ 
-║${setv} > 
-║${setv} < 
+│${setv} ${prefix}addbadword 
+│${setv} ${prefix}delbadword 
+│${setv} ${prefix}autoread 
+│${setv} ${prefix}autobio 
+│${setv} ${prefix}autotype 
+│${setv} ${prefix}unavailable 
+│${setv} ${prefix}autorecord 
+│${setv} ${prefix}autorecordtype 
+│${setv} ${prefix}autoswview 
+│${setv} ${prefix}setautoblock 
+│${setv} ${prefix}setantiforeign 
+│${setv} ${prefix}autoblock 
+│${setv} ${prefix}onlygc 
+│${setv} ${prefix}onlypc 
+│${setv} ${prefix}onlyindia 
+│${setv} ${prefix}onlyindo 
+│${setv} ${prefix}anticall 
+│${setv} ${prefix}self 
+│${setv} ${prefix}public 
+│${setv} ${prefix}join 
+│${setv} ${prefix}poll 
+│${setv} ${prefix}spam 
+│${setv} ${prefix}bc 
+│${setv} ${prefix}bcgroup 
+│${setv} ${prefix}setmenu 
+│${setv} ${prefix}setimgmenu 
+│${setv} ${prefix}setvidmenu 
+│${setv} ${prefix}setgifmenu 
+│${setv} ${prefix}setreply 
+│${setv} ${prefix}resethit 
+│${setv} ${prefix}resetuser 
+│${setv} ${prefix}creategc 
+│${setv} ${prefix}setexif 
+│${setv} ${prefix}getexif 
+│${setv} ${prefix}getautoblocknumber 
+│${setv} ${prefix}getantiforeignnumber 
+│${setv} ${prefix}userjid 
+│${setv} ${prefix}setbotbio 
+│${setv} ${prefix}delppbot 
+│${setv} ${prefix}shutdown 
+│${setv} ${prefix}setppbot 
+│${setv} ${prefix}addprem 
+│${setv} ${prefix}delprem 
+│${setv} ${prefix}addowner 
+│${setv} ${prefix}delowner 
+│${setv} ${prefix}addvn 
+│${setv} ${prefix}addapk 
+│${setv} ${prefix}addzip 
+│${setv} ${prefix}addpdf 
+│${setv} ${prefix}delapk 
+│${setv} ${prefix}delzip 
+│${setv} ${prefix}delpdf 
+│${setv} ${prefix}delvn 
+│${setv} ${prefix}addsticker 
+│${setv} ${prefix}delsticker 
+│${setv} ${prefix}addimage 
+│${setv} ${prefix}delimage 
+│${setv} ${prefix}addvideo 
+│${setv} ${prefix}delvideo 
+│${setv} ${prefix}upswtext 
+│${setv} ${prefix}upswvideo 
+│${setv} ${prefix}upswimage 
+│${setv} ${prefix}upswaudio 
+│${setv} ${prefix}autosticker 
+│${setv} ${prefix}block 
+│${setv} ${prefix}unblock 
+│${setv} ${prefix}leavegc 
+│${setv} ${prefix}pushcontact 
+│${setv} ${prefix}pushcontactv2 
+│${setv} ${prefix}pushcontactv3 
+│${setv} ${prefix}jpm 
+│${setv} ${prefix}checkmember 
+│${setv} ${prefix}post 
+│${setv} ${prefix}clearchat 
+│${setv} ${prefix}setprefix 
+│${setv} $ 
+│${setv} > 
+│${setv} < 
 ╰─┬────⎆
 ╭─┴⎆「 *GROUP MENU* 」⎆
 │${setv} ${prefix}antibot 
