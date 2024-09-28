@@ -10592,57 +10592,50 @@ break
            case 'spotify':{
 	if (!text) return replygcxeon(`*Please enter a song name*`)
     try {
-        const apiUrl = `https://www.guruapi.tech/api/spotifyinfo?text=${encodeURIComponent(text)}`
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            console.log('Error searching for song:', response.statusText)
-            return replygcxeon('Error searching for song')
+        let api = await fetchJson(`https://api.junn4.my.id/search/spotify?query=${text}`);
+    
+    if (!api.data || api.data.length === 0) {
+      await XeonBotInc.sendMessage(m.chat, '❌ No results found on Spotify. Please try again with a different query.', { quoted: m });
+      return;
         }
-        const data = await response.json()
-        const coverimage = data.spty.results.thumbnail
-        const name = data.spty.results.title
-        const slink = data.spty.results.url
-        const dlapi = `https://www.guruapi.tech/api/spotifydl?text=${encodeURIComponent(text)}`
-        const audioResponse = await fetch(dlapi)
-        if (!audioResponse.ok) {
-            console.log('Error fetching audio:', audioResponse.statusText)
-            return replygcxeon('Error fetching audio')
+            // Prepare the response message with song information
+    const songInfo = `*🎶 S P O T I F Y - D L 🎶*
+
+• 🎵 *Title*: ${api.data[0].title}
+• ⏱️ *Duration*: ${api.data[0].duration}
+• ⭐ *Popularity*: ${api.data[0].popularity}
+• 🔗 *Url*: ${api.data[0].url}`;
+
+    // Send the song info to the user
+    await XeonBotInc.sendMessage(m.chat, { text: songInfo }, { quoted: m });
+
+    // Fetch the Spotify song download link
+    let spodl = await fetchJson(`https://api.junn4.my.id/download/spotify?url=${api.data[0]
+.url}`);
+    const spoDl = spodl.data.download;
+
+    // Send the Spotify song as an audio message with additional context (external ad reply)
+    await XeonBotInc.sendMessage(m.chat, {
+      audio: { url: spoDl },
+      mimetype: 'audio/mpeg',
+      contextInfo: {
+        externalAdReply: {
+          title: `🎵 - sᴘᴏᴛɪғʏ -`,
+          body: api.data[0].title,
+          thumbnailUrl: spodl.data.image, // Use the song's album image as thumbnail
+          sourceUrl: global.sourceurl || spodl.data.url, // URL to the source (you can customize this)
+          mediaType: 2,
+          showAdAttribution: true,
+          renderLargerThumbnail: true
         }
-        const audioBuffer = await audioResponse.buffer()
-        const tempDir = os.tmpdir()
-        const audioFilePath = path.join(tempDir, 'audio.mp3')
-        try {
-            await fs.promises.writeFile(audioFilePath, audioBuffer)
-        } catch (writeError) {
-            console.error('Error writing audio file:', writeError)
-            return replygcxeon( 'Error writing audio file')
-        }
-        let doc = {
-            audio: {
-              url: audioFilePath
-            },
-            mimetype: 'audio/mpeg',
-            ptt: true,
-            waveform:  [100, 0, 100, 0, 100, 0, 100],
-            fileName: "dgxeon",
-            contextInfo: {
-              mentionedJid: [m.sender],
-              externalAdReply: {
-                title: `PLAYING TO ${name}`,
-                body: botname,
-                thumbnailUrl: coverimage,
-                sourceUrl: websitex,
-                mediaType: 1,
-                renderLargerThumbnail: true
-              }
-            }
-        }        
-        await XeonBotInc.sendMessage(m.chat, doc, { quoted: m })
-    } catch (error) {
-        console.error('Error fetching Spotify data:', error)
-        return replygcxeon('*Error*')
-    }
-    }
+      }
+    }, { quoted: m });
+
+  } catch (error) {
+    console.error('Error fetching Spotify data:', error);
+    await XeonBotInc.sendMessage(m.chat, { text: '❌ An error occurred while fetching the Spotify data. Please try again later.' }, { quoted: m });
+  }
+}
     break
 			case 'mediafire': {
   	if (!args[0]) return replygcxeon(`Enter the mediafire link next to the command`)
@@ -16184,7 +16177,7 @@ break
 			}
 			break
 			// Search Menu
-			case 'play':  case 'song': {
+			case 'play2':  case 'song2': {
 if (!text) return replygcxeon(`Example : ${prefix + command} anime whatsapp status`)
 try {
 const xeonplaymp3 = require('./lib/ytdl')
@@ -16214,6 +16207,59 @@ await fs.unlinkSync(pl.path)
 	}
 }
 break
+
+case 'play':
+case 'song': {
+  try {
+    if (!text) return replygcxeon(`Example: ${prefix + command} anime whatsapp status`);
+
+    // Indicate that the bot is processing the request
+    await XeonStickWait(); // Show loading indicator
+
+    // Perform a search using yts
+    const yts = require("yt-search");
+    let search = await yts(text);
+
+    if (!search || search.videos.length === 0) {
+      return replygcxeon('❌ No video found');
+    }
+
+    // Get the first video from the search results
+    let video = search.videos[0];
+
+    // Use the video URL to fetch audio
+    const xeonplaymp3 = require('./lib/ytdl');
+    const response = await axios.get(`https://apisku-furina.vercel.app/api/downloader/play?q=${text}&apikey=indradev`);
+
+    if (!response.data || !response.data.result || !response.data.result.mp3) {
+      return replygcxeon('🚫 Error fetching audio from the URL.');
+    }
+
+    // Prepare message with audio details
+    const audioDetails = `🎶 *Title:* _${video.title}_\n` +
+                         `⏳ *Duration:* _${video.timestamp}_\n` +
+                         `👤 *Artist:* _${video.author.name}_\n` +
+                         `👀 *Views:* _${video.views.toLocaleString()} views_\n` +
+                         `🔗 *Link:* _${video.url}_`;
+
+    // Send audio details
+    await replygcxeon(audioDetails);
+
+    // Notify user that the audio is being downloaded
+    await replygcxeon('📥 Downloading audio...');
+
+    // Send audio message
+    await XeonBotInc.sendMessage(m.chat, {
+      audio: { url: response.data.result.mp3 },
+      mimetype: 'audio/mpeg'
+    }, { quoted: m });
+
+  } catch (error) {
+    console.error("Error in play2/song2 command: ", error);
+    replygcxeon("⚠️ An error occurred while processing your request.");
+  }
+}
+break;
 			
 			case 'pixiv': {
 				if (!text) return replygcxeon(`Example: ${prefix + command} hello`)
@@ -16530,7 +16576,7 @@ ${themeemoji} Title: ${result.title}`;
 	  if (!text) return replygcxeon(`You need to give the URL of Any Instagram video, post, reel, image`)
   let res
   try {
-    res = await fetch(`https://www.guruapi.tech/api/igdlv1?url=${text}`)
+    res = await fetch(`https://api.fgmods.xyz/api/downloader/igdl?url=${text}&apikey=guYaDdtr`)
   } catch (error) {
     return replygcxeon(`An error occurred: ${error.message}`)
   }
@@ -19409,7 +19455,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 "title":"click to display",
 "description":"🐼Displays The List Of Database Features🦚",
 "id":"${prefix}databasemenu"},
-{"header":"🧬STORE MENU🍁",
+{"header":"??STORE MENU🍁",
 "title":"click to display",
 "description":"💃Displays The List Of Store Features😎",
 "id":"${prefix}storemenu"},
