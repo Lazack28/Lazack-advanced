@@ -16444,6 +16444,32 @@ case 'ytmp3': case 'ytaudio': case 'ytplayaudio': {
 				await XeonBotInc.sendMessage(m.chat, { video: { url: hasil.result }, caption: `*📍Title:* ${hasil.title}\n*✏Description:* ${hasil.desc ? hasil.desc : ''}\n*🚀Channel:* ${hasil.channel}\n*🗓Upload at:* ${hasil.uploadDate}` }, { quoted: m });
 			}
 			break
+		case 'yta': {
+      if (!text) return replygcxeon(`Example: ${prefix + command} youtube_url`);
+      if (!text.includes('youtu')) return replygcxlicon('The URL does not contain results from YouTube!');
+      XeonStickWait();
+      
+      try {
+          const response = await axios.get(`https://ironman.koyeb.app/ironman/dl/ytdl2?url=${text}`);
+          const hasil = response.data;
+  
+          // Check if audio URL is available
+          if (!hasil.audio) {
+              throw new Error('No audio download link found.');
+          }
+  
+          const audioLink = hasil.audio;
+  
+          await XeonBotInc.sendMessage(m.chat, {
+              audio: { url: audioLink },
+              mimetype: 'audio/mp4' // Change to mp4 if required
+          }, { quoted: m });
+      } catch (error) {
+          console.error('Error in yta2 command:', error);
+          replygcxeon('⚠️ An error occurred while processing the audio.');
+      }
+  }
+  break;	
 			case 'apk': {
 	try {
     if (command === 'apk') {
