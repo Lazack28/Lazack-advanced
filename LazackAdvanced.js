@@ -16446,7 +16446,7 @@ case 'ytmp3': case 'ytaudio': case 'ytplayaudio': {
 			break
 		case 'yta': {
       if (!text) return replygcxeon(`Example: ${prefix + command} youtube_url`);
-      if (!text.includes('youtu')) return replygcxlicon('The URL does not contain results from YouTube!');
+      if (!text.includes('youtu')) return replygcxeon('The URL does not contain results from YouTube!');
       XeonStickWait();
       
       try {
