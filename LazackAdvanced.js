@@ -16470,6 +16470,37 @@ case 'ytmp3': case 'ytaudio': case 'ytplayaudio': {
       }
   }
   break;	
+  case 'ytv': {
+      if (!text) return replygcxeon(`Example: ${prefix + command} youtube_url`);
+      if (!text.includes('youtu')) return replygcxeon('The URL does not contain results from YouTube!');
+      XeonStickWait();
+      
+      try {
+          const response = await axios.get(`https://ironman.koyeb.app/ironman/dl/ytdl2?url=${text}`);
+          const hasil = response.data;
+  
+          // Check if video URL is available
+          if (!hasil.video) {
+              throw new Error('No video download link found.');
+          }
+  
+          const videoLink = hasil.video;
+          const caption = `*_DOWNLOADED BY XLICON V4 MD_*\n\n
+  🎬 *Title*: _${hasil.title}_\n
+  ✨ *Enjoy your video!* 🎥\n🔥 *Powered by Team Lazack* 💻`;
+  
+          await XeonBotInc.sendMessage(m.chat, {
+              video: { url: videoLink },
+              caption: caption,
+              thumbnail: { url: hasil.thumbnail } // Include thumbnail if available
+          }, { quoted: m });
+      } catch (error) {
+          console.error('Error in ytv command:', error);
+          replygcxeon('⚠️ An error occurred while processing the video.');
+      }
+  }
+  break;
+  
 			case 'apk': {
 	try {
     if (command === 'apk') {
