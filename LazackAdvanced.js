@@ -16444,6 +16444,63 @@ case 'ytmp3': case 'ytaudio': case 'ytplayaudio': {
 				await XeonBotInc.sendMessage(m.chat, { video: { url: hasil.result }, caption: `*📍Title:* ${hasil.title}\n*✏Description:* ${hasil.desc ? hasil.desc : ''}\n*🚀Channel:* ${hasil.channel}\n*🗓Upload at:* ${hasil.uploadDate}` }, { quoted: m });
 			}
 			break
+		case 'yta': {
+      if (!text) return replygcxeon(`Example: ${prefix + command} youtube_url`);
+      if (!text.includes('youtu')) return replygcxeon('The URL does not contain results from YouTube!');
+      XeonStickWait();
+      
+      try {
+          const response = await axios.get(`https://ironman.koyeb.app/ironman/dl/ytdl2?url=${text}`);
+          const hasil = response.data;
+  
+          // Check if audio URL is available
+          if (!hasil.audio) {
+              throw new Error('No audio download link found.');
+          }
+  
+          const audioLink = hasil.audio;
+  
+          await XeonBotInc.sendMessage(m.chat, {
+              audio: { url: audioLink },
+              mimetype: 'audio/mp4' // Change to mp4 if required
+          }, { quoted: m });
+      } catch (error) {
+          console.error('Error in yta2 command:', error);
+          replygcxeon('⚠️ An error occurred while processing the audio.');
+      }
+  }
+  break;	
+  case 'ytv': {
+      if (!text) return replygcxeon(`Example: ${prefix + command} youtube_url`);
+      if (!text.includes('youtu')) return replygcxeon('The URL does not contain results from YouTube!');
+      XeonStickWait();
+      
+      try {
+          const response = await axios.get(`https://ironman.koyeb.app/ironman/dl/ytdl2?url=${text}`);
+          const hasil = response.data;
+  
+          // Check if video URL is available
+          if (!hasil.video) {
+              throw new Error('No video download link found.');
+          }
+  
+          const videoLink = hasil.video;
+          const caption = `*_youre video boss_*\n\n
+  🎬 *Title*: _${hasil.title}_\n
+  ✨ *Enjoy your video!* 🎥\n🔥 *Powered by Team Lazack* 💻`;
+  
+          await XeonBotInc.sendMessage(m.chat, {
+              video: { url: videoLink },
+              caption: caption,
+              thumbnail: { url: hasil.thumbnail } // Include thumbnail if available
+          }, { quoted: m });
+      } catch (error) {
+          console.error('Error in ytv command:', error);
+          replygcxeon('⚠️ An error occurred while processing the video.');
+      }
+  }
+  break;
+  
 			case 'apk': {
 	try {
     if (command === 'apk') {
@@ -17388,7 +17445,8 @@ let xmenu_oh = `
 │${setv} ${prefix}xvideodl 
 │${setv} ${prefix}itunes 
 │${setv} ${prefix}play 
-│${setv} ${prefix}ytmp3 
+│${setv} ${prefix}ytmp3
+│${setv} ${prefix}ytv (video link)
 │${setv} ${prefix}ytmp4 
 │${setv} ${prefix}tiktok 
 │${setv} ${prefix}tiktokaudio 
@@ -19513,6 +19571,7 @@ let xmenu_oh = `
 │${setv} ${prefix}itunes 
 │${setv} ${prefix}play ??
 │${setv} ${prefix}ytmp3 
+│${setv} ${prefix}ytv (youtube link)
 │${setv} ${prefix}ytmp4 
 │${setv} ${prefix}tiktok 
 │${setv} ${prefix}tiktokaudio 
