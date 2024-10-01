@@ -16485,7 +16485,7 @@ case 'ytmp3': case 'ytaudio': case 'ytplayaudio': {
           }
   
           const videoLink = hasil.video;
-          const caption = `*_DOWNLOADED BY XLICON V4 MD_*\n\n
+          const caption = `*_youre video boss_*\n\n
   🎬 *Title*: _${hasil.title}_\n
   ✨ *Enjoy your video!* 🎥\n🔥 *Powered by Team Lazack* 💻`;
   
