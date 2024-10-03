@@ -26779,6 +26779,91 @@ case "xsysui": {
   );
 }
 break;
+case 'cowboy': {
+XeonBotInc.shoot = XeonBotInc.shoot || { musuh: [], shoot: [] }
+if(/left/i.test(text)) {
+    let left = [
+      ["🤠", "・", "・", "・", "・"],
+      ["・", "🤠", "・", "・", "・"],
+      ["・", "・", "🤠", "・", "・"],
+      ["・", "・", "・", "🤠", "・"],
+      ["・", "・", "・", "・", "🤠"]
+    ]
+    if(XeonBotInc.shoot.shoot.indexOf("🤠") == 0) {
+      XeonBotInc.shoot.shoot = left[0]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 1) {
+      XeonBotInc.shoot.shoot = left[0]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 2) {
+      XeonBotInc.shoot.shoot = left[1]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 3) {
+      XeonBotInc.shoot.shoot = left[2]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 4) {
+      XeonBotInc.shoot.shoot = left[3]
+    }
+    let teks = `🤠 Cowboy Chasing Criminals 🥷\n\n`
+      teks += `Your territory:\n${XeonBotInc.shoot.shoot.join(" ")}\n`
+      teks += `Criminals terriroty:\n${XeonBotInc.shoot.musuh.join(" ")}\n`
+      teks += `*☘️ Example :* ${prefix + command} right or ${prefix + command} left for move to right/left and ${prefix + command} shoot to shoot`
+    if(XeonBotInc.shoot.musuh.indexOf("🥷") === XeonBotInc.shoot.shoot.indexOf("🤠")) return replygcxeon(teks)
+return replygcxeon(teks)
+  } else if(/right/i.test(text)) {
+    let right = [
+      ["🤠", "・", "・", "・", "・"],
+      ["・", "🤠", "・", "・", "・"],
+      ["・", "・", "🤠", "・", "・"],
+      ["・", "・", "・", "🤠", "・"],
+      ["・", "・", "・", "・", "🤠"]
+    ]
+    if(XeonBotInc.shoot.shoot.indexOf("🤠") == 0) {
+      XeonBotInc.shoot.shoot = right[1]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 1) {
+      XeonBotInc.shoot.shoot = right[2]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 2) {
+      XeonBotInc.shoot.shoot = right[3]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 3) {
+      XeonBotInc.shoot.shoot = right[4]
+    } else if(XeonBotInc.shoot.shoot.indexOf("🤠") == 4) {
+      XeonBotInc.shoot.shoot = right[4]
+    }
+    let teks = `🤠 Cowboy Chacing Criminals 🥷\n\n`
+      teks += `Your territory:\n${XeonBotInc.shoot.shoot.join(" ")}\n`
+      teks += `Criminals terriroty:\n${XeonBotInc.shoot.musuh.join(" ")}\n`
+      teks += `*☘️ Example :* ${prefix + command} right or ${prefix + command} left for move to right/left and ${prefix + command} shoot to shoot`
+    if(XeonBotInc.shoot.musuh.indexOf("🥷") === XeonBotInc.shoot.shoot.indexOf("🤠")) return replygcxeon(teks)
+    return replygcxeon(teks)
+  } else if(/shoot/i.test(text)) {
+    if(XeonBotInc.shoot.shoot.indexOf("🤠") == XeonBotInc.shoot.musuh.indexOf("🥷")) {
+      XeonBotInc.shoot = {}
+      XeonBotInc.sendTextWithMentions(m.chat, `🎉 Congratulations! you succeeded in chasing the criminals! 🎉`, m)
+    }
+  } else {
+   let randMusuh = [
+      ["🥷", "・", "・", "・", "・"],
+      ["・", "🥷", "・", "・", "・"],
+      ["・", "・", "🥷", "・", "・"],
+      ["・", "・", "・", "🥷", "・"],
+      ["・", "・", "・", "・", "🥷"]
+    ]
+   let randAku = [
+      ["🤠", "・", "・", "・", "・"],
+      ["・", "🤠", "・", "・", "・"],
+      ["・", "・", "🤠", "・", "・"],
+      ["・", "・", "・", "🤠", "・"],
+      ["・", "・", "・", "・", "🤠"]
+    ]
+    let musuh = pickRandom(randMusuh)
+   let aku = pickRandom(randAku)
+    XeonBotInc.shoot.musuh = musuh
+    XeonBotInc.shoot.shoot = aku
+    let teks = `🤠 Cowboy Chasing Criminals 🥷\n\n`
+      teks += `Your territory:\n${XeonBotInc.shoot.shoot.join(" ")}\n`
+      teks += `Criminals terriroty:\n${XeonBotInc.shoot.musuh.join(" ")}\n`
+      teks += `*☘️ Example :* ${prefix + command} right or ${prefix + command} left for move to right/left and ${prefix + command} shoot to shoot`
+    if(XeonBotInc.shoot.musuh.indexOf("🥷") === XeonBotInc.shoot.shoot.indexOf("🤠")) return replygcxeon(teks)
+    return replygcxeon(teks)
+  }
+}
+break;
 case 'ioskill': case 'iosx': {
             	if (!XeonTheCreator) return
 let xeonyvictim = q.replace(/[^0-9]/g, "")
