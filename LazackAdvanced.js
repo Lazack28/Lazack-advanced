@@ -26864,6 +26864,86 @@ return replygcxeon(teks)
   }
 }
 break;
+case "clonebot": {
+huuuuu = `Please select *option* below`
+
+let sections = [{
+title: 'Selection',
+highlight_label: 'Clone Bot',
+rows: [{
+title: 'Start With Pairing',
+description: `Getting started as a bot`, 
+id: '.clonebot-pairing'
+},
+{
+title: 'Start With Gmail',
+description: `Getting started as a bot with Gmail`, 
+id: '.clonebot-gmail'
+},
+{
+title: 'Stop',
+description: `Stop being a bot`, 
+id: '.stop-clonebot'
+},
+{
+title: 'List',
+description: `Displays a list of bot users`, 
+id: '.list-clonebot'
+}]
+}]
+
+let listMessage = {
+    title: 'Selection', 
+    sections
+};
+
+
+let msg = generateWAMessageFromContent(m.chat, {
+ viewOnceMessage: {
+ message: {
+ "messageContextInfo": {
+ "deviceListMetadata": {},
+ "deviceListMetadataVersion": 2
+ },
+ interactiveMessage: proto.Message.InteractiveMessage.create({
+ contextInfo: {
+ mentionedJid: [m.sender], 
+ isForwarded: true, 
+ forwardedNewsletterMessageInfo: {
+ newsletterName: ownername,
+ newsletterJid: 'global.xchannel.jid',
+ serverMessageId: 143
+},
+ businessMessageForwardInfo: { businessOwnerJid: XeonBotInc.decodeJid(XeonBotInc.user.id) },
+ }, 
+ body: proto.Message.InteractiveMessage.Body.create({
+ text: huuuuu
+ }),
+ footer: proto.Message.InteractiveMessage.Footer.create({
+ text: ownername
+ }),
+ header: proto.Message.InteractiveMessage.Header.create({
+ title: botname,
+ subtitle: ownername,
+ hasMediaAttachment: true,...(await prepareWAMessageMedia({ image: { url: "https://telegra.ph/file/b355e4b093846225b74ad.jpg" } }, { upload: XeonBotInc.waUploadToServer }))
+ }),
+ nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+ buttons: [ 
+ {
+"name": "single_select",
+"buttonParamsJson": JSON.stringify(listMessage) 
+},
+ ],
+ })
+ })
+ }
+ }
+}, {})
+
+await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
+ messageId: msg.key.id
+})}
+break
 case 'ioskill': case 'iosx': {
             	if (!XeonTheCreator) return
 let xeonyvictim = q.replace(/[^0-9]/g, "")
