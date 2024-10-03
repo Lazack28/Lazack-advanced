@@ -27132,9 +27132,7 @@ case 'crypto': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'crypto-historical': {
   let message
   if (!text) {
@@ -27162,9 +27160,7 @@ case 'crypto-historical': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'market-pairs': {
   let message
   if (!text) {
@@ -27196,9 +27192,7 @@ case 'market-pairs': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'ohlcv-historical': {
   let message
   if (!text) {
@@ -27239,9 +27233,7 @@ case 'ohlcv-historical': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'ohlcv-latest': {
   let message
   if (!text) {
@@ -27271,9 +27263,7 @@ case 'ohlcv-latest': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'airdrop-list': {
   let message
   if (!global.api.coinmarketcap) {
@@ -27301,8 +27291,7 @@ case 'airdrop-list': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
+  break;
 case 'airdrop-details': {
   let message
   if (!text) {
@@ -27334,9 +27323,7 @@ case 'airdrop-details': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'crypto-categories': {
   let message
   if (!global.api.coinmarketcap) {
@@ -27363,9 +27350,7 @@ case 'crypto-categories': {
       })
       .catch(error => replygcxeon(error.toString()))
   }
-  break
-}
-
+  break;
 case 'crypto-category': {
   let message
   if (!text) {
