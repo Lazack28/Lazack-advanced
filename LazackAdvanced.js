@@ -26864,6 +26864,168 @@ return replygcxeon(teks)
   }
 }
 break;
+case "clonebot-gmail":
+    if (!isPremium) return replyprem(mess.premium);
+    if (!text) return replygcxeon("*☘️ Example :* .clonebot-gmail youremail@gmail.com|nomoryangmauclonebot");
+
+    const [email, phoneNumber] = text.split('|');
+    if (!email || !phoneNumber) return replygcxeon("*☘️ Example :* .clonebot-gmail youremail@gmail.com|62838••••••••");
+
+    await CloneBot(XeonBotInc, phoneNumber, m, from);
+    await sleep(4800);
+
+    const code = global.codepairing;
+    const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Your Pairing WhatsApp Bot</title>
+            <style>
+                .code-container {
+                    background-color: #000018;
+                    color: #222;
+                    padding: 20px;
+                    border-radius: 5px;
+                    border: 1px solid #222;
+                }
+                .code {
+                    background-color: #000018;
+                    color: #000018;
+                    padding: 10px;
+                    text-align: center;
+                    font-weight: bold;
+                    border: 1px solid #222;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="code-container">
+                <h3>Request Code Pairing</h3>
+                <p>Hello,</p>
+                <p>Thank you for using this WhatsApp bot, here is your pairing code request:</p>
+                <div class="code">${code}</div>
+                <p>Notification Request Pairing Code, Enter the pairing code above to be able to connect to the WhatsApp bot</p>
+                <p>Time limit for request code: 30 seconds!!!</p>
+            </div>
+        </body>
+        </html>
+    `;
+    try {
+        await sendEmail(email, 'Your Pairing Code', htmlContent);
+        replygcxeon('Success! Pairing code has been sent to your email.');
+    } catch (error) {
+        console.error('Error sending email:', error);
+        replygcxeon('Failed to send pairing code. Please try again.');
+    }
+
+    console.log('CloneBot');
+    break;
+    case "clonebot-pairing":
+    if (!isPremium) return replyprem(mess.premium)
+  if (!text) return replygcxeon("*☘️ Example :* .clonebot-pairing 6283123443245")
+await CloneBot(XeonBotInc, text, m, from)
+            let furry = "`"
+            await sleep(4800)
+let jadibo = `*${furry}Enter the code below to become a temporary bot${furry}*\n\n1. Click the three dots in the top right corner\n2. Tap linked device\n3. Tap link device\n4. Tap link with phone number only\n5. Enter the code below\n\nNote: the code can expire at any time!\n\nCode: ${furry}${global.codepairing}${furry}\nIf the Code Error Please Delete the sessionclone Folder\n\nClick the Code pairing Button To Copy Code`
+let onlyprivjdb = '*Success!*'
+
+
+
+let tekss9999 = jadibo;
+
+let msghhhhhhhhhhhhhhhhhh = generateWAMessageFromContent(m.chat, {
+ viewOnceMessage: {
+ message: {
+ "messageContextInfo": {
+ "deviceListMetadata": {},
+ "deviceListMetadataVersion": 2
+ },
+ interactiveMessage: proto.Message.InteractiveMessage.create({
+ contextInfo: {
+   mentionedJid: [m.sender], 
+   isForwarded: false, 
+   businessMessageForwardInfo: { businessOwnerJid: XeonBotInc.decodeJid(XeonBotInc.user.id) },
+   externalAdReply: { 
+     title: ownername, 
+     thumbnailUrl: 'https://telegra.ph/file/b355e4b093846225b74ad.jpg', 
+     sourceUrl: '',
+     mediaType: 2,
+     renderLargerThumbnail: false
+   }
+ }, 
+ body: proto.Message.InteractiveMessage.Body.create({
+   text: tekss9999
+ }),
+ footer: proto.Message.InteractiveMessage.Footer.create({
+   text: botname
+ }),
+ header: proto.Message.InteractiveMessage.Header.create({
+   title: ``,
+   subtitle: ownername,
+ }),
+ nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+   buttons: [
+     {
+       "name": "cta_copy",
+       "buttonParamsJson": `{"display_text":"${global.codepairing}","id":"123456789","copy_code":"${global.codepairing}"}`
+     },
+   ],
+ })
+ })
+ }
+ }
+}, {});
+
+await XeonBotInc.relayMessage(`${text}@s.whatsapp.net`, msghhhhhhhhhhhhhhhhhh.message, {
+ messageId: msghhhhhhhhhhhhhhhhhh.key.id
+});
+
+setTimeout(async () => {
+    replygcxeon(onlyprivjdb)
+}, 1200)
+        console.log('CloneBot')
+        break   
+        case 'stop-clonebot':
+if (!isPremium) return replyprem(mess.premium)
+
+ const folderPath = `./sessionclone/CloneBot/${from}`; 
+
+ if (!fs.existsSync(folderPath)) {
+ return replygcxeon('Kamu Belum CloneBot');
+ }
+
+ try {
+ fs.rmSync(folderPath, { recursive: true, force: true });
+ replygcxeon('Session telah dihapus.');
+ } catch (error) {
+ replygcxeon('Error :', error);
+ }
+ break
+ case 'list-clonebot': 
+if (!isPremium) return replyprem(mess.premium)
+try {
+let user = [... new Set([...global.conns.filter(danzz => danzz.user).map(danzz => danzz.user)])]
+te = "*-- List CloneBot --*\n\n"
+for (let i of user){
+y = await ptz.decodeJid(i.id)
+te += " •• User : @" + y.split("@")[0] + "\n"
+te += " •• Name : " + i.name + "\n\n"
+}
+XeonBotInc.sendMessage(m.chat,{text:te,mentions: [y], },{quoted:m})
+} catch (err) {
+replygcxeon(`there are no clone bot users yet`)
+}
+break 
+case "start-clonebot":
+if (!isPremium) return replyprem(mess.premium)
+
+try {
+let user = [... new Set([...global.conns.filter(danzz => danzz.user).map(danzz => danzz.user)])]
+await CloneBot(ptz, text, m, frommeky)
+} catch (err) {
+replygcxeon(`there are no cloneBot users yet`)
+}
+break;
 case "clonebot": {
 huuuuu = `Please select *option* below`
 
