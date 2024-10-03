@@ -26925,7 +26925,7 @@ let msg = generateWAMessageFromContent(m.chat, {
  header: proto.Message.InteractiveMessage.Header.create({
  title: botname,
  subtitle: ownername,
- hasMediaAttachment: true,...(await prepareWAMessageMedia({ image: { url: "https://telegra.ph/file/b355e4b093846225b74ad.jpg" } }, { upload: XeonBotInc.waUploadToServer }))
+ hasMediaAttachment: true,...(await prepareWAMessageMedia({ image: { url: "https://i.imgur.com/X1SZ8oN.jpeg" } }, { upload: XeonBotInc.waUploadToServer }))
  }),
  nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
  buttons: [ 
