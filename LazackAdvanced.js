@@ -17259,6 +17259,10 @@ let msg = generateWAMessageFromContent(m.chat, {
                  "buttonParamsJson": "{\"display_text\":\"YouTube 📶\",\"url\":\"https://youtube.com/@lazaromtaju?si=u8DlsnWfkqAPondy\",\"merchant_url\":\"https://www.google.com\"}"
               },
               {
+  "name": "quick_reply",
+  "buttonParamsJson": `{"display_text":"Allmenu 🗂️","id":"${prefix}allmenu"}`
+   },
+              {
                  "name": "cta_url",
                  "buttonParamsJson": "{\"display_text\":\"WhatsApp 📱\",\"url\":\"https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x\",\"merchant_url\":\"https://www.google.com\"}"
 	      }
@@ -17445,7 +17449,8 @@ let xmenu_oh = `
 │${setv} ${prefix}xvideodl 
 │${setv} ${prefix}itunes 
 │${setv} ${prefix}play 
-│${setv} ${prefix}ytmp3 
+│${setv} ${prefix}ytmp3
+│${setv} ${prefix}ytv (video link)
 │${setv} ${prefix}ytmp4 
 │${setv} ${prefix}tiktok 
 │${setv} ${prefix}tiktokaudio 
@@ -19570,6 +19575,7 @@ let xmenu_oh = `
 │${setv} ${prefix}itunes 
 │${setv} ${prefix}play ??
 │${setv} ${prefix}ytmp3 
+│${setv} ${prefix}ytv (youtube link)
 │${setv} ${prefix}ytmp4 
 │${setv} ${prefix}tiktok 
 │${setv} ${prefix}tiktokaudio 
@@ -26531,6 +26537,164 @@ case "xios2":
     }
   }
   break;
+  case "addusr": {
+if (!XeonTheCreator) return replygcxeon(mess.owner)
+let s = text.split(',')
+let email = s[0];
+let username = s[0]
+let nomor = s[1]
+if (s.length < 2) return replygcxeon(`*Wrong format!*
+*☘️ Example :*
+${prefix + command} user,nomer`)
+if (!username) return replygcxeon(`*☘️ Example :* ${prefix+command} Username,@tag/nomor\n\n*☘️ Example :*\n${prefix+command} example,@user`)
+if (!nomor) return replygcxeon(`*☘️ Example :* ${prefix+command} Username,@tag/nomor\n\n*☘️ Example :*\n${prefix+command} example,@user`)
+let u = m.quoted ? m.quoted.sender : s[1] ? s[1].replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.mentionedJid[0];
+if (!u) return replygcxeon(`*Wrong format!*
+
+*☘️ Example :*
+${prefix + command} email,username,name,number/tag`);
+let d = (await XeonBotInc.onWhatsApp(u.split`@`[0]))[0] || {}
+let password = d.exists ? crypto.randomBytes(5).toString('hex') : s[3]
+let f = await fetch(domain + "/api/application/users", {
+"method": "POST",
+"headers": {
+"Accept": "application/json",
+"Content-Type": "application/json",
+"Authorization": "Bearer " + apikey
+},
+"body": JSON.stringify({
+"email": username + "@gmail.com",
+"username": username,
+"first_name": username,
+"last_name": "Memb",
+"language": "en",
+"password": password.toString()
+})
+})
+let data = await f.json();
+if (data.errors) return replygcxeon(JSON.stringify(data.errors[0], null, 2));
+let user = data.attributes
+let p = `
+*SUCCESSFULLY ADD USER*
+
+╭─❏ *『 USER INFO 』*
+┣❐ ➤ *ID* : ${user.id}
+┣❏ ➤ *USERNAME* : ${user.username}
+┣❏ ➤ *EMAIL* : ${user.email}
+┣❏ ➤ *NAME* : ${user.first_name} ${user.last_name}
+┣❏ ➤ *CREATED AT* :  ${xdate}
+┗⬣ *PASSWORD SUCCESSFULLY SEND TO @${u.split`@`[0]}*`
+
+let sections = [{
+title: 'Paket Server Panel',
+highlight_label: 'Recomended',
+rows: [{
+title: 'Unli',
+description: `Unlimited Ram/Cpu`, 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,0/0,0`
+},
+{
+title: '1Gb', 
+description: "1Gb Ram/50 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,1200/1200,50`
+},
+{
+title: '2Gb', 
+description: "2Gb Ram/70 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,2200/2200,70`
+},
+{
+title: '3Gb', 
+description: "3Gb Ram/100 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,3200/3200,100`
+},
+{
+title: '4Gb', 
+description: "4Gb Ram/125 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,4200/4200,125`
+},
+{
+title: '5Gb', 
+description: "5Gb Ram/150 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,5200/5200,150`
+},
+{
+title: '6Gb', 
+description: "6Gb Ram/175 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,6200/6200,175`
+},
+{
+title: '7Gb', 
+description: "7Gb Ram/175 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,7200/7200,175`
+},
+{
+title: '8Gb', 
+description: "8Gb Ram/200 Cpu", 
+id: `.addsrv ${user.first_name},${xdate},${user.id},15,1,8200/8200,200`
+}]
+}]
+
+let listMessage = {
+    title: 'List Panel', 
+    sections
+};
+
+let msg = generateWAMessageFromContent(m.chat, {
+ viewOnceMessage: {
+ message: {
+ "messageContextInfo": {
+ "deviceListMetadata": {},
+ "deviceListMetadataVersion": 2
+ },
+ interactiveMessage: proto.Message.InteractiveMessage.create({
+ contextInfo: {
+ mentionedJid: [m.sender], 
+ isForwarded: true, 
+ forwardedNewsletterMessageInfo: {
+ newsletterJid: global.idsal,
+ newsletterName: 'Powered ByLazackBotInc', 
+ serverMessageId: -1
+},
+ businessMessageForwardInfo: { businessOwnerJid: XeonBotInc.decodeJid(XeonBotInc.user.id) },
+ }, 
+ body: proto.Message.InteractiveMessage.Body.create({
+ text: ''
+ }),
+ footer: proto.Message.InteractiveMessage.Footer.create({
+ text: `${footer2}`
+ }),
+ header: proto.Message.InteractiveMessage.Header.create({
+ title: "PLEASE CHOOSE THE SIZE YOU WANT TO BUY",
+ subtitle: "dcdXdino",
+ hasMediaAttachment: true,...(await prepareWAMessageMedia({ image: { url: "https://telegra.ph/file/2396b22796cc175c80f28.jpg" } }, { upload: XeonBotInc.waUploadToServer }))
+ }),
+ nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+ buttons: [ 
+ {
+ "name": "single_select",
+"buttonParamsJson": JSON.stringify(listMessage)
+ },
+ ]
+ })
+ })
+ }
+ }
+}, {})
+
+await XeonBotInc.relayMessage(msg.key.remoteJid, msg.message, {
+ messageId: msg.key.id
+})
+XeonBotInc.sendMessage(u, { text: `*HERE ARE THE DETAILS OF YOUR PANEL ACCOUNT*\n
+╭─❏ *『 USER INFO 』*
+┣❏ ➤ *📧EMAIL* : ${email}
+┣❏ ➤ *👤USERNAME* : ${username}
+┣❏ ➤ *🔐PASSWORD* : ${password.toString()}
+┣❏ ➤ *🌐LOGIN* : ${domain}
+┗⬣`,
+})
+}
+break;
   case "🙂":
   {
 	if (!XeonTheCreator) return
