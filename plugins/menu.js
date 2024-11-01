@@ -275,7 +275,7 @@ module.exports = {
             footer: global.footer,
             media: setting.cover
           }).then(async () => {
-            let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
+            let music = await Func.random(['https://imgur.com/q7WXO5w.jpeg', 'https://imgur.com/q7WXO5w.jpeg', 'https://imgur.com/q7WXO5w.jpeg'])
             conn.sendFMusic(m.chat, music, "Information About Bots | LAZACK Team", "0363220399229536@newsletter", m)
           })
         }
