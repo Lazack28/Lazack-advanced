@@ -4,7 +4,7 @@ module.exports = {
       let member = participants.map(v => v.id)
       let readmore = String.fromCharCode(8206).repeat(4001)
       let message = (!text) ? 'Hello everyone, admin mention you in ' + await (await conn.groupMetadata(m.chat)).subject + ' group.' : text
-      conn.reply(m.chat, `*[ EVERYONE ]*\n\n*“${message}”*\n${readmore}\n${member.map(v => '*-* @' + v.replace(/@.+/, '')).join('\n')}`, m)
+      conn.reply(m.chat, `*[ EVERYONE BY LAZACK ADVANCE  ]*\n\n*“${message}”*\n${readmore}\n${member.map(v => '*-* @' + v.replace(/@.+/, '')).join('\n')}`, m)
     } catch (e) {
       console.log(e)
       return conn.reply(m.chat, Func.jsonFormat(e), m)
