@@ -56,4 +56,4 @@ function start(file) {
    // console.log(p)
 }
 
-start('lazack.js')
+start('mtaju.js')
