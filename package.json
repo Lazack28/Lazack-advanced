@@ -1,5 +1,5 @@
 {
-  "name": "mari-wabot",
+  "name": "Lazack",
   "version": "4.1.1",
   "description": "WhatsApp bot sederhana yang di buat oleh Dims",
   "main": "index.js",
@@ -11,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Im-Dims/mari-wabot.git"
+    "url": "git+https://github.com/Lazack28/Lazack-advanced.git"
   },
   "keywords": [
     "whatsapp-bot",
     "wabot-aq"
   ],
-  "author": "Im-Dims",
+  "author": "Lazack",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Im-Dims/mari-wabot/issues"
+    "url": "https://github.com/Lazack28/Lazack-advanced/issues"
   },
-  "homepage": "https://github.com/Im-Dims/mari-wabot#readme",
+  "homepage": "https://github.com/Lazack28/Lazack-advanced#readme",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@fainshe/scrapers": "^0.0.6",

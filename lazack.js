@@ -133,14 +133,14 @@
     if (!!env.pairing.number) {
       PhoneNumber = env.pairing.number.toString().replace(/[^0-9]/g, '');
       if (!Object.keys(PHONENUMBER_MCC).some(v => PhoneNumber.startsWith(v))) {
-        console.log(chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx")));
+        console.log(chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 255xx")));
         process.exit(0);
       }
     } else {
       PhoneNumber = await question(chalk.bgBlack(chalk.greenBright("Please type your WhatsApp number : ")));
       PhoneNumber = PhoneNumber.replace(/[^0-9]/g, '');
       if (!Object.keys(PHONENUMBER_MCC).some(v => PhoneNumber.startsWith(v))) {
-        console.log(chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx")));
+        console.log(chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 255xx")));
         PhoneNumber = await question(chalk.bgBlack(chalk.greenBright("Please type your WhatsApp number : ")));
         PhoneNumber = PhoneNumber.replace(/[^0-9]/g, '');
         rl.close();

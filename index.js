@@ -1,12 +1,12 @@
 const cluster = require('cluster'), path = require('path'), fs = require('fs'), package = require('./package.json'), CFonts = require('cfonts'), Readline = require('readline'), yargs = require('yargs/yargs')
 const readline = Readline.createInterface(process.stdin, process.stdout)
 
-CFonts.say(`MARI-WABOT`, {
+CFonts.say(`LAZACK ADVANCED`, {
    font: 'tiny',
    align: 'center',
    colors: ['system']
 })
-CFonts.say(`Github : https://github.com/Im-Dims/mari-wabot`, {
+CFonts.say(`Github : https://github.com/Lazack28/Lazack-advanced`, {
    font: 'console',
    align: 'center',
    colors: ['system']
@@ -56,4 +56,4 @@ function start(file) {
    // console.log(p)
 }
 
-start('main.js')
+start('lazack.js')
