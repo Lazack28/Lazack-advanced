@@ -5,9 +5,9 @@ module.exports = {
       number: env.owner,
       about: 'Owner & Creator'
     }], m, {
-      org: 'Mari Support',
-      website: 'https://api.ssateam.my.id',
-      email: 'dev@ssateam.my.id'
+      org: 'lazackorganisition',
+      website: 'lazackorganisation.us.kg',
+      email: 'lazaromtaju12@gmail.com'
     })
   },
   help: ['owner'],

@@ -1,7 +1,7 @@
 module.exports = {
   run: async (m, { conn, usedPrefix, command, text, Func }) => {
     try {
-      if (!text) return conn.reply(m.chat, Func.example(usedPrefix, command, 'mari bot'), m)
+      if (!text) return conn.reply(m.chat, Func.example(usedPrefix, command, 'LAZACK ADVANCE'), m)
       if (text.length > 25) return conn.reply(m.chat, `Text is too long, maximum 25 characters.`, m)
       conn.authState.creds.me.name = text
       await global.db.write()

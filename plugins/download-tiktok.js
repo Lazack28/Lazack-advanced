@@ -32,7 +32,7 @@ let handler = async (m, { usedPrefix, command, args, Func }) => {
     }
   } catch (e) {
     console.log(e)
-    return m.reply('Fitur ini sedang eror!, Gunakan *tiktokv2* untuk mendownload')
+    return m.reply('if lazack not downloading ude *tiktokv2* will download')
   }
 };
 handler.help = ['tiktok', 'tiktokslide'].map(v => v + ' *url*')

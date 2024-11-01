@@ -19,19 +19,19 @@ const handler = async (m, { conn, text, usedPrefix, command, Func }) => {
       {
         name: 'quick_reply',
         buttonParamsJson: JSON.stringify({
-          display_text: '🎶 Audio',
+          display_text: 'Audio',
           id: `${usedPrefix}yta ${lot.videos[0].url}`
         })
       }, {
         name: 'quick_reply',
         buttonParamsJson: JSON.stringify({
-          display_text: '🎥 Video',
+          display_text: 'Video',
           id: `${usedPrefix}ytv ${lot.videos[0].url}`
         })
       }, {
         name: 'quick_reply',
         buttonParamsJson: JSON.stringify({
-          display_text: '🔍 Search',
+          display_text: 'sSearch',
           id: `${usedPrefix}yts ${lot.videos[0].title}`
         })
       }
