@@ -8,7 +8,7 @@ let msg = await generateWAMessageFromContent(m.chat, {
     degreesLongitude: 0,
     name: "Lazack-advanced",
     address: "Tanzania",
-    url: "https:ithub.com/Lazack28/Lazack-advanced",
+    url: "https://Github.com/Lazack28/Lazack-advanced",
     isLive: true,
     accuracyInMeters: 0,
     speedInMps: 0,
