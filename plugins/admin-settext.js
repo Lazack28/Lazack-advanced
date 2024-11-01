@@ -23,7 +23,7 @@ const formatWel = (prefix, command) => {
   return `Sorry, can't return without text, and this explanation and how to use :
 
 *1.* +tag : for mention new member on welcome message.
-*2.* +grup : for getting group name.
+*2.* +group : for getting group name.
 
 • *Example* : ${prefix + command} Hi +tag, welcome to +grup group, we hope you enjoyed with us.`
 }
