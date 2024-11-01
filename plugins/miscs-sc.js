@@ -6,9 +6,9 @@ let msg = await generateWAMessageFromContent(m.chat, {
   locationMessage: {
     degreesLatitude: 0,
     degreesLongitude: 0,
-    name: "Iochi Mari",
-    address: "Hayoo mau ngapain??",
-    url: "api.ssateam.my.id",
+    name: "Lazack-advanced",
+    address: "Tanzania",
+    url: "https:ithub.com/Lazack28/Lazack-advanced",
     isLive: true,
     accuracyInMeters: 0,
     speedInMps: 0,
@@ -20,8 +20,8 @@ let msg = await generateWAMessageFromContent(m.chat, {
 
 return conn.relayMessage(m.chat, msg.message, {})
 }
-handler.help = ['sourcecode']
+handler.help = ['repo']
 handler.tags = ['info']
-handler.command = ['sc', 'sourcecode']
+handler.command = ['sc', 'repo']
 
 module.exports = handler
