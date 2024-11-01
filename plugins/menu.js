@@ -63,7 +63,7 @@ module.exports = {
           url: setting.link
         }).then(async () => {
           let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-          conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "120363193509141242@newsletter", m)
+          conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "0363220399229536@newsletter", m)
         })
       } else if (style === 2) {
         const defaultMenu = {
@@ -146,7 +146,7 @@ module.exports = {
             url: setting.link
           }).then(async () => {
             let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-            conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "120363193509141242@newsletter", m)
+            conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "0363220399229536@newsletter", m)
           })
         }
 
@@ -276,7 +276,7 @@ module.exports = {
             media: setting.cover
           }).then(async () => {
             let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-            conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "120363193509141242@newsletter", m)
+            conn.sendFMusic(m.chat, music, "Information About Bots | LAZACK Team", "0363220399229536@newsletter", m)
           })
         }
         let groups = {}
