@@ -10,14 +10,14 @@ let registrasiEmail = {};
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   let user = global.db.data.users[m.sender];
   let name = await conn.getName(m.sender);
-  let lerr = 'Selamat kamu mendapatkan:\n+100 Limit\n+10.000 Balance\n+10.000 XP\n+10.000 Money';
+  let lerr = 'Congratulations on getting:\n+100 Limit\n+10.000 Balance\n+10.000 XP\n+10.000 Money';
   let sn = createHash('md5').update(m.sender).digest('hex');
   switch (command) {
     case 'regmail':
       if (!user.registered) {
-        if (!text) return conn.reply(m.sender, `Masukkan Alamat Email!\n\nContoh: *${usedPrefix + command} xxx@gmail.com*`, m);
+        if (!text) return conn.reply(m.sender, `Enter Emai's Addressl!\n\nContoh: *${usedPrefix + command} xxx@gmail.com*`, m);
         m.react('🕒');
-        m.reply(`Kode sudah di kirim melalui email, Silakan cek email mu, jika ada kode maka salin trus ketik *${usedPrefix}vercode kode yang kamu salin*`)
+        m.reply(`The code has been sent via email, Please check your email, if there is a code then copy and type *${usedPrefix}vercode the code you copied*`)
         const email = text.trim();
         user.email = email
         const kodenya = await generateVerificationCode();
@@ -34,19 +34,19 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
           ignoreMessage: 'If you did not request this verification, please ignore this email.'
         });
       } else {
-        conn.reply(m.chat, `Kamu telah terdaftar sebelumnya.`, m);
+        conn.reply(m.chat, `You have been registered before.`, m);
       }
       break;
     case 'vercode':
-      if (!text) return conn.reply(m.chat, `Masukkan kode verifikasi yang telah dikirimkan ke email anda.`, m);
+      if (!text) return conn.reply(m.chat, `Enter the verification code that has been sent to your email.`, m);
       m.react('🕒');
       const kodeOtp = text.trim();
       const kodeEmail = registrasiEmail[m.sender];
-      if (!kodeEmail) return conn.reply(m.chat, `Anda belum meminta kode verifikasi. Silahkan lakukan pendaftaran terlebih dahulu dengan perintah ${usedPrefix}regmail.`, m);
+      if (!kodeEmail) return conn.reply(m.chat, `You haven't asked for a verification code yet. Please register first with the command ${usedPrefix}regmail.`, m);
       if (kodeEmail.code === kodeOtp) {
         if (Date.now() > kodeEmail.expiresAt) {
           delete registrasiEmail[m.sender];
-          return conn.reply(m.chat, `Kode verifikasi telah kedaluwarsa. Silahkan kirim ulang kode verifikasi dengan perintah ${usedPrefix}regmail.`, m);
+          return conn.reply(m.chat, `Verification code is incorrect. Please double-check or resend the verification code with the command ${usedPrefix}regmail.`, m);
         }
 
         delete registrasiEmail[m.sender];
@@ -55,7 +55,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         user.balance += 10000;
         user.money += 10000;
         user.limit += 100;
-        conn.reply(m.chat, `Daftar berhasil!
+        conn.reply(m.chat, `Successful registration!
 
 ╭─「 Info User 」
 │ Nama: ${name}
@@ -63,11 +63,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 │ SN: ${sn}
 ╰────
 
-*Jika SN kamu lupa ketik ${usedPrefix}ceksn*
+*If your SN forgot to type ${usedPrefix}ceksn*
 
 ${lerr}`, m);
       } else {
-        conn.reply(m.chat, `Kode verifikasi salah. Silahkan periksa kembali atau kirim ulang kode verifikasi dengan perintah ${usedPrefix}regmail.`, m);
+        conn.reply(m.chat, `'Verification code is incorrect. Please double-check or resend the verification code with the command ${usedPrefix}regmail.`, m);
       }
       break;
   }
@@ -125,7 +125,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
             <hr style="border: none; border-top: 1px solid #eeeeee; margin: 30px 0">
             <p style="font-size: 14px; color: #999999">${ignoreMessage}</p>
             <p style="font-size: 14px; color: #999999; text-align: center; margin-top: 30px">
-                <a href="https://www.youtube.com/@Dims_senpai" style="color: #3a7bd5; text-decoration: none; font-weight: 600">2023 © ${wm}</a>
+                <a href="https://www.youtube.com/@lazaromtaju" style="color: #3a7bd5; text-decoration: none; font-weight: 600">2023 © ${wm}</a>
             </p>
         </div>
     </div>
