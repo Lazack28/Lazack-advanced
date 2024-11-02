@@ -1,35 +1,29 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=WELCOME+TO+LAZACK+MD+v3+MADE+BY;LAZACK28;THANKS+FOR+VISITING+MY+REPO)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=WELCOME+TO+LAZACK+MD+BOTS+MADE+BY;LAZACK28;THANKS+FOR+VISITING+MY+REPO)](https://git.io/typing-svg)
 
-<p align="left">
-  <a href="" target="_blank">
-    <img alt="Forks" src="https://img.shields.io/github/forks/Lazack28/Lazack-advanced" />
-  </a>
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
-</p>
-<p align="center"><img src="https://profile-counter.glitch.me/{Lazack28}/count.svg" alt="Lazack28 :: Visitor's Count" /></p>
-<p align="center">  
-
-<p align="center">
-  <a href="https://chat.whatsapp.com/ICNOZzsDH9E81j3RlqLx4w">
-    <img alt=Support height="250" src="https://telegra.ph/file/1dc10a39146c80069a439.jpg"> 
-    </p>
-
-****[FORK THIS REPO](https://github.com/Lazack28/Lazack-advanced/fork)****
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=F70707&center=true&width=910&height=100&lines=LAZACK+M+DEVICE" alt="Typing SVG" /></a>
+  </p>
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
 ***[GROUP](https://chat.whatsapp.com/IIpL6gf6dcq4ial8gaJLE9)***
 
 
 ------------------------------------------
 
-**Generate Pair Code For Session**
-
-<a href='https://replit.com/@lazck22/LAZACK-ADVANCE-AND-DEVICE' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-001-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+**Genenerate pairing code**
 
 
-     `upload youre given creds.json by editing it on the creds.json file in the session folder, some of the country use vpn to get youre file recomended vpn is Stark vpn`
 
-         use this pairing 02 
-<a href='https://creds-1.onrender.com/pair' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-002-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+<a href="https://web-three-nu-67.vercel.app/" target="_blank"><img alt='PAIRING' src='https://img.shields.io/badge/PAIRING CODE-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+
+
+
+**Get in touch with the creator**
+
+
+<a href="https://lazackorganisation.us.kg"><img alt='OWNER' src='https://img.shields.io/badge/GET IN TOUCH-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+
 
 -------------------------
 
@@ -65,4 +59,9 @@
  
 - *Lazack Bots are made by a student if you see any errors please submit a pull request`*
 - *I may help you in bot deployment and bot code editing if i have time to do so*
-- *Use Lazack bots are always safe to youre heroku and give us credits.*
+
+
+
+
+
+         NOT FREE SRC 
