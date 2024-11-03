@@ -24,9 +24,9 @@ let handler = async function(m, { conn, text, usedPrefix }) {
 /*  } else
     m.reply(`You have unregistered, wait another ${waktutionskh} to be able to unregister again.`) */
 }
-handler.help = ['ceksn']
+handler.help = ['serial']
 handler.tags = ['user']
-handler.command = ['ceksn']
+handler.command = ['serial']
 handler.register = handler.limit = true
 
 module.exports = handler
