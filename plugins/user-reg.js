@@ -6,7 +6,7 @@ module.exports = {
     try {
       let user = global.db.data.users[m.sender]
       if (user.registered === true) return conn.reply(m.chat, Func.texted('bold', 'Your number is already registered'), m)
-      if (!Reg.test(text)) return conn.reply(m.chat, Func.example(usedPrefix, command, 'mari.15'), m)
+      if (!Reg.test(text)) return conn.reply(m.chat, Func.example(usedPrefix, command, 'lazack.15'), m)
       let [_, name, splitter, age] = text.match(Reg)
       if (!name) return conn.reply(m.chat, Func.texted('bold', 'Enter your name'), m)
       if (!age) return conn.reply(m.chat, Func.texted('bold', 'Enter your age'), m)
