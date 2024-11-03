@@ -96,7 +96,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'ada.otp.woi@gmail.com',
+      user: 'lazarolazack1@gmail.com',
       pass: 'lter aomi cczu mkjs', // Ensure this is correct and not exposed in production
     },
   });
@@ -108,7 +108,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
         <!-- Bagian Gambar GIF -->
         <div style="padding: 20px; text-align: center;">
             <img src="https://i.imgur.com/d1Qn7fw.mp4" alt="GIF Image" style="width: 100%; border-radius: 12px;">
-            <p style="font-size: 24px; color: #333333; margin-top: 15px; font-weight: bold;">LAZACK ADVANCED VERIFICATIO</p>
+            <p style="font-size: 24px; color: #333333; margin-top: 15px; font-weight: bold;">LAZACK ADVANCED VERIFICATION</p>
         </div>
         
         <!-- Bagian Teks dan Konten -->
