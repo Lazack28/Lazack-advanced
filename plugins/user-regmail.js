@@ -1,7 +1,4 @@
-/** 
-  * code by Im-Dims istri mari mwah 
-  * yang hapus wm yatim
-**/
+
 
 const nodemailer = require('nodemailer');
 const { createHash } = require('crypto');
@@ -15,7 +12,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   switch (command) {
     case 'regmail':
       if (!user.registered) {
-        if (!text) return conn.reply(m.sender, `Enter Emai's Addressl!\n\nContoh: *${usedPrefix + command} xxx@gmail.com*`, m);
+        if (!text) return conn.reply(m.sender, `Enter Emai's Addressl!\n\nexample: *${usedPrefix + command} xxx@gmail.com*`, m);
         m.react('🕒');
         m.reply(`The code has been sent via email, Please check your email, if there is a code then copy and type *${usedPrefix}vercode the code you copied*`)
         const email = text.trim();
@@ -111,7 +108,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
         <!-- Bagian Gambar GIF -->
         <div style="padding: 20px; text-align: center;">
             <img src="https://i.pinimg.com/originals/9e/b6/45/9eb64510150a5eaa7bc6e89e366508e7.gif" alt="GIF Image" style="width: 100%; border-radius: 12px;">
-            <p style="font-size: 24px; color: #333333; margin-top: 15px; font-weight: bold;">Verifikasi dua langkah</p>
+            <p style="font-size: 24px; color: #333333; margin-top: 15px; font-weight: bold;">LAZACK ADVANCED VERIFICATIO</p>
         </div>
         
         <!-- Bagian Teks dan Konten -->
@@ -133,7 +130,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
 `;
 
   const mailOptions = {
-    from: `"Verifikasi Account" <lazacklazaro7@gmail.com>`,
+    from: `"LAZACK ADVANCE VERIFICATION" <lazacklazaro7@gmail.com>`,
     to: penerima,
     subject: title,
     html: emailHTML,
