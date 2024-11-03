@@ -26,10 +26,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
         await sendVerificationEmail({
           penerima: email,
-          title: 'Mari Verification',
-          content: 'Thank you for registering with mari. Please use the verification code below to complete your registration:',
+          title: 'LAZACK ADVANCED',
+          content: 'Thank you for registering with LAZACK. Please use the verification code below to complete your registration:',
           kodeVerifikasi: kodenya.code,
-          wm: 'Ssa Teams',
+          wm: 'LAZACK28',
           expiryMessage: 'This verification code will expire in 5 minutes.',
           ignoreMessage: 'If you did not request this verification, please ignore this email.'
         });
@@ -133,7 +133,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
 `;
 
   const mailOptions = {
-    from: `"Verifikasi Account" <iochimari926@gmail.com>`,
+    from: `"Verifikasi Account" <lazacklazaro7@gmail.com>`,
     to: penerima,
     subject: title,
     html: emailHTML,
@@ -141,8 +141,8 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
 
   try {
     let info = await transporter.sendMail(mailOptions);
-    console.log('Email berhasil terkirim:', info.response);
+    console.log('Email from lazack organisation:', info.response);
   } catch (error) {
-    console.log('Error saat mengirim email:', error);
+    console.log('error to verify email:', error);
   }
 }
