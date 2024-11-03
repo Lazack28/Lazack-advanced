@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command, args, Func }) => {
       conn.sendMessage(m.chat, { audio: { url: anu.media }, fileName: anu.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m }).then(async () => {
         conn.sendFile(m.chat, anu.media, anu.title + '.mp3', 'Here is the document version!', m, {
           document: true,
-          APIC: await Func.fetchBuffer("https://rest.cifumo.biz.id/api/downloader/ytdl?url=")
+          APIC: await Func.fetchBuffer("https://telegra.ph/file/14648bf3119959bbfe434.jpg")
         }, {
           jpegThumbnail: await Func.createThumb("https://telegra.ph/file/14648bf3119959bbfe434.jpg")
         })
