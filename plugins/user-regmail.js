@@ -107,7 +107,7 @@ async function sendVerificationEmail({ penerima, title, content, kodeVerifikasi,
         
         <!-- Bagian Gambar GIF -->
         <div style="padding: 20px; text-align: center;">
-            <img src="https://i.imgur.com/d1Qn7fw.mp4" alt="GIF Image" style="width: 100%; border-radius: 12px;">
+            <img src="https://i.imgur.com/d1Qn7fw.mp4" alt="MP4 IMG" style="width: 100%; border-radius: 12px;">
             <p style="font-size: 24px; color: #333333; margin-top: 15px; font-weight: bold;">LAZACK ADVANCED VERIFICATION</p>
         </div>
         
