@@ -9,7 +9,7 @@ let handler = async (m, { conn, usedPrefix, command, args, Func }) => {
   
   try {
     // Replace with your actual API endpoint
-    const apiUrl = 'https://itzpire.com/download'; 
+    const apiUrl = 'https://itzpire.com/download/youtube'; 
     const response = await axios.post(apiUrl, {
       url: args[0]
     });
