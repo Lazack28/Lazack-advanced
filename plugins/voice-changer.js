@@ -21,7 +21,9 @@ module.exports = {
       if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
       if (/chipmunk/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
       if (/audio/.test(mime)) {
-        conn.sendReact(m.chat, '🕒', m.key)
+        // Remove or replace the following line
+        // conn.sendReact(m.chat, '🕒', m.key)
+        
         const buffer = await Converter.toAudio(await m.quoted.download(), 'mp3')
         const parse = await Func.getFile(buffer)
         let ran = Func.filename('mp3')
