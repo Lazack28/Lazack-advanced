@@ -62,7 +62,7 @@ module.exports = {
           largeThumb: true,
           url: setting.link
         }).then(async () => {
-          let music = await Func.random(['https://imgur.com/07PuKsf.mp4', 'https://imgur.com/YS3BFpT.mp4', 'https://imgur.com/OvYIAit.mp4'])
+          let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
           conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "0363220399229536@newsletter", m)
         })
       } else if (style === 2) {
@@ -145,7 +145,7 @@ module.exports = {
             thumbnail: setting.cover,
             url: setting.link
           }).then(async () => {
-            let music = await Func.random(['https://imgur.com/07PuKsf.mp4', 'https://imgur.com/YS3BFpT.mp4', 'https://imgur.com/OvYIAit.mp4'])
+            let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
             conn.sendFMusic(m.chat, music, "Information About Bots | LAZACK", "0363220399229536@newsletter", m)
           })
         }
@@ -275,7 +275,7 @@ module.exports = {
             footer: global.footer,
             media: setting.cover
           }).then(async () => {
-            let music = await Func.random(['https://imgur.com/07PuKsf.mp4', 'https://imgur.com/YS3BFpT.mp4', 'https://imgur.com/OvYIAit.mp4'])
+            let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
             conn.sendFMusic(m.chat, music, "Information About Bots | LAZACK Team", "0363220399229536@newsletter", m)
           })
         }
