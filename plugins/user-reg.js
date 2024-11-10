@@ -13,7 +13,7 @@ module.exports = {
       age = parseInt(age)
       if (name.length > 20) return conn.reply(m.chat, Func.texted('bold', 'Name is too long'), m)
       if (age > 80) return conn.reply(m.chat, Func.texted('bold', 'Age is too old'), m)
-      if (age < 5) return conn.reply(m.chat, Func.texted('bold', 'Ajg bayi bisa ngetik cok'), m)
+      if (age < 5) return conn.reply(m.chat, Func.texted('bold', 'A baby can\'t type, dude'), m) // Translated from Indonesian
       user.name = name.trim()
       user.age = age
       user.regTime = +new Date()
@@ -28,8 +28,8 @@ module.exports = {
       capt += ` ∘ SN : ${sn}\n\n`
       capt += `*Congratulations you got a prize!*\n`
       capt += `+ 100 limit\n`
-      capt += `+ 20.000 exp\n`
-      capt += `+ 10.000 money\n`
+      capt += `+ 20,000 exp\n`
+      capt += `+ 10,000 money\n`
       conn.reply(m.chat, capt, m)
     } catch (e) {
       console.log(e)
