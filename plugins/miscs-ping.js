@@ -1,1 +1,29 @@
-function _0x3dc8(){const _0x4f6cbd=['10CZjspr','MB\x0a*-*\x20*OS*\x20:\x20','\x0a*-*\x20*Platform*\x20:\x20','misc','1196530lWZgUB','hostname','7RHlaDw','help','949112SIRaRs','1785822tOKCHK','MB\x20/\x20','Ram:','toFixed','version','569eWGUus','platform','110IQiIlL','ping','perf_hooks','now','6760938OhELpp','7142032MlyjQI','\x20_ms_\x0a*-*\x20*Memory*\x20:\x20','toString','neofetch\x20--stdout','516804tqMLop','*-*\x20*Kecepatan\x20Respon*\x20:\x20','speed','117GDvvLl','reply','child_process','utf-8','replace','5656QgDRnX','command'];_0x3dc8=function(){return _0x4f6cbd;};return _0x3dc8();}const _0x142331=_0x25d8;(function(_0x5222b7,_0x3ff051){const _0x56eb41=_0x25d8,_0x222b0d=_0x5222b7();while(!![]){try{const _0x476298=parseInt(_0x56eb41(0x18b))/0x1*(parseInt(_0x56eb41(0x17b))/0x2)+parseInt(_0x56eb41(0x186))/0x3+parseInt(_0x56eb41(0x185))/0x4*(-parseInt(_0x56eb41(0x17d))/0x5)+-parseInt(_0x56eb41(0x191))/0x6*(-parseInt(_0x56eb41(0x183))/0x7)+-parseInt(_0x56eb41(0x192))/0x8+-parseInt(_0x56eb41(0x176))/0x9*(parseInt(_0x56eb41(0x181))/0xa)+-parseInt(_0x56eb41(0x18d))/0xb*(-parseInt(_0x56eb41(0x196))/0xc);if(_0x476298===_0x3ff051)break;else _0x222b0d['push'](_0x222b0d['shift']());}catch(_0x36e0b1){_0x222b0d['push'](_0x222b0d['shift']());}}}(_0x3dc8,0xccdbc));const os=require('os'),{performance}=require(_0x142331(0x18f)),{spawn,exec,execSync}=require(_0x142331(0x178));var handler=async(_0xf787b7,{conn:_0x4ad425})=>{const _0x44cd99=_0x142331,_0x311091=performance[_0x44cd99(0x190)](),_0x8c8e4a=performance[_0x44cd99(0x190)]()-_0x311091;exec(_0x44cd99(0x195),(_0x16237f,_0x8ed59c,_0x2705c9)=>{const _0x53cb78=_0x44cd99,_0x4de1f0=_0x8ed59c[_0x53cb78(0x194)](_0x53cb78(0x179)),_0x2f2d71=_0x4de1f0[_0x53cb78(0x17a)](/Memory:/,_0x53cb78(0x188));_0xf787b7[_0x53cb78(0x177)](_0x2f2d71+_0x53cb78(0x197)+_0x8c8e4a[_0x53cb78(0x189)](0x4)+_0x53cb78(0x193)+(process['memoryUsage']()['heapUsed']/0x400/0x400)['toFixed'](0x2)+_0x53cb78(0x187)+Math['round'](os['totalmem']/0x400/0x400)+_0x53cb78(0x17e)+os[_0x53cb78(0x18a)]()+_0x53cb78(0x17f)+os[_0x53cb78(0x18c)]()+'\x0a*-*\x20*Hostname*\x20:\x20'+os[_0x53cb78(0x182)]());});};function _0x25d8(_0x553da0,_0x556c2a){const _0x3dc827=_0x3dc8();return _0x25d8=function(_0x25d843,_0x13a07c){_0x25d843=_0x25d843-0x176;let _0x2f736f=_0x3dc827[_0x25d843];return _0x2f736f;},_0x25d8(_0x553da0,_0x556c2a);}handler[_0x142331(0x184)]=[_0x142331(0x18e)],handler['tags']=[_0x142331(0x180)],handler[_0x142331(0x17c)]=[_0x142331(0x18e),_0x142331(0x198)],module['exports']=handler;
+const os = require('os');
+const { performance } = require('perf_hooks');
+const { exec } = require('child_process');
+
+var handler = async (message, { conn }) => {
+    const startTime = performance.now();
+    
+    exec('neofetch --stdout', (error, stdout, stderr) => {
+        const memoryInfo = stdout.replace(/Memory:/, '');
+        const memoryUsage = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2); // Convert to MB
+        const totalMemory = Math.round(os.totalmem() / 1024 / 1024); // Convert to MB
+        
+        const response = `
+            *OS*: ${os.platform()}
+            *Hostname*: ${os.hostname()}
+            *Memory Used*: ${memoryUsage} MB
+            *Total Memory*: ${totalMemory} MB
+            *Response Time*: ${(performance.now() - startTime).toFixed(2)} ms
+        `;
+        
+        message.reply(response);
+    });
+};
+
+handler.help = ['neofetch'];
+handler.tags = ['misc'];
+handler.command = ['neofetch'];
+
+module.exports = handler;
