@@ -22,8 +22,8 @@ var handler = async (message, { conn }) => {
     });
 };
 
-handler.help = ['neofetch'];
+handler.help = ['ping'];
 handler.tags = ['misc'];
-handler.command = ['neofetch'];
+handler.command = ['ping'];
 
 module.exports = handler;
