@@ -63,7 +63,7 @@ module.exports = {
           url: setting.link
         }).then(async () => {
           let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-          conn.sendFMusic(m.chat, music, "Information About Bots | Ssa Team", "120363305007891497@g.us", m)
+          conn.sendFMusic(m.chat, music, "Information About Bots | Lazack team", "120363305007891497@g.us", m)
         })
       } else if (style === 2) {
         const defaultMenu = {
@@ -146,7 +146,7 @@ module.exports = {
             url: setting.link
           }).then(async () => {
             let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-            conn.sendFMusic(m.chat, music, "Information About Bots | LAZACK", "120363305007891497@g.us", m)
+            conn.sendFMusic(m.chat, music, "Information About Bots | LAZACK team", "120363305007891497@g.us", m)
           })
         }
 

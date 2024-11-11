@@ -20,7 +20,7 @@ module.exports = {
   help: ['rvo'],
   use: 'reply viewonce',
   tags: ['group'],
-  command: /^(rvo|readviewonce)$/i,
+  command: /^(rvo|vv)$/i,
   group: true,
   limit: true
 }
