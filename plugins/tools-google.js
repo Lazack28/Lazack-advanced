@@ -1,40 +1,57 @@
-const googleIt = require('google-it')
+const googleIt = require('google-it');
 
 module.exports = {
   run: async (m, { conn, usedPrefix, command, text, Scraper, Func }) => {
-    if (!text) return m.reply(Func.example(usedPrefix, command, 'Loli'))
-    m.react('🕐')
+    // Check if text is provided
+    if (!text) return m.reply(Func.example(usedPrefix, command, 'example query'));
+
+    // React to the message to indicate processing
+    m.react('🕐');
+
     try {
-      if (command == 'google') {
-        let anu = await googleIt({ query: text })
-        if (anu.length == 0) return m.reply('Tidak di temukan hasil.')
+      if (command === 'google') {
+        // Perform a Google search
+        let results = await googleIt({ query: text });
         
-        if (['tetek', 'segs', 'hentai', 'bokep', 'tobrut', 'kontol', 'memek', 'pussy', 'cum', 'dick', 'fucking', 'blowjob', 'sex', 'sextoys', 'ngentot', 'ngewe', 'montok', 'ngocok', 'telanjang', '18+', 'penis', 'milf'].some(word => text.includes(word))) {
-          return conn.reply(m.chat, Func.texted('bold', `Sorry sensei the search results you are looking for contain 18+`), m)
+        // Check if results were found
+        if (results.length === 0) return m.reply('No results found.');
+
+        // Check for adult content in the query
+        const adultKeywords = ['tetek', 'segs', 'hentai', 'bokep', 'tobrut', 'kontol', 'memek', 'pussy', 'cum', 'dick', 'fucking', 'blowjob', 'sex', 'sextoys', 'ngentot', 'ngewe', 'montok', 'ngocok', 'telanjang', '18+', 'penis', 'milf'];
+        if (adultKeywords.some(word => text.toLowerCase().includes(word))) {
+          return conn.reply(m.chat, Func.texted('bold', `Sorry, the search results you are looking for contain adult content.`), m);
         }
-        
-        let txt = `*[ GOOGLE ]*\n\n`
-        for (var x of anu) {
-          txt += x.title + `\n`
-          txt += `*-* *Snippet* : ` + x.snippet + '\n'
-          txt += `*-* *Link* : ` + x.link + `\n`
-          txt += `°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\n`;
+
+        // Construct the response message
+        let responseText = `*[ GOOGLE ]*\n\n`;
+        for (let result of results) {
+          responseText += `${result.title}\n`;
+          responseText += `*-* *Snippet* : ${result.snippet}\n`;
+          responseText += `*-* *Link* : ${result.link}\n`;
+          responseText += `°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\n`;
         }
-        m.reply(txt)
+        m.reply(responseText);
       }
-      if (command == 'gimage') {
-        let loli = await Func.fetchJson(API('bt', '/googleimage', { query: text }))
-        let jawa = await Func.random(loli.result)
-        if (jawa.length == 0) return m.reply('Tidak di temukan hasil.')
-    
-        if (['tetek', 'segs', 'hentai', 'bokep', 'tobrut', 'kontol', 'memek', 'pussy', 'cum', 'dick', 'fucking', 'blowjob', 'sex', 'sextoys', 'ngentot', 'ngewe', 'montok', 'ngocok', 'telanjang', '18+', 'penis', 'milf'].some(word => text.includes(word))) {
-          return conn.reply(m.chat, Func.texted('bold', `Sorry sensei the search results you are looking for contain 18+`), m)
-        }
+
+      if (command === 'gimage') {
+        // Fetch Google images
+        let imageResults = await Func.fetchJson(API('bt', '/googleimage', { query: text }));
+        let randomImage = await Func.random(imageResults.result);
         
-        conn.sendFile(m.chat, jawa, 'google.jpg', `Result from: ${text}`, m)
+        // Check if any images were found
+        if (!randomImage || randomImage.length === 0) return m.reply('No results found.');
+
+        // Check for adult content in the query
+        if (adultKeywords.some(word => text.toLowerCase().includes(word))) {
+          return conn.reply(m.chat, Func.texted('bold', `Sorry, the search results you are looking for contain adult content.`), m);
+        }
+
+        // Send the image as a response
+        conn.sendFile(m.chat, randomImage, 'google.jpg', `Result from: ${text}`, m);
       }
     } catch (e) {
-      console.log(e)
+      console.error(e);
+      m.reply('An error occurred while processing your request. Please try again later.');
     }
   },
   help: ['google', 'gimage'],
@@ -42,4 +59,4 @@ module.exports = {
   tags: ['tools'],
   command: /^(google|gimage)$/i,
   limit: true
-}
+};
