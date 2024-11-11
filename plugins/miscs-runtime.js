@@ -1,1 +1,27 @@
-function _0x1c71(){const _0x4303a6=['21696fYzMZM','toTime','exports','miscs','3761637sTHePq','10cEOMFB','uptime','1396647EWpcHd','104ravGib','bold','41370hbPKFz','2082zDhmHy','runtime','273992ruAcWe','54077DkAbrE','12vAKxpg','2535FhUAac','chat'];_0x1c71=function(){return _0x4303a6;};return _0x1c71();}function _0x56c2(_0x2abead,_0x28c675){const _0x1c7136=_0x1c71();return _0x56c2=function(_0x56c2c9,_0xa33a13){_0x56c2c9=_0x56c2c9-0x9a;let _0x1c997c=_0x1c7136[_0x56c2c9];return _0x1c997c;},_0x56c2(_0x2abead,_0x28c675);}const _0x3cfb72=_0x56c2;(function(_0x2c1259,_0xa1b39b){const _0x4f7cd3=_0x56c2,_0x21331c=_0x2c1259();while(!![]){try{const _0x3f4482=parseInt(_0x4f7cd3(0xa0))/0x1+-parseInt(_0x4f7cd3(0x9f))/0x2+parseInt(_0x4f7cd3(0xa4))/0x3*(-parseInt(_0x4f7cd3(0xa1))/0x4)+parseInt(_0x4f7cd3(0xa2))/0x5*(-parseInt(_0x4f7cd3(0x9d))/0x6)+-parseInt(_0x4f7cd3(0x9c))/0x7*(parseInt(_0x4f7cd3(0x9a))/0x8)+-parseInt(_0x4f7cd3(0xab))/0x9*(-parseInt(_0x4f7cd3(0xa9))/0xa)+parseInt(_0x4f7cd3(0xa8))/0xb;if(_0x3f4482===_0xa1b39b)break;else _0x21331c['push'](_0x21331c['shift']());}catch(_0x29654e){_0x21331c['push'](_0x21331c['shift']());}}}(_0x1c71,0x22200),module[_0x3cfb72(0xa6)]={'run':async(_0x47bc1a,{conn:_0x2b0a28,Func:_0x1273d1})=>{const _0xaea420=_0x3cfb72;let _0x2c1ab9=process[_0xaea420(0xaa)]()*0x3e8,_0x1f8bc4=_0x1273d1[_0xaea420(0xa5)](_0x2c1ab9);_0x2b0a28['reply'](_0x47bc1a[_0xaea420(0xa3)],_0x1273d1['texted'](_0xaea420(0x9b),'Lazack\x20Running\x20for\x20:\x20[\x20'+_0x1f8bc4+'\x20]'),_0x47bc1a);},'help':[_0x3cfb72(0x9e)],'tags':[_0x3cfb72(0xa7)],'command':/^(runtime|run)$/i});
+module.exports = {
+    run: async (message, { conn, Func }) => {
+        try {
+            let uptime = process.uptime() * 1000; // Get uptime in milliseconds
+            let formattedUptime = Func.toTime(uptime); // Convert uptime to a human-readable format
+            
+            // Get current memory usage
+            let memoryUsage = process.memoryUsage();
+            let memoryInfo = `Heap Total: ${(memoryUsage.heapTotal / 1024 / 1024).toFixed(2)} MB, Heap Used: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`;
+
+            // Get current date and time
+            let currentTime = new Date().toLocaleString();
+
+            // Construct the reply message
+            let replyMessage = `Lazack Running for: [${formattedUptime}]\nMemory Usage: ${memoryInfo}\nCurrent Time: ${currentTime}`;
+
+            // Send the reply
+            conn.reply(message.id, Func.texted('bold', replyMessage), message);
+        } catch (error) {
+            console.error("Error in runtime command:", error);
+            conn.reply(message.id, "An error occurred while retrieving the runtime information.", message);
+        }
+    },
+    help: ['runtime'],
+    tags: ['miscs'],
+    command: /^(runtime|run)$/i
+};

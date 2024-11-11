@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 const handler = async (m, { conn }) => {
-  m.reply(`Sukses Membersihkan *tmp + sessions*`);
+  m.reply(`Successfully cleaned *tmp + sessions*`);
   m.react("✅");
 
   // Membersihkan direktori tmp
