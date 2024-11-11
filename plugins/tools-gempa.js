@@ -1,27 +1,42 @@
-const fetch = require("node-fetch")
-const link = 'https://data.bmkg.go.id/DataMKG/TEWS/'
+const fetch = require("node-fetch");
+const link = 'https://data.bmkg.go.id/DataMKG/TEWS/';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
-    let res = await fetch(link + 'autogempa.json')
-    let anu = await res.json()
-    anu = anu.Infogempa.gempa
-    let txt = `*${anu.Wilayah}*\n\n`
-    txt += `Tanggal : ${anu.Tanggal}\n`
-    txt += `Waktu : ${anu.Jam}\n`
-    txt += `Potensi : *${anu.Potensi}*\n\n`
-    txt += `Magnitude : ${anu.Magnitude}\n`
-    txt += `Kedalaman : ${anu.Kedalaman}\n`
-    txt += `Koordinat : ${anu.Coordinates}${anu.Dirasakan.length > 3 ? `\nDirasakan : ${anu.Dirasakan}` : ''}`
-    await conn.sendMessage(m.chat, { image: { url: link + anu.Shakemap }, caption: txt }, { quoted: m })
-  } catch (e) {
-    console.log(e)
-    return m.reply(`Fitur Error.`)
-  }
-}
-handler.help = ['gempa']
-handler.tags = ['tools']
-handler.command = /^(gempa|infogempa)$/i
-handler.limit = true
+    // Fetch earthquake data
+    let res = await fetch(link + 'autogempa.json');
+    let data = await res.json();
+    let earthquakeInfo = data.Infogempa.gempa;
 
-module.exports = handler
+    // Prepare the message text in English
+    let messageText = `*Location:* ${earthquakeInfo.Wilayah}\n\n`;
+    messageText += `Date: ${earthquakeInfo.Tanggal}\n`;
+    messageText += `Time: ${earthquakeInfo.Jam}\n`;
+    messageText += `Potential: *${earthquakeInfo.Potensi}*\n\n`;
+    messageText += `Magnitude: ${earthquakeInfo.Magnitude}\n`;
+    messageText += `Depth: ${earthquakeInfo.Kedalaman}\n`;
+    messageText += `Coordinates: ${earthquakeInfo.Coordinates}`;
+
+    // Include felt reports if available
+    if (earthquakeInfo.Dirasakan.length > 3) {
+      messageText += `\nFelt Reports: ${earthquakeInfo.Dirasakan}`;
+    }
+
+    // Send the message with an image of the shakemap
+    await conn.sendMessage(m.chat, { 
+      image: { url: link + earthquakeInfo.Shakemap }, 
+      caption: messageText 
+    }, { quoted: m });
+    
+  } catch (e) {
+    console.error(e);
+    return m.reply(`Feature Error.`);
+  }
+};
+
+handler.help = ['earthquake'];
+handler.tags = ['tools'];
+handler.command = /^(earthquake|infoearthquake)$/i;
+handler.limit = true;
+
+module.exports = handler;
