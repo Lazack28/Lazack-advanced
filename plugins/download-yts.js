@@ -1,5 +1,5 @@
 const yts = require('yt-search');
-const loli = require("node-yt-dl");
+const { download } = require('btch-downloader');
 
 module.exports = {
   run: async (m, { conn, usedPrefix, command, text, users, env, Func }) => {
@@ -17,40 +17,27 @@ module.exports = {
           return m.reply(Func.texted('bold', 'Exceed amount of data.'));
         }
         m.react('🕒');
-        let anu;
+        const videoUrl = search.results[Number(text) - 1];
 
-        if (command === 'mp3') {
-          anu = await loli.mp3(search.results[Number(text) - 1]);
-        } else if (command === 'mp4') {
-          anu = await loli.mp4(search.results[Number(text) - 1]);
-        }
+        // Downloading using btch-downloader
+        const mediaType = command === 'mp3' ? 'audio' : 'video';
+        const downloadOptions = {
+          url: videoUrl,
+          format: mediaType,
+        };
 
-        if (!anu || !anu.metadata || !anu.metadata.thumbnail) {
-          return m.reply('Failed to retrieve video metadata. Please try again.');
-        }
-
-        const thumbnailUrl = anu.metadata.thumbnail;
-        const mediaUrl = anu.media;
-        const title = anu.title;
-
-        await conn.sendMessage(m.chat, { image: { url: thumbnailUrl }, caption: title }, { quoted: m });
-
-        if (command === 'mp3') {
-          await conn.sendMessage(m.chat, { audio: { url: mediaUrl }, fileName: title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m });
-          await conn.sendFile(m.chat, mediaUrl, title + '.mp3', 'Here is the document version!', m, {
-            document: true,
-            APIC: await Func.fetchBuffer("https://telegra.ph/file/14648bf3119959bbfe434.jpg")
-          }, {
-            jpegThumbnail: await Func.createThumb("https://telegra.ph/file/14648bf3119959bbfe434.jpg")
-          });
-        } else if (command === 'mp4') {
-          await conn.sendMessage(m.chat, { video: { url: mediaUrl }, caption: '' }, { quoted: m });
-          await conn.sendFile(m.chat, mediaUrl, title + '.mp4', 'Here is the document version!', m, {
-            document: true,
-            APIC: await Func.fetchBuffer("https://telegra.ph/file/14648bf3119959bbfe434.jpg")
-          }, {
-            jpegThumbnail: await Func.createThumb("https://telegra.ph/file/14648bf3119959bbfe434.jpg")
-          });
+        const media = await download(downloadOptions);
+        
+        if (mediaType === 'audio') {
+          conn.sendMessage(m.chat, { image: { url: media.thumbnail }, caption: media.title }, { quoted: m })
+            .then(async () => {
+              conn.sendMessage(m.chat, { audio: { url: media.url }, fileName: media.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m });
+            });
+        } else {
+          conn.sendMessage(m.chat, { image: { url: media.thumbnail }, caption: media.title }, { quoted: m })
+            .then(async () => {
+              conn.sendMessage(m.chat, { video: { url: media.url }, caption: '' }, { quoted: m });
+            });
         }
       } else {
         m.react('🕒');
@@ -75,24 +62,24 @@ module.exports = {
           teks += '*-* *Duration* : ' + anu.timestamp + '\n';
           teks += '*-* *Views* : ' + Func.h2k(anu.views) + '\n';
           teks += '*-* *Link* : ' + anu.url + '\n\n';
-        }).join('\n\n')
-        teks += global.footer
-        conn.reply(m.chat, teks, m)
+        }).join('\n\n');
+        teks += global.footer;
+        conn.reply(m.chat, teks, m);
       }
       setInterval(async () => {
-        const files = conn.yts.find(v => v.jid == m.sender)
+        const files = conn.yts.find(v => v.jid == m.sender);
         if (files && new Date() - files.created_at > env.timer) {
-          Func.removeItem(conn.yts, files)
+          Func.removeItem(conn.yts, files);
         }
-      }, 60000)
+      }, 60000);
     } catch (e) {
-      console.log(e)
-      return m.reply(Func.jsonFormat(e))
+      console.log(e);
+      return m.reply(Func.jsonFormat(e));
     }
   },
   help: ['yts'],
   use: 'query',
   tags: ['downloader'],
   command: /^(yts|ytsearch|youtubesearch|mp3|mp4)$/i,
-  limit: 2
-}
+  limit: 5
+};
