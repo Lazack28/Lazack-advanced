@@ -26,18 +26,23 @@ module.exports = {
           format: mediaType,
         };
 
+        // Use the correct method to download
         const media = await download(downloadOptions);
         
-        if (mediaType === 'audio') {
-          conn.sendMessage(m.chat, { image: { url: media.thumbnail }, caption: media.title }, { quoted: m })
-            .then(async () => {
-              conn.sendMessage(m.chat, { audio: { url: media.url }, fileName: media.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m });
-            });
+        if (media) {
+          if (mediaType === 'audio') {
+            conn.sendMessage(m.chat, { image: { url: media.thumbnail }, caption: media.title }, { quoted: m })
+              .then(async () => {
+                conn.sendMessage(m.chat, { audio: { url: media.url }, fileName: media.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m });
+              });
+          } else {
+            conn.sendMessage(m.chat, { image: { url: media.thumbnail }, caption: media.title }, { quoted: m })
+              .then(async () => {
+                conn.sendMessage(m.chat, { video: { url: media.url }, caption: '' }, { quoted: m });
+              });
+          }
         } else {
-          conn.sendMessage(m.chat, { image: { url: media.thumbnail }, caption: media.title }, { quoted: m })
-            .then(async () => {
-              conn.sendMessage(m.chat, { video: { url: media.url }, caption: '' }, { quoted: m });
-            });
+          m.reply('Failed to download media. Please try again.');
         }
       } else {
         m.react('🕒');
@@ -80,6 +85,6 @@ module.exports = {
   help: ['yts'],
   use: 'query',
   tags: ['downloader'],
-  command: /^(yts|ytsearch|youtubesearch|mp3|mp4)$/i,
-  limit: 5
+  command: /^(yts|ytsearch|y outubesearch|mp3|mp4)$/i,
+  limit: 2
 };
