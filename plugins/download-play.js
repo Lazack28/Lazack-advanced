@@ -1,1 +1,33 @@
-const _0x455de7=_0x2b6f;function _0x578c(){const _0x196510=['url','Video','title','thumbnail','783475pFJLIq','\x20ms','wait','*-*\x20*Fetching*\x20:\x20','quick_reply','all','videos','yts\x20','582620zFobSH','108918fFcNtJ','status','help','stringify','*[\x20YOUTUBE\x20PLAY\x20]*\x0a\x0a','ytv\x20','sSearch','videoId','error','Yoasobi\x20idol','play','408770CEeIlh','132BqHXUj','6721BSDADL','ago','downloader','exports','*-*\x20*Url*\x20:\x20','9452msXLMb','tags','sendIAMessage','yta\x20','reply','*-*\x20*Author*\x20:\x20','views','*-*\x20*Published*\x20:\x20','footer','1312952WRxXHA','*-*\x20*Views*\x20:\x20','Audio'];_0x578c=function(){return _0x196510;};return _0x578c();}(function(_0x377d2b,_0x196200){const _0x275ed7=_0x2b6f,_0x58ac12=_0x377d2b();while(!![]){try{const _0x21d306=parseInt(_0x275ed7(0xd1))/0x1+parseInt(_0x275ed7(0xd6))/0x2*(parseInt(_0x275ed7(0xd0))/0x3)+parseInt(_0x275ed7(0xc3))/0x4+parseInt(_0x275ed7(0xcf))/0x5+-parseInt(_0x275ed7(0xc4))/0x6+-parseInt(_0x275ed7(0xbb))/0x7+-parseInt(_0x275ed7(0xdf))/0x8;if(_0x21d306===_0x196200)break;else _0x58ac12['push'](_0x58ac12['shift']());}catch(_0x2b92f4){_0x58ac12['push'](_0x58ac12['shift']());}}}(_0x578c,0x241a5));const yts=require('yt-search'),handler=async(_0x78255f,{conn:_0xec7110,text:_0x12b642,usedPrefix:_0x4db40c,command:_0x23999c,Func:_0x3352fa})=>{const _0x5e6e12=_0x2b6f;if(!_0x12b642)return _0x78255f[_0x5e6e12(0xda)](_0x3352fa['example'](_0x4db40c,_0x23999c,_0x5e6e12(0xcd)));_0x78255f[_0x5e6e12(0xda)](global['status'][_0x5e6e12(0xbd)]);try{let _0x1152ff=await yts(_0x12b642),_0xcea961=_0x1152ff,_0x4ef50a=new Date(),_0x3bcccf=_0x5e6e12(0xc8);_0x3bcccf+='*-*\x20*Title*\x20:\x20'+_0xcea961[_0x5e6e12(0xc0)][0x0][_0x5e6e12(0xb9)]+'\x0a',_0x3bcccf+=_0x5e6e12(0xdb)+_0xcea961[_0x5e6e12(0xc0)][0x0]['author']['name']+'\x0a',_0x3bcccf+='*-*\x20*Video\x20ID*\x20:\x20'+_0xcea961[_0x5e6e12(0xc0)][0x0][_0x5e6e12(0xcb)]+'\x0a',_0x3bcccf+=_0x5e6e12(0xdd)+_0xcea961[_0x5e6e12(0xc0)][0x0][_0x5e6e12(0xd2)]+'\x0a',_0x3bcccf+=_0x5e6e12(0xe0)+_0xcea961[_0x5e6e12(0xc0)][0x0][_0x5e6e12(0xdc)]+'\x0a',_0x3bcccf+=_0x5e6e12(0xd5)+_0xcea961[_0x5e6e12(0xc0)][0x0][_0x5e6e12(0xe2)]+'\x0a',_0x3bcccf+=_0x5e6e12(0xbe)+((new Date()-_0x4ef50a)*0x1+_0x5e6e12(0xbc));const _0x5d3220=[{'name':_0x5e6e12(0xbf),'buttonParamsJson':JSON[_0x5e6e12(0xc7)]({'display_text':_0x5e6e12(0xe1),'id':_0x4db40c+_0x5e6e12(0xd9)+_0xcea961[_0x5e6e12(0xc1)][0x0]['url']})},{'name':_0x5e6e12(0xbf),'buttonParamsJson':JSON[_0x5e6e12(0xc7)]({'display_text':_0x5e6e12(0xe3),'id':_0x4db40c+_0x5e6e12(0xc9)+_0xcea961['videos'][0x0][_0x5e6e12(0xe2)]})},{'name':_0x5e6e12(0xbf),'buttonParamsJson':JSON[_0x5e6e12(0xc7)]({'display_text':_0x5e6e12(0xca),'id':_0x4db40c+_0x5e6e12(0xc2)+_0xcea961[_0x5e6e12(0xc1)][0x0][_0x5e6e12(0xb9)]})}];_0xec7110[_0x5e6e12(0xd8)](_0x78255f['chat'],_0x5d3220,_0x78255f,{'content':_0x3bcccf,'footer':global[_0x5e6e12(0xde)],'media':_0x1152ff[_0x5e6e12(0xc0)][0x0][_0x5e6e12(0xba)]});}catch(_0x5d90ff){return _0x78255f[_0x5e6e12(0xda)](global[_0x5e6e12(0xc5)][_0x5e6e12(0xcc)]);}};function _0x2b6f(_0x4cfe01,_0x90625){const _0x578c0f=_0x578c();return _0x2b6f=function(_0x2b6fd8,_0x240e14){_0x2b6fd8=_0x2b6fd8-0xb9;let _0xf9692d=_0x578c0f[_0x2b6fd8];return _0xf9692d;},_0x2b6f(_0x4cfe01,_0x90625);}handler[_0x455de7(0xc6)]=['play']['map'](_0x525d1e=>_0x525d1e+'\x20*title*'),handler[_0x455de7(0xd7)]=[_0x455de7(0xd3)],handler['command']=[_0x455de7(0xce)],handler['limit']=0x3,module[_0x455de7(0xd4)]=handler;
+const yts = require('yt-search');
+const btchDownloader = require('btch-downloader'); // Assuming this is the correct import for the downloader
+
+const handler = async (_0x78255f, { conn: _0xec7110, text: _0x12b642, usedPrefix: _0x4db40c, command: _0x23999c, Func: _0x3352fa }) => {
+    if (!_0x12b642) return _0x78255f.reply(_0x3352fa.example(_0x4db40c, _0x23999c, 'Please provide a search term.'));
+
+    _0x78255f.reply(global.status);
+
+    try {
+        let searchResults = await yts(_0x12b642);
+        let video = searchResults.videos[0]; // Get the first video result
+
+        // Prepare the response message
+        let responseMessage = `*-* Title: ${video.title}\n`;
+        responseMessage += `*-* Author: ${video.author.name}\n`;
+        responseMessage += `*-* Video ID: ${video.videoId}\n`;
+        responseMessage += `*-* Views: ${video.views}\n`;
+        responseMessage += `*-* Published: ${video.ago}\n`;
+
+        // Download music using btch-downloader
+        const musicDownloadUrl = video.url; // Assuming the video URL is used for music download
+        await btchDownloader.download(musicDownloadUrl); // Modify this line based on the actual usage of btch-downloader
+
+        // Send the response message
+        _0xec7110.sendMessage(_0x78255f.chat, { text: responseMessage });
+    } catch (error) {
+        return _0x78255f.reply(global.status.error);
+    }
+};
+
+handler.command = ['play']; // Register the command
+handler.limit = 3; // Set command limit
+module.exports = handler;
