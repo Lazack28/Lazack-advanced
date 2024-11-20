@@ -1,12 +1,12 @@
-import ytSearch from "yt-search";
-import { youtube } from "btch-downloader";
+const yts = require('yt-search')
+const { youtube } = require('btch-downloader')
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) return m.reply(`Enter the title or YouTube link!\nExample: *${usedPrefix + command} Faded Alan Walker*`);
+const handler = async (m, { conn, text, usedPrefix, command }) => {
+  if (!text) return m.reply(Func.example(usedPrefix, command, 'pwita'));
 
-  await m.reply("🔄 Please wait while I fetch the audio...");
+  m.reply("🔄 Please wait while I fetch the audio...");
   try {
-    const search = await ytSearch(text); // Search for the video
+    const search = await yts(text); // Search for the video
     const video = search.videos[0];
 
     if (!video) return m.reply("❌ No results found! Please try again with a different query.");
@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     // Send audio file
-    await conn.sendMessage(
+    conn.sendMessage(
       m.chat,
       {
         audio: { url: audioUrl.mp3 },
@@ -47,6 +47,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
 handler.help = ["play"];
 handler.tags = ["downloader"];
-handler.command = /^play$/i;
+handler.command = ['play'];
+handler.limit = 3
 
-export default handler;
+module.exports = handler;
