@@ -1,7 +1,7 @@
 const yts = require('yt-search')
 const { youtube } = require('btch-downloader')
 
-const handler = async (m, { conn, text, usedPrefix, command }) => {
+const handler = async (m, { conn, text, usedPrefix, command, Func }) => {
   if (!text) return m.reply(Func.example(usedPrefix, command, 'pwita'));
 
   m.reply("🔄 Please wait while I fetch the audio...");
