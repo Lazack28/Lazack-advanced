@@ -1,33 +1,52 @@
-const yts = require('yt-search');
-const btchDownloader = require('btch-downloader'); // Assuming this is the correct import for the downloader
+import ytSearch from "yt-search";
+import { youtube } from "btch-downloader";
 
-const handler = async (_0x78255f, { conn: _0xec7110, text: _0x12b642, usedPrefix: _0x4db40c, command: _0x23999c, Func: _0x3352fa }) => {
-    if (!_0x12b642) return _0x78255f.reply(_0x3352fa.example(_0x4db40c, _0x23999c, 'Please provide a search term.'));
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+  if (!text) return m.reply(`Enter the title or YouTube link!\nExample: *${usedPrefix + command} Faded Alan Walker*`);
 
-    _0x78255f.reply(global.status);
+  await m.reply("🔄 Please wait while I fetch the audio...");
+  try {
+    const search = await ytSearch(text); // Search for the video
+    const video = search.videos[0];
 
+    if (!video) return m.reply("❌ No results found! Please try again with a different query.");
+    if (video.seconds >= 3600) return m.reply("❌ Video duration exceeds 1 hour. Please choose a shorter video!");
+
+    // Attempt to get the audio URL
+    let audioUrl;
     try {
-        let searchResults = await yts(_0x12b642);
-        let video = searchResults.videos[0]; // Get the first video result
-
-        // Prepare the response message
-        let responseMessage = `*-* Title: ${video.title}\n`;
-        responseMessage += `*-* Author: ${video.author.name}\n`;
-        responseMessage += `*-* Video ID: ${video.videoId}\n`;
-        responseMessage += `*-* Views: ${video.views}\n`;
-        responseMessage += `*-* Published: ${video.ago}\n`;
-
-        // Download music using btch-downloader
-        const musicDownloadUrl = video.url; // Assuming the video URL is used for music download
-        await btchDownloader.download(musicDownloadUrl); // Modify this line based on the actual usage of btch-downloader
-
-        // Send the response message
-        _0xec7110.sendMessage(_0x78255f.chat, { text: responseMessage });
+      audioUrl = await youtube(video.url);
     } catch (error) {
-        return _0x78255f.reply(global.status.error);
+      return m.reply("⚠️ Failed to fetch audio. Please try again later.");
     }
+
+    // Send audio file
+    await conn.sendMessage(
+      m.chat,
+      {
+        audio: { url: audioUrl.mp3 },
+        mimetype: "audio/mpeg",
+        contextInfo: {
+          externalAdReply: {
+            title: video.title,
+            body: "",
+            thumbnailUrl: video.image,
+            sourceUrl: video.url,
+            mediaType: 1,
+            showAdAttribution: true,
+            renderLargerThumbnail: true,
+          },
+        },
+      },
+      { quoted: m }
+    );
+  } catch (error) {
+    m.reply(`❌ Error: ${error.message}`);
+  }
 };
 
-handler.command = ['play']; // Register the command
-handler.limit = 3; // Set command limit
-module.exports = handler;
+handler.help = ["play"];
+handler.tags = ["downloader"];
+handler.command = /^play$/i;
+
+export default handler;
