@@ -9,9 +9,7 @@ async before(m, { conn}){
       !m.isBaileys &&
       !m.isGroup
     ) {
-      conn.reply(m.chat, `*Hi ✋*`)
+     return conn.reply(m.chat, `*Hi ✋*`, m)
       }
-  
-    return !0
    }
 }
