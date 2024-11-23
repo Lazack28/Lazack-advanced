@@ -1,6 +1,6 @@
 Module.export = {
 
-async before(m) {
+async before(m, { conn}){
     // when someone sends a group link to the bot's dm
     if (
       (m.mtype === 'groupInviteMessage' ||
