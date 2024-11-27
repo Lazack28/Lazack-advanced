@@ -1,9 +1,10 @@
-const axios = requre('axios');
-const cheerio = require('cheerio');
-const qs = require ('qs');
 
-let handler = async (m, { conn, text, isOwner }) => {
-  if (!text) return m.reply("Harap masukkan URL video YouTube.");
+const axios = requre('axios')
+const cheerio = require('cheerio')
+const qs = require ('qs')
+
+let handler = async (m, { conn, text, usedPrefix, command, isOwner, Func }) => {
+  if (!text) return m.reply(func.example(usedPrefix, command, 'enter link'));
 
   try {
     const getData = async (videoUrl) => {
@@ -90,9 +91,9 @@ let handler = async (m, { conn, text, isOwner }) => {
   }
 };
 
-handler.help = ['ytmp3'];
-handler.tags = ['downloader'];
-handler.command = ['ytm', 'ply'];
+handler.help = ['ytmp3']
+handler.tags = ['downloader']
+handler.command = ['ytm', 'ply']
 handler.limit = true;
 
 module.exports = handler;
