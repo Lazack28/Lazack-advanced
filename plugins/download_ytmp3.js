@@ -1,7 +1,6 @@
-
-const axios = require('axios');
+const axios = requre('axios');
 const cheerio = require('cheerio');
-const qs = require('qs');
+const qs = require ('qs');
 
 let handler = async (m, { conn, text, isOwner }) => {
   if (!text) return m.reply("Harap masukkan URL video YouTube.");
@@ -12,7 +11,7 @@ let handler = async (m, { conn, text, isOwner }) => {
         method: 'GET',
         url: `https://ytconvert.pro/button/?url=${encodeURIComponent(videoUrl)}`,
         headers: {
-          'User-Agent': 'Mozilla/5.0',
+          'User -Agent': 'Mozilla/5.0',
           'Accept': 'text/html',
         },
       };
@@ -43,7 +42,7 @@ let handler = async (m, { conn, text, isOwner }) => {
         method: 'POST',
         url: 'https://ytconvert.pro/convert/',
         headers: {
-          'User-Agent': 'Mozilla/5.0',
+          'User -Agent': 'Mozilla/5.0',
           'Accept': 'application/json',
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -66,7 +65,7 @@ let handler = async (m, { conn, text, isOwner }) => {
         method: 'GET',
         url: `https://ytconvert.pro/convert/?jobid=${jobid}`,
         headers: {
-          'User-Agent': 'Mozilla/5.0',
+          'User -Agent': 'Mozilla/5.0',
           'Accept': 'application/json',
         },
       };
@@ -83,8 +82,8 @@ let handler = async (m, { conn, text, isOwner }) => {
 
     const { title, audio } = await audioJob(text);
 
-    conn.sendMessage(m.chat, { text: `🎶${title}\n> Your Music In Process` }, { quoted: m })
-    conn.sendMessage(m.chat, { audio: { url: audio }, { quoted: m }) 
+    await conn.sendMessage(m.chat, { text: `🎶 ${title}\n> Your Music Is In Process` }, { quoted: m });
+    await conn.sendMessage(m.chat, { audio: { url: audio }, mimetype: 'audio/mpeg' }, { quoted: m }); 
   } catch (e) {
     console.error(e);
     m.reply("Terjadi kesalahan saat mencoba mengunduh audio.");
@@ -93,7 +92,7 @@ let handler = async (m, { conn, text, isOwner }) => {
 
 handler.help = ['ytmp3'];
 handler.tags = ['downloader'];
-handler.command = /^(ytm|yt|mp3)$/i;
+handler.command = /^(ytmp3|youtube2mp3|mp3)$/i;
 handler.limit = true;
 
-export default handler;
+module.exports = handler;
