@@ -92,7 +92,7 @@ let handler = async (m, { conn, text, isOwner }) => {
 
 handler.help = ['ytmp3'];
 handler.tags = ['downloader'];
-handler.command = /^(ytmp|youtube|ply)$/i;
+handler.command = ['ytm', 'ply'];
 handler.limit = true;
 
 module.exports = handler;
