@@ -1,6 +1,6 @@
 const axios = require ("axios")
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
+const handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) {
     return m.reply(`Enter the Spotify track URL or title!\nExample: *${usedPrefix + command} Faded*`);
   }
@@ -68,6 +68,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
 handler.help = ["splay"];
 handler.tags = ["downloader"];
-handler.command = /^splay$/i;
+handler.command = ['splay'];
+handler.limit = 3
 
-export default handler;
+module.exports = handler;
