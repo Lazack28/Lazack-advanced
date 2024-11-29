@@ -17,7 +17,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     // Construct playlist message
-    let playlistMessage = `_🎶 SILVA SPOTIFY PLAYLIST 🎶_\n\n`;
+    let playlistMessage = `_🎶 SPOTIFY PLAYLIST 🎶_\n\n`;
     for (const track of searchData) {
       playlistMessage += `- *Title*: ${track.title}\n`;
       playlistMessage += `  *Artist*: ${track.artist || "Unknown"}\n`;
@@ -34,8 +34,8 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
           mentionedJid: [m.sender],
           externalAdReply: {
             showAdAttribution: true,
-            title: "Silva Spotify Playlist",
-            body: "SILVA SPOTIFY SEARCH",
+            title: "Advance Spotify Playlist",
+            body: "LAZACK SPOTIFY SEARCH",
             thumbnailUrl: "https://i.imgur.com/J7BBps6.jpeg", // Example thumbnail
             mediaType: 1,
             renderLargerThumbnail: true,
