@@ -36,7 +36,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
             showAdAttribution: true,
             title: "Advance Spotify Playlist",
             body: "LAZACK SPOTIFY SEARCH",
-            thumbnailUrl: "https://i.imgur.com/J7BBps6.jpeg", // Example thumbnail
+            thumbnailUrl: "https://i.imgur.com/9ZgmMuf.mp4", // Example thumbnail
             mediaType: 1,
             renderLargerThumbnail: true,
           },
