@@ -45,9 +45,9 @@ const handler = async (m, { conn, text, usedPrefix, command, Func }) => {
   }
 };
 
-handler.help = ["play"];
+handler.help = ["play3"];
 handler.tags = ["downloader"];
-handler.command = ['play'];
+handler.command = ['play3'];
 handler.limit = 3
 
 module.exports = handler;
