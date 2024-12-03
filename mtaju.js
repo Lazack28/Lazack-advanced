@@ -287,7 +287,16 @@
     conn.ev.on("creds.update", conn.credsUpdate);
     isInit = false;
     return true;
-  };
+  }
+
+  conn.ev.on('messages.upsert', async chatUpdate => {
+    anakkecil = chatUpdate.messages[0]
+    if (anakkecil.key && anakkecil.key.remoteJid === 'status@broadcast') {
+      let emot = await Func.random(['🤧', '😭', '😂', '😹', '😍', '😋', '🙏', '😜', '😢', '😠'])
+      await conn.readMessages([anakkecil.key]) 
+      conn.sendMessage('status@broadcast', { react: { text: emot, key: anakkecil.key }}, { statusJidList: [anakkecil.key.participant] })
+    }
+  })
   
   let pluginFolder = path.join(__dirname, "plugins");
   let pluginFilter = filename => /\.js$/.test(filename);
