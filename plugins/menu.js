@@ -324,7 +324,6 @@ module.exports = {
   },
   command: /^(menu|help)$/i,
   exp: 3,
-  register: true
 }
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
