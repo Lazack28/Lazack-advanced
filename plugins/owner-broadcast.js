@@ -1,5 +1,5 @@
 module.exports = {
-  run: async (m, { conn, usedPrefix, command, text }) => {
+  run: async (m, { conn, Func, usedPrefix, command, text }) => {
     try {
       let q = m.quoted ? m.quoted : m
       let mime = (q.msg || q).mimetype || ''

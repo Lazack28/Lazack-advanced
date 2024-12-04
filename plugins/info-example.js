@@ -52,7 +52,6 @@ let handler = async (m, { conn, Func, usedPrefix, command, text }) => {
   
           const listMessage = {
             text: "Please choose one of the examples below:",
-            footer: lazack-advance,
             title: "Code Examples",
             buttonText: "Touch me >//<",
             sections
