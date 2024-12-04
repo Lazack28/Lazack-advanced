@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix, command, text }) => {
+let handler = async (m, { conn, Func, usedPrefix, command, text }) => {
     try {
       if (!text) {
         if (m.isGroup) {
