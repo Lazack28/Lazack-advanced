@@ -146,7 +146,7 @@ module.exports = {
             url: setting.link
           }).then(async () => {
             let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-            conn.sendFMusic(m.chat, music, "Lazack organisation", "120363220399229536@newsletter", m)
+            conn.sendFMusic(m.chat, music, "Lazack organisation", "120363321705798318@newsletter", m)
           })
         }
 
@@ -276,7 +276,7 @@ module.exports = {
             media: setting.cover
           }).then(async () => {
             let music = await Func.random(['https://pomf2.lain.la/f/kaapfv1n.jpg', 'https://pomf2.lain.la/f/sp3zwfzj.jpg', 'https://pomf2.lain.la/f/cvoradkw.jpg'])
-            conn.sendFMusic(m.chat, music, "Lazack organisation", "120363220399229536@newsletter", m)
+            conn.sendFMusic(m.chat, music, "Lazack organisation", "120363321705798318@newsletter", m)
           })
         }
         let groups = {}
