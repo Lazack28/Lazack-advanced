@@ -18,7 +18,7 @@
     lowdb,
     CloudDBAdapter,
     Function
-  } = new (require("@whiskeysockets/baileys"))();
+  } = new (require("@im-dims/wb"))();
   const readline = require("readline");
   const chalk = require("chalk");
   const path = require("path");
