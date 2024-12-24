@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Lazack28/Lazack-advanced#readme",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
+    "@hapi/boom": "*",
     "axios": "^1.3.5",
     "baileys": "npm:@whiskeysockets/baileys",
     "chalk-animation": "^2.0.3",
