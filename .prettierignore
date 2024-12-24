@@ -1,0 +1,13 @@
+# Ignore artifacts:
+Media
+session
+node_modules
+.tmp
+.gitignore
+package-lock.json
+package.json
+README.md
+nodemon.json
+yarn.lock
+.prettierrc.json
+.prettierignore
