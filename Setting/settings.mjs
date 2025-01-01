@@ -1,5 +1,5 @@
 export default {
-  name: "Airi Miyu", // bot name
+  name: "Airi lazack", // bot name
   ownername: "Lazack28",
   dev: ["255734980103"],
   developer: JSON.parse(fs.readFileSync("./Setting/owner.json")) ?? ["255734980103"], // Check in owner.json
@@ -70,7 +70,7 @@ export default {
   
   // DEFAULT WELCOME SETTING
   // @sub @user @admin @jmlh
-  joingc: "Hi Kak, I am Miyu\nI entered here at the command of my owner :)\nI will leave this group if my owner commands me to leave\nPlease use my features as best as possible :)",
+  joingc: "Hi Kak, I am lazack\nI entered here at the command of my owner :)\nI will leave this group if my owner commands me to leave\nPlease use my features as best as possible :)",
   fsub: "@admin has changed the group subject to @sub",
   fppgc: "@admin has changed the group profile photo",
   fbgc: "@admin has opened this group, members can now send messages to this group",

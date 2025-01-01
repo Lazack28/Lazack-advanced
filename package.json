@@ -1,7 +1,7 @@
 {
   "name": "lazack advance",
   "version": "1.3.0",
-  "description": "miyu adalah bot whatsapp yang dibuat dengan type module dan di update secara berkala",
+  "description": "lazack adalah bot whatsapp yang dibuat dengan type module dan di update secara berkala",
   "main": "main.js",
   "type": "module",
   "scripts": {

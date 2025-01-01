@@ -11,7 +11,7 @@ const handle = async (m, { q, conn, bot, db }) => {
   let antitag = false // [1][4]
   let store = {} // [1][5]
   let pack = "Sticker by" // [1][6]
-  let auth = "© airi miyu" // [1][7]
+  let auth = "© airi lazack" // [1][7]
   let setmenu = "list" // [1][7]
   let backup = false
   let lastbackup = Date.now()
