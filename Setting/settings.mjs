@@ -2,9 +2,9 @@ export default {
   name: "Airi lazack", // bot name
   ownername: "Lazack28",
   dev: ["255734980103"],
-  developer: JSON.parse(fs.readFileSync("./Setting/owner.json")) ?? ["255734980103"], // Check in owner.json
-  moderator: JSON.parse(fs.readFileSync("./Setting/mod.json")) ?? [], // Check in mods.json
-  prems: JSON.parse(fs.readFileSync("./Setting/prems.json")) ?? ["255734980103"], // Check in prems.json
+  developer: "./Setting/owner.json" ?? ["255734980103"], // Check in owner.json
+  moderator: "./Setting/mod.json" ?? [], // Check in mods.json
+  prems: "./Setting/prems.json" ?? ["255734980103"], // Check in prems.json
 
   // connection
   browser: ["Ubuntu", "Firefox", "20.0.04"],
