@@ -1,6 +1,6 @@
 export default {
   name: "Airi lazack", // bot name
-  ownername: "Lazack28",
+  ownername: "Lazack-28",
   dev: ["255734980103"],
   developer: "./Setting/owner.json" ?? ["255734980103"], // Check in owner.json
   moderator: "./Setting/mod.json" ?? [], // Check in mods.json
