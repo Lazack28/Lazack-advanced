@@ -100,7 +100,7 @@ isForwarded: true,
 "title": ``,
 "body": ``,
 "previewType": "PHOTO",
-"thumbnailUrl": `https://telegra.ph/file/64620ff1d3778449dfd22.jpg`,
+"thumbnailUrl": `https://as1.ftcdn.net/v2/jpg/02/09/20/30/1000_F_209203088_dUNW9sjX1SwPtLoIVRI6N4qXK8s8X2V0.jpg`,
 "thumbnail": ``,
 "sourceUrl": ``}}},
 { quoted: m})
