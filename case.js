@@ -19,7 +19,7 @@ const colors = require('@colors/colors/safe')
 const chalk = require('chalk')
 const { toPTT, toAudio } = require("./lib/converter")
 
-//  Base
+// Base
 module.exports = lazack28 = async (lazack28, m, chatUpdate, store) => {
 try {
 var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
@@ -51,13 +51,13 @@ const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
 const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
 const groupOwner = m.isGroup ? groupMetadata.owner : ''
 const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
-// Akses
+// Access
 
 //React
 const moji = ['📚', '💭', '💫', '🌌', '🌏', '〽️', '🌷', '🍁', '🪻',]
 const randomemoji = moji[Math.floor(Math.random() * moji.length)]
 
-//Ini Waktu | Waktu adalah emas,maka dari itu sentuh lah rumput.dan jangan nolep dikamar terus,usahakan tu kontol jangan dikocok terus.Lutut ama sikut lu kopong nanti
+//This is Time | Time is gold, so touch the grass. and don't stay in the room all the time, try not to keep jerking off. Your knees and elbows will be weak later
 const moment = require('moment-timezone')
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss")
 if(time2 < "19:00:00"){
@@ -87,9 +87,9 @@ if (!m.key.fromMe) return
 
 //Reply
 
-const reply = (teks) => {
+const reply = (text) => {
 lazack28.sendMessage(m.chat,
-{ text: teks,
+{ text: text,
 contextInfo:{
 mentionedJid:[m.sender],
 forwardingScore: 9999999,
@@ -110,14 +110,14 @@ isForwarded: true,
 if (m.message) {
 if (isCmd && !m.isGroup) {
 console.log(chalk.black(chalk.bgHex('#ff5e78').bold(`\n🌟 ${ucapanWaktu} 🌟`)));
-console.log(chalk.white(chalk.bgHex('#4a69bd').bold(`🚀 Ada Pesan, Om! 🚀`)));
+console.log(chalk.white(chalk.bgHex('#4a69bd').bold(`🚀 You have a message! 🚀`)));
 console.log(chalk.black(chalk.bgHex('#fdcb6e')(`📅 DATE: ${new Date().toLocaleString()}
 💬 MESSAGE: ${m.body || m.mtype}
 🗣️ SENDERNAME: ${pushname}
 👤 JIDS: ${m.sender}`)));
 } else if (m.isGroup) {
 console.log(chalk.black(chalk.bgHex('#ff5e78').bold(`\n🌟 ${ucapanWaktu} 🌟`)));
-console.log(chalk.white(chalk.bgHex('#4a69bd').bold(`🚀 Ada Pesan, Om! 🚀`)));
+console.log(chalk.white(chalk.bgHex('#4a69bd').bold(`🚀 You have a message! 🚀`)));
 console.log(chalk.black(chalk.bgHex('#fdcb6e')(`📅 DATE: ${new Date().toLocaleString()}
 💬 MESSAGE: ${m.body || m.mtype}
 🗣️ SENDERNAME: ${pushname}
@@ -133,18 +133,18 @@ switch (command) {
 
     // Status
 case 'public': {
-if (!isCreator) return reply('*khusus Premium*') 
+if (!isCreator) return reply('*premium only*') 
 lazack28.sendMessage(m.chat, { react: { text: `${randomemoji}`, key: m.key }})
 lazack28.public = true
-reply('succes')
+reply('success')
 }
 break
 
 case 'self': {
-if (!isCreator) return reply('*khusus Premium*') 
+if (!isCreator) return reply('*premium only*') 
 lazack28.sendMessage(m.chat, { react: { text: `${randomemoji}`, key: m.key }})
 lazack28.public = false
-reply('succes')
+reply('success')
 }
 break
 
