@@ -66,10 +66,10 @@ const welcomeMessage = `
 ${ucapanWaktu}
 Session        : ${global.sessionName}
 Waktu        : ${ucapanWaktu}
-Base By    : Fauzialifatah
+Base By    : Lazack28
 
--> Base Ori By thisisfauzialifatah / fauzi
-Dengan menggunakan script ini, Anda menyatakan bahwa Anda memahami dan setuju bahwa penggunaan script ini sepenuhnya berada pada risiko Anda sendiri!!
+-> Base Ori By thisisLazack28 / fauzi
+script under development
 `;
 // DISINI CONNECT NYA,  PAIRING 
 const readline = require("readline")
@@ -95,7 +95,7 @@ browser: [ "Ubuntu", "Chrome", "20.0.04" ]
 });
     // question code
     if(usePairingCode && !lazack28.authState.creds.registered) {
-		const phoneNumber = await question('Masukan Nomer Yang Aktif Awali Dengan 62:\n');
+        const phoneNumber = await question('Enter an active number starting with 255:\n');
 		const code = await lazack28.requestPairingCode(phoneNumber.trim())
 		console.log(`Pairing code: ${code}`)
 
@@ -244,25 +244,25 @@ lazack28.public = true;
 `,`${randomcolor5}`));
                 
                 console.log(color(`${welcomeMessage}`,`${randomcolor}`)) //Console-3
-                console.log(color(`✅ Sukses Connected Bot WhatsApp`,`${randomcolor}`))
-                console.log(color(`📝 Terima kasih atas pengertian dan kerjasama Anda.`))
+                console.log(color(`✅ successfully bot connected`,`${randomcolor}`))
+                console.log(color(`📝 thaks for transting Tanzania developers.`))
                 await sleep(1000)
                 
-            lazack28.sendMessage('6281340019858@s.whatsapp.net', {
+            lazack28.sendMessage('255785894229@s.whatsapp.net', {
                 image: {
                     url: 'https://as1.ftcdn.net/v2/jpg/02/09/20/30/1000_F_209203088_dUNW9sjX1SwPtLoIVRI6N4qXK8s8X2V0.jpg'
                 }, 
-                caption: 'Menyalaa Abangkuuu🔥🔥'
+                caption: 'i really like the bot mr/mrs Lazack'
             })
             
             await sleep(5000)
             
-            lazack28.sendMessage('6281340019858@s.whatsapp.net', {
+            lazack28.sendMessage('255734980103@s.whatsapp.net', {
                 text: `_*PERINGATAN/RULES‼️*_
 
 > _Script ini disediakan secara gratis dan tanpa biaya. Dilarang keras untuk menjual atau mendistribusikan ulang untuk keuntungan komersial, atau menggunakan script ini untuk tujuan komersial tanpa izin tertulis. Kami ingin tegaskan bahwa script ini diberikan secara gratis untuk berbagi pengetahuan dan membantu komunitas. Setiap upaya menjual atau mengkomersilkan script ini tanpa izin merupakan pelanggaran etika yang tidak diterima. Gunakanlah script ini dengan penuh tanggung jawab dan hormati usaha yang telah dilakukan oleh pembuatnya._
-> My YouTube: @Fauzialifatah
-> My Instagram: @fauzialifatah_
+> My YouTube: @Lazack28
+> My Instagram: @Lazack28_
 
 _*Selamat Mencoba Base Dari Kami✅*_`
               })
