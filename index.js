@@ -250,7 +250,7 @@ lazack28.public = true;
                 
             lazack28.sendMessage('6281340019858@s.whatsapp.net', {
                 image: {
-                    url: 'ttps://files.catbox.moe/k68d72.jpg'
+                    url: 'https://as1.ftcdn.net/v2/jpg/02/09/20/30/1000_F_209203088_dUNW9sjX1SwPtLoIVRI6N4qXK8s8X2V0.jpg'
                 }, 
                 caption: 'Menyalaa Abangkuuu🔥🔥'
             })
