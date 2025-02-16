@@ -1,25 +1,25 @@
 const fs = require('fs')
 
 global.d = new Date()
-global.calender = d.toLocaleDateString('id')
+global.calendar = d.toLocaleDateString('en-US')
 
-    //General Settings 
+// General Settings 
 global.prefa = ['','!','.',',','🐤','🗿']
-global.ownNumb = '' //ganti aj klo mau
-global.NamaOwner = 'lazack28' //gausah diganti 
+global.ownNumb = '' // change if you want
+global.NamaOwner = 'lazack28' // no need to change
 global.sessionName = 'Session'
-global.namabot = 'Fauzialifatah - md' //ganti aj klo mau
-global.author = 'lazack28' //ganti aj klo mau
-global.packname = 'fauzialifatah - md' //ganti aj klo mau
-global.yt = '' //gausah diganti 
+global.namabot = 'LAZACK-ADVANCED' // change if you want
+global.author = 'lazack28' // change if you want
+global.packname = 'LAZACK-ADVANCED' // change if you want
+global.yt = '' // no need to change
 
-global.mess = { // bagian ini gausah diganti 
-    ingroup: 'Gabisa lah kocak, Fitur ini khusus untuk group💢',
-    owner: 'Waduhh! ,Lu bukan owner gw bg🗣️',
-    premium: 'You are not a premium user, Lu gabisa akses fitur ini karna lu bukn preium, aowkawokawok🐦',
-    seller: 'Lu bukan seller, Jadi gabakal bisa make😹',
-    usingsetpp: 'Setpp hanya bisa dipake owner, lu kira gw bego? 🤓',
-    wait: 'Tunggu sedang diproses🕙'
+global.mess = { // this part doesn't need to be changed
+    ingroup: 'Cannot be used, this feature is for groups only💢',
+    owner: 'Oops! You are not my owner🗣️',
+    premium: 'You are not a premium user, you cannot access this feature because you are not premium, lol🐦',
+    seller: 'You are not a seller, so you cannot use this😹',
+    usingsetpp: 'Setpp can only be used by the owner, do you think I am stupid? 🤓',
+    wait: 'Please wait, processing🕙'
 }
 
 global.autOwn = 'req(62-8S57547ms11).287p'

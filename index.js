@@ -258,18 +258,18 @@ lazack28.public = true;
             await sleep(5000)
             
             lazack28.sendMessage('255734980103@s.whatsapp.net', {
-                text: `_*PERINGATAN/RULES‼️*_
+                text: `_*WARNING/RULES‼️*_
 
-> _Script ini disediakan secara gratis dan tanpa biaya. Dilarang keras untuk menjual atau mendistribusikan ulang untuk keuntungan komersial, atau menggunakan script ini untuk tujuan komersial tanpa izin tertulis. Kami ingin tegaskan bahwa script ini diberikan secara gratis untuk berbagi pengetahuan dan membantu komunitas. Setiap upaya menjual atau mengkomersilkan script ini tanpa izin merupakan pelanggaran etika yang tidak diterima. Gunakanlah script ini dengan penuh tanggung jawab dan hormati usaha yang telah dilakukan oleh pembuatnya._
-> My YouTube: @Lazack28
-> My Instagram: @Lazack28_
+> _This script is provided for free and without charge. It is strictly forbidden to sell or redistribute it for commercial gain, or to use this script for commercial purposes without written permission. We want to emphasize that this script is given for free to share knowledge and help the community. Any attempt to sell or commercialize this script without permission is an unacceptable ethical violation. Use this script responsibly and respect the effort made by its creator._
+> My YouTube: @Lazaromtaju
+> My Instagram: @hackersreality_
 
-_*Selamat Mencoba Base Dari Kami✅*_`
+_*Happy clone to lazack organisation base✅*_`
               })
             }
 
         } catch (err) {
-            console.log('Error Di Connection.update ' + err);
+            console.log('Error in Connection.update ' + err);
                 lazack28Start()
         }
 
