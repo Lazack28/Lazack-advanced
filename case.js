@@ -196,7 +196,37 @@ const qchanel = {
 
 switch (command) {
     //Menu
-
+    case "menu":
+        case "allmenu": {
+        let teksmenu = `
+        *Haii* @${m.sender.split("@")[0]}, WELCOME TO LAZACK ADVANCED BUG BOT
+        
+         ▬▭▬▭[ *ɪɴғᴏ ᴜsᴇʀ* ]▬▭▬▭▬  
+        ╭───────────────⪩
+        │► > *_NAME_* : ${pushname}
+        │► > *NUMBER* : ${m.sender.split('@')[0]}
+        ╰───────────────t⪩
+        ▬▭▬▭[ *sᴛᴀᴛᴜs ʙᴏᴛ* ]▬▭▬▭▬  
+        ╭───────────────⪩
+        │► > *NAME OF BOT* : ${global.namabot}
+        │► > *CREATOR NUMBER* : @${global.owner}
+        │► > *_VERSION_* : ${version}
+        │► > *_RUNTIME_* : ${runtime(process.uptime())}
+        ╰───────────────t⪩
+        
+        ╭───➢ • *B U G - M E N U* •
+        │ > Bugs coming soon.
+        | > bot under development 
+        ╰────────────────➢
+        
+        https://home.lazackorganisation.my.id
+        `
+        lazack28.sendMessage(m.chat, {text: `${teksmenu}`, contextInfo: {mentionedJid: [m.sender], externalAdReply: { showAdAttribution: true,
+        thumbnail: fs.readFileSync("./src/thumbnail2.jpg"), title: `© ${namabot} - ${version}`, body: `Runtime : ${runtime(process.uptime())}`,  sourceUrl: global.linkyt,mediaType: 1,
+        renderLargerThumbnail: true }}}, {quoted: qchanel})
+        }
+        break
+        
     // Status
 case 'public': {
 if (!isCreator) return reply('*premium only*') 
