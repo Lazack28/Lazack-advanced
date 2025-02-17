@@ -132,6 +132,66 @@ ppuser = await lazack28.profilePictureUrl(m.sender, 'image')
 ppuser = 'https://telegra.ph/file/a059a6a734ed202c879d3.jpg'
 }
 
+const qchanel = {
+    key: {
+    remoteJid: 'status@broadcast',
+    fromMe: false,
+    participant: '0@s.whatsapp.net'
+    },
+    message: {
+    newsletterAdminInviteMessage: {
+    newsletterJid: `120363321705798318@newsletter`,
+    newsletterName: `Lazack`,
+    jpegThumbnail: "",
+    caption: `Powered By ${namaowner}`,
+    inviteExpiration: Date.now() + 1814400000
+    }
+    }}
+
+    
+    const qtoko = {
+        key: {
+        fromMe: false,
+        participant: `0@s.whatsapp.net`,
+        ...(m.chat ? {
+        remoteJid: "status@broadcast"
+        } : {})
+        }, message: {
+        "productMessage": {
+        "product": {
+        "productImage": {
+        "mimetype": "image/jpeg",
+        "jpegThumbnail": "",
+        },
+        "title": `Pterodactyl Server By ${namaowner}`,
+        "description": null,
+        "currencyCode": "IDR",
+        "priceAmount1000": "9999999999",
+        "retailerId": `Powered By jflex`,
+        "productImageCount": 1
+        },
+        "businessOwnerJid": `0@s.whatsapp.net`
+        }}
+        }
+        const qtext = { key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "0@s.whatsapp.net"} : {}) },'message': {extendedTextMessage: {text: "Thank you for using my services"}}}
+
+        const qdoc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {documentMessage: {title: `Powered By ${namaowner}`, jpegThumbnail: ""}}}
+        
+        
+        const qkontak = {
+        key: {
+        participant: `0@s.whatsapp.net`,
+        ...(botNumber ? {
+        remoteJid: `status@broadcast`
+        } : {})
+        },
+        message: {
+        'contactMessage': {
+        'displayName': `${namaowner}`,
+        'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;ttname,;;;\nFN:ttname\nitem1.TEL;waid=6285624297893:+62 856-2429-7893\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+        sendEphemeral: true
+        }}
+        }
 
 
 switch (command) {
