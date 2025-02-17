@@ -125,6 +125,12 @@ console.log(chalk.black(chalk.bgHex('#fdcb6e')(`📅 DATE: ${new Date().toLocale
 🔍 MESS LOCATION: ${groupName}`)));
 }
 }
+let ppuser
+try {
+ppuser = await lazack28.profilePictureUrl(m.sender, 'image')
+} catch (err) {
+ppuser = 'https://telegra.ph/file/a059a6a734ed202c879d3.jpg'
+}
 
 
 
@@ -166,6 +172,17 @@ m.reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
 } catch (e) {
 m.reply(String(e))
 }
+}
+
+if (/^(Hello|Hi)$/i.test(chats)) {
+    const greatings = [
+        `Hola, ${pushname}... welcome to lazack organisation bug bots`,
+        `Hola, ${pushname}... if this is not mr lazack please contact him through 255734980103`,
+        `Hola, ${pushname}... if its lazack, confirm the number 255734980103, PLEASE let us know how we gonna help you boss.`,
+    ];
+    const response = greatings[Math.floor(Math.random() * greatings.length)];
+    return
+    lazack28.sendMessage(from, { text: response});
 }
 
 if (budy.startsWith('>')) {
