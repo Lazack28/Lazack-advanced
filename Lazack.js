@@ -1329,8 +1329,8 @@ Lazack28.sendMessage(from, { text: teks, contextInfo: {
 "containsAutoReply": true, 
 "mediaType": 1, 
 "thumbnail": fkethmb, 
-"mediaUrl": "https://whatsapp.com/channel/", 
-"sourceUrl": "https://whatsapp.com/channel/" }}}, { quoted: m }) }
+"mediaUrl": "https://whatsapp.com/channel/0029ValRlNGCXC3EussN4b2E", 
+"sourceUrl": "https://whatsapp.com/channel/0029ValRlNGCXC3EussN4b2E" }}}, { quoted: m }) }
 
 const reply2 = (teks) => {
 Lazack28.sendMessage(from, { text : teks }, { quoted : m })
@@ -1529,7 +1529,7 @@ whatsappmessage = `
 ↯ /public *public mode*
 
 *\`⪻ CHANNEL OF THE DEV ⪼\`*
-https://whatsapp.com/channel/0029VaIRINGCXC3EussN4b2E
+https://whatsapp.com/channel/0029ValRlNGCXC3EussN4b2E
 
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
 ➢ Lazack28
@@ -1559,7 +1559,7 @@ whatsappmessage = `*\`[ LAZACK BUGS ]\`*
 ┗════════════❐
 
 *\`⪻ CHANNEL OF THE DEV ⪼\`*
-https://whatsapp.com/channel/0029VaIRINGCXC3EussN4b2E
+https://whatsapp.com/channel/0029ValRlNGCXC3EussN4b2E
 
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
 ➢ Lazack28
