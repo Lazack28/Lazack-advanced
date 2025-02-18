@@ -1506,37 +1506,42 @@ case "menu": case "start": case "Lazack28": case "xmenu": case "bugmenu": {
 if (!isPremium) return reply(" premium users only ")
 officialist = `${nomerOwner}@s.whatsapp.net`
 whatsappmessage = `
-*\`[ LAZACK BUGS ]\`*
-❏ 𝘂𝘀𝗲𝗿 𝗻𝗮𝗺𝗲 : *${pushname}*
-❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : LAZACK ADVANCED
-❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 1.0.0
-❏ 𝗱𝗲𝘃 : TEAM LAZACK 28
-❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${Lazack28.public ? "public": "self"}*
+╭━━━〔 *LAZACK BUGS* 〕━━━╮  
+┃ ✦ 𝘂𝘀𝗲𝗿 𝗻𝗮𝗺𝗲 : *${pushname}*  
+┃ ✦ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : *LAZACK ADVANCED*  
+┃ ✦ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : *1.0.0*  
+┃ ✦ 𝗱𝗲𝘃 : *TEAM LAZACK 28*  
+┃ ✦ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${Lazack28.public ? "Public" : "Self"}*  
+╰━━━━━━━━━━━━━━━━━╯  
 
-*\`✰ 𝗕𝘂𝗴 ↯ 𝗠𝗲𝗻𝘂 ✰\`*
-↯ /love-you 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /lazack-v1 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /lazack-v2 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /lazack-v3 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /all-device 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /ui-system 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /Xvip-fc 
+╭───⌬ *Bug ↯ Menu* ⌬───╮  
+│ ➤ love-you 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ lazack-v1 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ lazack-v2 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ lazack-v3 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ all-device 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ ui-system 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ Xvip-fc  
+╰─────────────────────╯  
 
-*\`✰ 𝗢𝘄𝗻𝗲𝗿 ↯ 𝗠𝗲𝗻𝘂 ✰\`*
-↯ /addprem 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /delprem 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /self *private mode*
-↯ /public *public mode*
+╭───⌬ *Owner ↯ Menu* ⌬───╮  
+│ ➤ addprem 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ delprem 𝗻𝘂𝗺𝗯𝗲𝗿  
+│ ➤ self *Private Mode*  
+│ ➤ public *Public Mode*  
+╰──────────────────────╯  
 
-*\`⪻ CHANNEL OF THE DEV ⪼\`*
-https://whatsapp.com/channel/0029ValRlNGCXC3EussN4b2E
+⪻ *CHANNEL OF THE DEV* ⪼  
+📌 [Join Here](https://whatsapp.com/channel/0029ValRlNGCXC3EussN4b2E)  
 
-❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ Lazack28
+╭─❏ *𝗢𝘄𝗻 𝗦𝗰𝗿𝗶𝗽𝘁* ❏──╮  
+➥ *Lazack28*  
+╰────────────────╯  
 
-❏ 𝘀𝗲𝗹𝗹𝗲𝗿 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ lazackdevs
-➢ lazack28
+╭─❏ *𝗦𝗲𝗹𝗹𝗲𝗿 𝗦𝗰𝗿𝗶𝗽𝘁* ❏──╮  
+➥ *lazackdevs*  
+➥ *lazack28*  
+╰────────────────╯
  `
 Lazack28.sendMessage(from, { image: thumb, caption: whatsappmessage,  mentions:[sender, officialist] }, { quoted: m })
 Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
