@@ -1632,11 +1632,6 @@ fs.writeFileSync('./database/premium.json', JSON.stringify(premium))
 reply(`yah ${ya} tidak memiliki akses lagi`)
 break
 
-/**
-  * Lazack28
-  * don't forget to follow
-  * https://whatsapp.com/channel/0029VazvJLp5Ui2Skrlhai3n
-*/
 
 case "ai": case "leptonai": case "letmegpt": {
     if (!text) return m.reply("Masukan teks!");
