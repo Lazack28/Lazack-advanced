@@ -52,7 +52,7 @@ const question = (text) => { const rl = readline.createInterface({ input: proces
 
 async function startBotz() {
 const { state, saveCreds } = await useMultiFileAuthState("session")
-const AndraZyy = makeWASocket({
+const Lazack28 = makeWASocket({
 logger: pino({ level: "silent" }),
 printQRInTerminal: false,
 auth: state,
@@ -67,32 +67,32 @@ markOnlineOnConnect: true,
 browser: ["Ubuntu", "Chrome", "20.0.04"],
 });
 
-if (!AndraZyy.authState.creds.registered) {
+if (!Lazack28.authState.creds.registered) {
 const phoneNumber = await question('Lazack : Enter Your Number ;\n');
-let code = await AndraZyy.requestPairingCode(phoneNumber);
+let code = await Lazack28.requestPairingCode(phoneNumber);
 code = code?.match(/.{1,4}/g)?.join("-") || code;
 console.log(`Lazack : Your Code :`, code);
 }
 
-store.bind(AndraZyy.ev)
+store.bind(Lazack28.ev)
 
-AndraZyy.ev.on('messages.upsert', async chatUpdate => {
+Lazack28.ev.on('messages.upsert', async chatUpdate => {
 try {
 mek = chatUpdate.messages[0]
 if (!mek.message) return
 mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
 if (mek.key && mek.key.remoteJid === 'status@broadcast') return
-if (!AndraZyy.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+if (!Lazack28.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
 if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
-m = smsg(AndraZyy, mek, store)
-require("./Lazack")(AndraZyy, m, chatUpdate, store)
+m = smsg(Lazack28, mek, store)
+require("./Lazack")(Lazack28, m, chatUpdate, store)
 } catch (err) {
 console.log(err)
 }
 })
 
 // Setting
-AndraZyy.decodeJid = (jid) => {
+Lazack28.decodeJid = (jid) => {
 if (!jid) return jid
 if (/:\d+@/gi.test(jid)) {
 let decode = jidDecode(jid) || {}
@@ -100,28 +100,28 @@ return decode.user && decode.server && decode.user + '@' + decode.server || jid
 } else return jid
 }
 
-AndraZyy.getName = (jid, withoutContact= false) => {
-id = AndraZyy.decodeJid(jid)
-withoutContact = AndraZyy.withoutContact || withoutContact 
+Lazack28.getName = (jid, withoutContact= false) => {
+id = Lazack28.decodeJid(jid)
+withoutContact = Lazack28.withoutContact || withoutContact 
 let v
 if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
 v = store.contacts[id] || {}
-if (!(v.name || v.subject)) v = AndraZyy.groupMetadata(id) || {}
+if (!(v.name || v.subject)) v = Lazack28.groupMetadata(id) || {}
 resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
 })
 else v = id === '0@s.whatsapp.net' ? {
 id,
 name: 'WhatsApp'
-} : id === AndraZyy.decodeJid(AndraZyy.user.id) ?
-AndraZyy.user :
+} : id === Lazack28.decodeJid(Lazack28.user.id) ?
+Lazack28.user :
 (store.contacts[id] || {})
 return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
 }
 
-AndraZyy.public = true
+Lazack28.public = true
 
-AndraZyy.serializeM = (m) => smsg(AndraZyy, m, store);
-AndraZyy.ev.on('connection.update', (update) => {
+Lazack28.serializeM = (m) => smsg(Lazack28, m, store);
+Lazack28.ev.on('connection.update', (update) => {
 const { connection, lastDisconnect } = update;
 if (connection === 'close') {
 let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
@@ -129,18 +129,18 @@ if (reason === DisconnectReason.badSession || reason === DisconnectReason.connec
 startBotz();
 } else if (reason === DisconnectReason.loggedOut) {
 } else {
-AndraZyy.end(`Unknown DisconnectReason: ${reason}|${connection}`);
+Lazack28.end(`Unknown DisconnectReason: ${reason}|${connection}`);
 }
 } else if (connection === 'open') {
-console.log('[LAZACK BUGS Now Is Active!!!]\n ' + JSON.stringify(AndraZyy.user.id, null, 2));
+console.log('[LAZACK BUGS Now Is Active!!!]\n ' + JSON.stringify(Lazack28.user.id, null, 2));
 }
 });
 
-AndraZyy.ev.on('creds.update', saveCreds)
+Lazack28.ev.on('creds.update', saveCreds)
 
-AndraZyy.sendText = (jid, text, quoted = '', options) => AndraZyy.sendMessage(jid, { text: text, ...options }, { quoted })
+Lazack28.sendText = (jid, text, quoted = '', options) => Lazack28.sendMessage(jid, { text: text, ...options }, { quoted })
 //=========================================\\
-AndraZyy.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+Lazack28.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
 let quoted = message.msg ? message.msg : message
 let mime = (message.msg || message).mimetype || ''
 let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
@@ -156,9 +156,9 @@ await fs.writeFileSync(trueFileName, buffer)
 return trueFileName
 }
 //=========================================\\
-AndraZyy.sendTextWithMentions = async (jid, text, quoted, options = {}) => AndraZyy.sendMessage(jid, { text: text, mentions: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net'), ...options }, { quoted })
+Lazack28.sendTextWithMentions = async (jid, text, quoted, options = {}) => Lazack28.sendMessage(jid, { text: text, mentions: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net'), ...options }, { quoted })
 //=========================================\\
-AndraZyy.downloadMediaMessage = async (message) => {
+Lazack28.downloadMediaMessage = async (message) => {
 let mime = (message.msg || message).mimetype || ''
 let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
 const stream = await downloadContentFromMessage(message, messageType)
@@ -169,12 +169,12 @@ buffer = Buffer.concat([buffer, chunk])
 return buffer
 }
 
-return AndraZyy
+return Lazack28
 }
 
 startBotz()
 
-function smsg(AndraZyy, m, store) {
+function smsg(Lazack28, m, store) {
 if (!m) return m
 let M = proto.WebMessageInfo
 if (m.key) {
@@ -183,8 +183,8 @@ m.isBaileys = m.id.startsWith('BAE5') && m.id.length === 16
 m.chat = m.key.remoteJid
 m.fromMe = m.key.fromMe
 m.isGroup = m.chat.endsWith('@g.us')
-m.sender = AndraZyy.decodeJid(m.fromMe && AndraZyy.user.id || m.participant || m.key.participant || m.chat || '')
-if (m.isGroup) m.participant = AndraZyy.decodeJid(m.key.participant) || ''
+m.sender = Lazack28.decodeJid(m.fromMe && Lazack28.user.id || m.participant || m.key.participant || m.chat || '')
+if (m.isGroup) m.participant = Lazack28.decodeJid(m.key.participant) || ''
 }
 if (m.message) {
 m.mtype = getContentType(m.message)
@@ -206,8 +206,8 @@ m.quoted.mtype = type
 m.quoted.id = m.msg.contextInfo.stanzaId
 m.quoted.chat = m.msg.contextInfo.remoteJid || m.chat
 m.quoted.isBaileys = m.quoted.id ? m.quoted.id.startsWith('BAE5') && m.quoted.id.length === 16 : false
-m.quoted.sender = AndraZyy.decodeJid(m.msg.contextInfo.participant)
-m.quoted.fromMe = m.quoted.sender === AndraZyy.decodeJid(AndraZyy.user.id)
+m.quoted.sender = Lazack28.decodeJid(m.msg.contextInfo.participant)
+m.quoted.fromMe = m.quoted.sender === Lazack28.decodeJid(Lazack28.user.id)
 m.quoted.text = m.quoted.text || m.quoted.caption || m.quoted.conversation || m.quoted.contentText || m.quoted.selectedDisplayText || m.quoted.title || ''
 m.quoted.mentionedJid = m.msg.contextInfo ? m.msg.contextInfo.mentionedJid : []
 m.getQuotedObj = m.getQuotedMessage = async () => {
@@ -224,16 +224,16 @@ id: m.quoted.id
 message: quoted,
 ...(m.isGroup ? { participant: m.quoted.sender } : {})
 })
-m.quoted.delete = () => AndraZyy.sendMessage(m.quoted.chat, { delete: vM.key })
-m.quoted.copyNForward = (jid, forceForward = false, options = {}) => AndraZyy.copyNForward(jid, vM, forceForward, options)
-m.quoted.download = () => AndraZyy.downloadMediaMessage(m.quoted)
+m.quoted.delete = () => Lazack28.sendMessage(m.quoted.chat, { delete: vM.key })
+m.quoted.copyNForward = (jid, forceForward = false, options = {}) => Lazack28.copyNForward(jid, vM, forceForward, options)
+m.quoted.download = () => Lazack28.downloadMediaMessage(m.quoted)
 }
 }
-if (m.msg.url) m.download = () => AndraZyy.downloadMediaMessage(m.msg)
+if (m.msg.url) m.download = () => Lazack28.downloadMediaMessage(m.msg)
 m.text = m.msg.text || m.msg.caption || m.message.conversation || m.msg.contentText || m.msg.selectedDisplayText || m.msg.title || ''
-m.reply = (text, chatId = m.chat, options = {}) => Buffer.isBuffer(text) ? AndraZyy.sendMedia(chatId, text, 'file', '', m, { ...options }) : AndraZyy.sendText(chatId, text, m, { ...options })
+m.reply = (text, chatId = m.chat, options = {}) => Buffer.isBuffer(text) ? Lazack28.sendMedia(chatId, text, 'file', '', m, { ...options }) : Lazack28.sendText(chatId, text, m, { ...options })
 m.copy = () => exports.smsg(conn, M.fromObject(M.toObject(m)))
-m.copyNForward = (jid = m.chat, forceForward = false, options = {}) => AndraZyy.copyNForward(jid, m, forceForward, options)
+m.copyNForward = (jid = m.chat, forceForward = false, options = {}) => Lazack28.copyNForward(jid, m, forceForward, options)
 
 return m
 }
