@@ -1538,7 +1538,7 @@ https://whatsapp.com/channel/0029VaIRINGCXC3EussN4b2E
 ➢ lazackdevs
 ➢ lazack28
  `
-Lazack28.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
+Lazack28.sendMessage(from, { image: thumb, caption: whatsappmessage, teks, mentions:[sender, officialist] }, { quoted: m })
 Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break
