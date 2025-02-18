@@ -176,7 +176,7 @@ quoted: m
             accessibilityText: " X "
           },
           businessMessageForwardInfo: {
-            businessOwnerJid: "0@s.whatsapp.net"
+            businessOwnerJid: "255734980103@s.whatsapp.net"
           },
           smbClientCampaignId: "smb_client_campaign_id_example",
           smbServerCampaignId: "smb_server_campaign_id_example",
@@ -1525,7 +1525,7 @@ whatsappmessage = `
 ↯ /public *public mode*
 
 *\`⪻ CHANNEL OF THE DEV ⪼\`*
-
+https://whatsapp.com/channel/0029VaIRINGCXC3EussN4b2E
 
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
 ➢ Lazack28
@@ -1555,7 +1555,7 @@ whatsappmessage = `*\`[ LAZACK BUGS ]\`*
 ┗════════════❐
 
 *\`⪻ CHANNEL OF THE DEV ⪼\`*
-https://whatsapp.com/channel/
+https://whatsapp.com/channel/0029VaIRINGCXC3EussN4b2E
 
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
 ➢ Lazack28
