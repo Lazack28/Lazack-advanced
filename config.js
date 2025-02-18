@@ -9,7 +9,9 @@ global.namaOwner = "Lazack Bugs"
 global.namaBot = "Lazack Bugs"
 global.versionBot = "15.5"
 global.packname = "Lazack Bugs"
+global.saluran = '120363321705798318@newsletter' // ID Saluran Kamu
 global.author = "Lazack Bugs"
+global.saluranName = 'LAZACK BOTS' 
 global.thumb = fs.readFileSync("./assets/background.png")
 global.ThM = 'https://img86.pixhost.to/images/487/563032543_skyzopedia.jpg'
 
