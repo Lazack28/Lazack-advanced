@@ -132,7 +132,7 @@ startBotz();
 AndraZyy.end(`Unknown DisconnectReason: ${reason}|${connection}`);
 }
 } else if (connection === 'open') {
-console.log('[AndraZyy Now Is Active!!!]\n ' + JSON.stringify(AndraZyy.user.id, null, 2));
+console.log('[LAZACK BUGS Now Is Active!!!]\n ' + JSON.stringify(AndraZyy.user.id, null, 2));
 }
 });
 
