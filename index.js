@@ -68,10 +68,10 @@ browser: ["Ubuntu", "Chrome", "20.0.04"],
 });
 
 if (!AndraZyy.authState.creds.registered) {
-const phoneNumber = await question('AndraZyy : Enter Your Number ;\n');
+const phoneNumber = await question('Lazack : Enter Your Number ;\n');
 let code = await AndraZyy.requestPairingCode(phoneNumber);
 code = code?.match(/.{1,4}/g)?.join("-") || code;
-console.log(`AndraZyy : Your Code :`, code);
+console.log(`Lazack : Your Code :`, code);
 }
 
 store.bind(AndraZyy.ev)
@@ -85,7 +85,7 @@ if (mek.key && mek.key.remoteJid === 'status@broadcast') return
 if (!AndraZyy.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
 if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
 m = smsg(AndraZyy, mek, store)
-require("./AndraZyy")(AndraZyy, m, chatUpdate, store)
+require("./Lazack")(AndraZyy, m, chatUpdate, store)
 } catch (err) {
 console.log(err)
 }
