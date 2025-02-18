@@ -160,7 +160,7 @@ quoted: m
             url: "‎ ‎ "
           },
           groupSubject: " X ",
-          parentGroupJid: "6287888888888-1234567890@g.us",
+          parentGroupJid: "120363321705798318@newsletter",
           trustBannerType: " X ",
           trustBannerAction: 1,
           isSampled: false,
@@ -169,7 +169,7 @@ quoted: m
             utmCampaign: " X "
           },
           forwardedNewsletterMessageInfo: {
-            newsletterJid: "6287888888888-1234567890@g.us",
+            newsletterJid: "120363321705798318@newsletter",
             serverMessageId: 1,
             newsletterName: " X ",
             contentType: "UPDATE",
@@ -674,7 +674,7 @@ async function IosMJ(target, Ptcp = false) {
                 url: "https://home.lazackorganisation.my.id",
               },
               groupSubject: "Example Group Subject",
-              parentGroupJid: "6287888888888-1234567890@g.us",
+              parentGroupJid: "120363321705798318@newsletter",
               trustBannerType: "trust_banner_example",
               trustBannerAction: 1,
               isSampled: false,
@@ -683,7 +683,7 @@ async function IosMJ(target, Ptcp = false) {
                 utmCampaign: "utm_campaign_example",
               },
               forwardedNewsletterMessageInfo: {
-                newsletterJid: "6287888888888-1234567890@g.us",
+                newsletterJid: "120363321705798318@newsletter",
                 serverMessageId: 1,
                 newsletterName: " target ",
                 contentType: "UPDATE",
@@ -828,7 +828,7 @@ async function DocBug(target) {
                             nativeFlowMessage: {},
                             contextInfo: {
                                 mentionedJid: Array.from({ length: 5 }, () => "1@newsletter"),
-                                groupMentions: [{ groupJid: "1@newsletter", groupSubject: "𝐀𝐧𝐝𝐫𝐚𝐙𝐲𝐲" }]
+                                groupMentions: [{ groupJid: "1@newsletter", groupSubject: "LAZACK28" }]
                             }
                         }
                     }
@@ -894,7 +894,7 @@ async function killui(target, Ptcp = true) {
                   messageParamsJson: "{}",
                 },
                 contextInfo: {
-                  mentionedJid: ["6289526156543@s.whatsapp.net"],
+                  mentionedJid: ["255734980103@s.whatsapp.net"],
                   forwardingScore: 1,
                   isForwarded: true,
                   fromMe: false,
@@ -975,8 +975,8 @@ async function func1(target) {
                     },
                     nativeFlowMessage: {},
                     contextInfo: {
-                        mentionedJid: Array.from({ length: 5 }, () => "1@newsletter"),
-                        groupMentions: [{ groupJid: "1@newsletter", groupSubject: " 𝐀𝐧𝐝𝐫𝐚𝐙𝐲𝐲 " }]
+                        mentionedJid: Array.from({ length: 5 }, () => "120363321705798318@newsletter"),
+                        groupMentions: [{ groupJid: "120363321705798318@newsletter", groupSubject: " LAZACK28 " }]
                     }
                 }
             }
@@ -1069,7 +1069,7 @@ async function newsLetter(target) {
                     botInvokeMessage: {
                         message: {
                             newsletterAdminInviteMessage: {
-                                newsletterJid: `33333333333333333@newsletter`,
+                                newsletterJid: `120363321705798318@newsletter`,
                                 newsletterName: "lazackbots" + "ી".repeat(120000),
                                 jpegThumbnail: "",
                                 caption: "ꦽ".repeat(120000),
@@ -1130,7 +1130,7 @@ async function newsLetter(target) {
             degreesLatitude: 999.03499999999999,
             degreesLongitude: -999.03499999999999,
             name: CrashQAiphone,
-            url: "https://t.me/home.lazackorganisation.my.id",
+            url: "https://home.lazackorganisation.my.id",
           },
         },
         {
@@ -1505,7 +1505,7 @@ whatsappmessage = `
 *\`[ LAZACK BUGS ]\`*
 ❏ 𝘂𝘀𝗲𝗿 𝗻𝗮𝗺𝗲 : *${pushname}*
 ❏ 𝗯𝗼𝘁 𝗻𝗮𝗺𝗲 : LAZACK ADVANCED
-❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 15.5.0
+❏ 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 : 1.0.0
 ❏ 𝗱𝗲𝘃 : TEAM LAZACK 28
 ❏ 𝗺𝗼𝗱𝗲 𝗯𝗼𝘁 : *${AndraZyy.public ? "public": "self"}*
 
@@ -1521,8 +1521,8 @@ whatsappmessage = `
 *\`✰ 𝗢𝘄𝗻𝗲𝗿 ↯ 𝗠𝗲𝗻𝘂 ✰\`*
 ↯ /addprem 𝗻𝘂𝗺𝗯𝗲𝗿
 ↯ /delprem 𝗻𝘂𝗺𝗯𝗲𝗿
-↯ /self *<mode diri sendiri>*
-↯ /public *<mode semua>*
+↯ /self *private mode*
+↯ /public *public mode*
 
 *\`⪻ CHANNEL OF THE DEV ⪼\`*
 
@@ -1530,10 +1530,9 @@ whatsappmessage = `
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
 ➢ Lazack28
 
-
 ❏ 𝘀𝗲𝗹𝗹𝗲𝗿 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ LAZACKDEVS
-➢ LAZACK28
+➢ lazackdevs
+➢ lazack28
  `
 AndraZyy.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
 AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
@@ -1561,10 +1560,9 @@ https://whatsapp.com/channel/
 ❏ 𝗼𝘄𝗻 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
 ➢ Lazack28
 
-
 ❏ 𝘀𝗲𝗹𝗹𝗲𝗿 𝘀𝗰𝗿𝗶𝗽𝘁 ❏
-➢ LAZACKDEVS
-➢ LAZACK28
+➢ lazackdevs
+➢ lazack28
 `
 AndraZyy.sendMessage(from, { image: thumb, caption: whatsappmessage, mentions:[sender, officialist] }, { quoted: m })
 AndraZyy.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
@@ -1575,7 +1573,7 @@ break
  //GAK USAH RENAME, KETAHUAN REANAME TANGGUNG RESIKO LU SENDIRI
 
 case 'z': case 'hidetag': case 'ht': case 'h': {
-if (!isPremium) return reply(" maaf kamu tidak memiliki akses ")
+if (!isPremium) return reply("sorry, you do not have access.")
 if (!m.quoted && !text) return m.reply(example("teksnya/replyteks"))
 var teks = m.quoted ? m.quoted.text : text
 var member = await groupMetadata.participants.map(e => e.id)
@@ -1586,7 +1584,7 @@ break
 case "tagall": {
 if (!isOwner && !isAdmins) return reply(mess.admin)
 if (!isGroup) return joreply(mess.only.group)
-if (!q) return reply(`Teks Nya Mana Kak?`)
+if (!q) return reply(`text is needed`)
 let teks = `${q ? q : ''}\n‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ \n`
 for (let mem of participants) {
 teks += `⊝ @${mem.id.split('@')[0]}\n`
@@ -1596,22 +1594,22 @@ AndraZyy.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id)
 break
 
 case "public": {
-if (!isPremium) return reply(" maaf kamu tidak memiliki akses ")
-AndraZyy.public = true
-reply(`*berhasil mengubah bot ke mode public*`)
+  if (!isPremium) return reply("sorry, you do not have access");
+  AndraZyy.public = true;
+  reply("*successfully changed the bot to public mode*");
 }
 break
 
 case "self": {
-if (!isPremium) return reply(" maaf kamu tidak memiliki akses ")
-AndraZyy.public = false
-reply(`*berhasil mengubah bot ke mode self*`)
+  if (!isPremium) return reply("sorry, you do not have access");
+  AndraZyy.public = false;
+  reply("*successfully changed the bot to self mode*");
 }
 break
 
 case 'addprem':
-if (!isPremium) return reply(" maaf kamu tidak memiliki akses ")
-if (!args[0]) return reply(`Use ${prefix+command} number\nContoh ${prefix+command} 628xxx`)
+if (!isPremium) return reply(" sorry you dont have acess.")
+if (!args[0]) return reply(`Use ${prefix+command} number\nexample${prefix+command} 255734xx`)
 prrkek = q.split("|")[0].replace(/[^0-9]/g, '')
 let ceknya = await AndraZyy.onWhatsApp(prrkek)
 if (ceknya.length == 0) return reply(`Enter a valid and registered number on WhatsApp!!!`)
@@ -1621,8 +1619,8 @@ reply(`oke ${prrkek} telah diberikan akses`)
 break
 
 case 'delprem':
-if (!isPremium) return reply(" maaf kamu tidak memiliki akses ")
-if (!args[0]) return reply(`Use ${prefix+command} Nomor\nContoh ${prefix+command} 628xxx`)
+if (!isPremium) return reply(" sorry you dont have acess.")
+if (!args[0]) return reply(`Use ${prefix+command} number\nexample${prefix+command} 255734xx`)
 ya = q.split("|")[0].replace(/[^0-9]/g, '')
 unp = premium.indexOf(ya)
 premium.splice(unp, 1)
@@ -1691,24 +1689,24 @@ case "ai": {
       'Content-Type': 'application/json'
     },
     data: {
-      logic: 'nama kamu adalah Shyzu, assistent AI cerdas buatan MannR.',
+      logic: 'hi brother, am still under development.',
       messages: msgs
     }
   })
   .then(response => {
     if (response.status === 200) {
       const { result } = response.data;
-      m.reply(result ?? "Hmmm sepertinya terjadi kesalahan pada API, Minta bantuan ke owner ya.");
+      m.reply(result ?? "hello brother");
       aiSessions[senderId].messages.push({ content: text, role: "user" });
       aiSessions[senderId].messages.push({ content: result, role: "assistant" });
       shyzu.ai_sessions = aiSessions;
     } else {
-      m.reply("Hmmm sepertinya terjadi kesalahan pada API, Minta bantuan ke owner ya.");
+      m.reply("hello brother");
     }
   })
   .catch(error => {
     console.error(error);
-    m.reply("Hmmm sepertinya terjadi kesalahan, Minta bantuan ke owner ya.");
+    m.reply("failed to get response");
   });
 }
 break;
@@ -1716,7 +1714,7 @@ break;
 //===========TOOLS MENU=========//
 case 'tiktok': case 'tt': {
   if (!text) return reply(`Contoh: ${prefix + command} link`);
-  reply("Mohon Tunggu Sebentar...")
+  reply("please wait..")
  const data = await fetchJson(`https://api.tiklydown.eu.org/api/download?url=${encodeURIComponent(text)}`)
   const vidnya = data.video.noWatermark
   const caption = `*[ TIKTOK DOWNLOADER ]*
@@ -1737,7 +1735,7 @@ if (!/image|video/.test(mime)) return reply(example("dengan mengirim/reply foto/
 if (/video/.test(mime)) {
 if ((qmsg).seconds > 15) return reply("Durasi vidio maksimal 15 detik!")
 }
-reply("Mohon Tunggu Sebentar...")
+reply("please wait..")
 var media = await AndraZyyt.downloadAndSaveMediaMessage(qmsg)
 await AndraZyy.sendStimg(m.chat, media, m, {packname: `𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 ${namaBot} 👑`})
 await fs.unlinkSync(media)
@@ -1746,9 +1744,9 @@ break
 
 case 'splay': {
  const axios = require("axios");
- if (!text) return m.reply('Masukkan Judul Contoh\nContoh `Kewer Kewer`');
+ if (!text) return m.reply('please use the comand with the prompt example `Kewer Kewer`');
 
- await reply("Mohon Tunggu Sebentar...");
+ await reply("please wait..");
 
  try {
  // URL API untuk pencarian lagu
@@ -1757,13 +1755,13 @@ case 'splay': {
  
  // Pilih hasil pertama dari data pencarian
  const data = searchData[0];
- if (!data) return reply("Lagu tidak ditemukan.");
+ if (!data) return reply("mmh keep waiting.");
 
  // Teks yang akan dikirimkan
  const tekswait = `*𝐒𝐩𝐨𝐭𝐢𝐟𝐲 𝐩𝐥𝐚𝐲𝐞𝐫*
 
-- *Judul:* ${data.title}
-- *Artis:* ${data.artist}
+- *tittle:* ${data.title}
+- *Artist:* ${data.artist}
 - *URL:* ${data.url}`;
 
  // Mengirim pesan informasi lagu
@@ -1796,7 +1794,7 @@ case 'splay': {
  }
  } catch (error) {
  console.error(error);
- m.reply("Terjadi kesalahan saat mengambil file audio.");
+ m.reply("failed to get the the musics.");
  }
 }
 break
@@ -1806,8 +1804,8 @@ case 'hdr':
 case 'hdimg':
 case 'remini':
 case 'enhance': {
-if (!/image/.test(mime)) return reply(`Kirim/kutip gambar dengan caption ${prefix+command}`)
-reply("Mohon Tunggu Sebentar...")
+if (!/image/.test(mime)) return reply(`${prefix+command}`)
+reply("please wait..")
 let media = await quoted.download()
 let proses = await remini(media, "enhance");
 AndraZyy.sendMessage(m.chat, { image: proses, caption: 'BERHASIL ENCHANTED ✅'}, { quoted: m})
@@ -1849,7 +1847,7 @@ const catbox = async (content) => {
  }
  }
 	if (!mime) return reply('reply media!')
-	reply("Mohon Tunggu Sebentar...")
+	reply("please wait..")
 	let media = await q.download()
 	let link = await catbox(media)
 	let size = await fetch(link)
@@ -1867,13 +1865,13 @@ break
 case "kick": case "kik": {
 if (!m.isGroup) return reply("Only Group")
 if (!isCreator && !m.isAdmins) return reply("Only Owner!")
-if (!m.isBotAdmins) return Reply("Blum Admin Kontol")
+if (!m.isBotAdmins) return Reply("only admins")
 if (text || m.quoted) {
 const input = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, "") + "@s.whatsapp.net" : false
 var onWa = await AndraZyy.onWhatsApp(input.split("@")[0])
-if (onWa.length < 1) return m.reply("Nomor tidak terdaftar di whatsapp")
+if (onWa.length < 1) return m.reply("really she left")
 const res = await AndraZyy.groupParticipantsUpdate(m.chat, [input], 'remove')
-await m.reply(`Berhasil mengeluarkan ${input.split("@")[0]} dari grup ini`)
+await m.reply(`kicked ${input.split("@")[0]} in the group`)
 } else {
 return m.reply(example("@tag/reply"))
 }
