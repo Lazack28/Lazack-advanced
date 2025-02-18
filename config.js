@@ -1,32 +1,22 @@
-const fs = require('fs')
+const chalk = require("chalk")
+const fs = require("fs")
 
-global.d = new Date()
-global.calendar = d.toLocaleDateString('en-US')
+global.ownerNumber = ["255734980103@s.whatsapp.net"]
+global.nomerOwner = "255734980103"
+global.nomorOwner = ['255734980103']
+global.namaDeveloper = "Lazack Bugs" // Do not change this
+global.namaOwner = "Lazack Bugs"
+global.namaBot = "Lazack Bugs"
+global.versionBot = "15.5"
+global.packname = "Lazack Bugs"
+global.author = "Lazack Bugs"
+global.thumb = fs.readFileSync("./Andrazyy1.jpg")
+global.ThM = 'https://img86.pixhost.to/images/487/563032543_skyzopedia.jpg'
 
-// General Settings 
-global.prefa = ['','!','.',',','🐤','🗿']
-global.ownNumb = '' // change if you want
-global.NamaOwner = 'lazack28' // no need to change
-global.sessionName = 'Session'
-global.namabot = 'ADVANCED-BUGS' // change if you want
-global.author = 'lazack28' // change if you want
-global.packname = 'LAZACK-ADVANCED' // change if you want
-global.yt = '' // no need to change
-
-global.mess = { // this part doesn't need to be changed
-    ingroup: 'Cannot be used, this feature is for groups only💢',
-    owner: 'Oops! You are not my owner🗣️',
-    premium: 'You are not a premium user, you cannot access this feature because you are not premium, lol🐦',
-    seller: 'You are not a seller, so you cannot use this😹',
-    usingsetpp: 'Setpp can only be used by the owner, do you think I am stupid? 🤓',
-    wait: 'Please wait, processing🕙'
-}
-
-global.autOwn = 'req(62-8S57547ms11).287p'
-let file = require.resolve(__filename)
-require('fs').watchFile(file, () => {
-	require('fs').unwatchFile(file)
-	console.log('\x1b[0;32m'+__filename+' \x1b[1;32mupdated!\x1b[0m')
-	delete require.cache[file]
-	require(file)
+let file = require.resolve(__filename) 
+fs.watchFile(file, () => {
+fs.unwatchFile(file)
+console.log(chalk.redBright(`Update ${__filename}`))
+delete require.cache[file]
+require(file)
 })
