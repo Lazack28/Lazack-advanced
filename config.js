@@ -1,17 +1,17 @@
 const chalk = require("chalk")
 const fs = require("fs")
 
-global.ownerNumber = ["255734980103@s.whatsapp.net"]
-global.nomerOwner = "255734980103"
-global.nomorOwner = ['255734980103']
-global.namaDeveloper = "Lazack Bugs" // Do not change this
-global.namaOwner = "Lazack Bugs"
-global.namaBot = "Lazack Bugs"
+global.ownerNumber = ["243895984998@s.whatsapp.net"]
+global.nomerOwner = "256727043859"
+global.nomorOwner = ['243895984998']
+global.namaDeveloper = "Arjay Bugs" // Do not change this
+global.namaOwner = "Arjay Bugs"
+global.namaBot = Arjay Bugs"
 global.versionBot = "15.5"
-global.packname = "Lazack Bugs"
+global.packname = "Arjay Bugs"
 global.saluran = '120363321705798318@newsletter' // ID Saluran Kamu
-global.author = "Lazack Bugs"
-global.saluranName = 'LAZACK BOTS' 
+global.author = "Arjay Bugs"
+global.saluranName = 'ARJAY BOTS' 
 global.thumb = fs.readFileSync("./assets/logo.png")
 global.ThM = 'https://img86.pixhost.to/images/487/563032543_skyzopedia.jpg'
 
