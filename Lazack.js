@@ -1503,7 +1503,6 @@ Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mime
 break;
 
 case "menu": case "start": case "Lazack28": case "xmenu": case "bugmenu": {
-if (!isPremium) return reply(" premium users only ")
 officialist = `${nomerOwner}@s.whatsapp.net`
 whatsappmessage = `
 ╭━━━〔 *LAZACK BUGS* 〕━━━╮  
@@ -1521,7 +1520,7 @@ whatsappmessage = `
 │ ➤ lazack-v3 𝗻𝘂𝗺𝗯𝗲𝗿  
 │ ➤ all-device 𝗻𝘂𝗺𝗯𝗲𝗿  
 │ ➤ ui-system 𝗻𝘂𝗺𝗯𝗲𝗿  
-│ ➤ Xvip-fc  
+│ ➤ Vipmenu  
 ╰─────────────────────╯  
 
 ╭───⌬ *Owner ↯ Menu* ⌬───╮  
@@ -1547,8 +1546,7 @@ Lazack28.sendMessage(from, { image: thumb, caption: whatsappmessage,  mentions:[
 Lazack28.sendMessage(m.chat, {audio: fs.readFileSync('./assets/mtaju.mp3'), mimetype:'audio/mpeg', ptt: true}, {quoted: m})
 }
 break
-case "xvip-fc": {
-if (!isPremium) return reply(" premium users only ")
+case "Vipmenu": {
 officialist = `${nomerOwner}@s.whatsapp.net`
 whatsappmessage = `*\`[ LAZACK BUGS ]\`*
 ❏ 𝘂𝘀𝗲𝗿 𝗻𝗮𝗺𝗲 : *${pushname}*
